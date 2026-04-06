@@ -64,6 +64,7 @@ const translations = {
     /* Support */
     'support.label': 'Make an Impact', 'support.title': 'Support Us',
     'support.subtitle': "Whether you're an individual or a company — there are many ways to contribute to our mission.",
+    'tab.hint': 'Select your category to see how you can help',
     'tab.individuals': 'For Individuals', 'tab.companies': 'For Companies',
     'support.donate.title': 'Donate',
     'support.donate.desc': 'Every contribution directly funds technology access, teacher training, and learning materials for children in need.',
@@ -181,6 +182,7 @@ const translations = {
     /* Support */
     'support.label': 'Wirkung erzielen', 'support.title': 'Unterstütze uns',
     'support.subtitle': 'Ob als Einzelperson oder Unternehmen — es gibt viele Möglichkeiten, unsere Mission zu unterstützen.',
+    'tab.hint': 'Wähle deine Kategorie aus, um zu sehen, wie du helfen kannst',
     'tab.individuals': 'Für Einzelpersonen', 'tab.companies': 'Für Unternehmen',
     'support.donate.title': 'Spenden',
     'support.donate.desc': 'Jeder Beitrag finanziert direkt den Zugang zu Technologie, die Lehrerausbildung und Lernmaterialien für bedürftige Kinder.',
