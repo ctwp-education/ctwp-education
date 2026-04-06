@@ -1152,7 +1152,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 .sponsors-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
@@ -1217,12 +1217,15 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   background: rgba(232,86,29,0.06);
 }
 .sponsor-tag-plus {
+  background: var(--orange-500);
   border-color: var(--orange-500);
-  color: var(--orange-500);
+  color: var(--white);
+  font-size: 0.85rem;
+  padding: 0.3rem 1rem;
 }
 .sponsor-placeholder:hover .sponsor-tag-plus {
-  background: var(--orange-500);
-  color: var(--white);
+  background: var(--orange-400);
+  border-color: var(--orange-400);
 }
 
 /* ---------- Contact ---------- */
