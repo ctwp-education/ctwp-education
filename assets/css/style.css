@@ -1187,6 +1187,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
+.sponsor-tight img { padding: 0.4rem 0.6rem; }
 .sponsor-placeholder {
   width: 180px; height: 72px;
   display: flex;
