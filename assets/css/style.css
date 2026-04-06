@@ -1188,7 +1188,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   box-shadow: var(--shadow-md);
 }
 .sponsor-tight img { padding: 0.4rem 0.6rem; }
-.sponsor-zoom img { padding: 0.65rem 1rem; object-fit: cover; object-position: center; }
+.sponsor-zoom img { padding: 1.1rem 1.75rem; object-fit: cover; object-position: center; }
 .sponsor-placeholder {
   width: 180px; height: 72px;
   display: flex;
