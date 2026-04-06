@@ -1216,16 +1216,8 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   color: var(--orange-400);
   background: rgba(232,86,29,0.06);
 }
-.sponsor-tag-plus {
-  background: var(--orange-500);
-  border-color: var(--orange-500);
-  color: var(--white);
-  font-size: 0.85rem;
-  padding: 0.3rem 1rem;
-}
 .sponsor-placeholder:hover .sponsor-tag-plus {
-  background: var(--orange-400);
-  border-color: var(--orange-400);
+  background: rgba(232,86,29,0.12);
 }
 
 /* ---------- Contact ---------- */
