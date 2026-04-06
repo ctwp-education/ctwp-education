@@ -1188,6 +1188,14 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   box-shadow: var(--shadow-md);
 }
 .sponsor-tight img { padding: 0.4rem 0.6rem; }
+.sponsor-square img { width: 110px; height: 110px; }
+.sponsor-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  margin-top: 0.1rem;
+}
 .sponsor-placeholder {
   width: 180px; height: 72px;
   display: flex;
