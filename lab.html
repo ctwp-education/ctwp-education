@@ -95,31 +95,22 @@
     }
     .lab-hero-img {
       position: relative;
-      aspect-ratio: 1;
-      max-height: 480px;
-      padding: 10px;
-    }
-    .lab-hero-img::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 1.75rem;
-      border: 2px solid rgba(255,255,255,0.18);
-      pointer-events: none;
-      z-index: 1;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.08);
+      align-self: end;
     }
     .lab-hero-img img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 1.35rem;
-      box-shadow: 0 28px 72px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.08);
     }
-    .lab-hero-badge-zw {
-      display: none;
-      letter-spacing: 0.06em;
-    }
+    .lab-hero-badge-zw { display: none; }
 
     /* Breadcrumb */
     .lab-breadcrumb {
@@ -153,11 +144,11 @@
       gap: 0.85rem;
       margin-top: 1.75rem;
     }
-    .milestones-grid-compact .milestone-card { padding: 1.1rem; }
-    .milestones-grid-compact .milestone-icon { width: 36px; height: 36px; margin-bottom: 0.6rem; }
-    .milestones-grid-compact .milestone-icon i { font-size: 0.95rem; }
-    .milestones-grid-compact .milestone-card h4 { font-size: 0.85rem; }
-    .milestones-grid-compact .milestone-card p { font-size: 0.76rem; display: none; }
+    .milestones-grid-compact .milestone-card { padding: 1rem; }
+    .milestones-grid-compact .milestone-icon { width: 34px; height: 34px; margin-bottom: 0.5rem; }
+    .milestones-grid-compact .milestone-icon i { font-size: 0.9rem; }
+    .milestones-grid-compact .milestone-card h4 { font-size: 0.82rem; margin-bottom: 0.3rem; }
+    .milestones-grid-compact .milestone-card p { font-size: 0.74rem; line-height: 1.5; color: var(--gray-600); display: block; }
     .milestones-grid-compact .milestone-done { margin-top: 0.5rem; }
     .lab-intro-img-wrap {
       position: relative;
@@ -463,7 +454,7 @@
       <div class="lab-hero-content" data-animate="fade-up">
         <div class="hero-badge">
           <span class="fi fi-zw" style="font-size:1em;"></span>
-          Zimbabwe · Bongai Shamwari · 2025
+          Zimbabwe · Bongai Shamwari
         </div>
         <h1>Our <em>Computer Lab</em> in Zimbabwe</h1>
         <p data-i18n="lab.hero.subtitle">A fully equipped digital learning lab for disadvantaged and disabled children — powered by solar energy, Starlink internet, and the belief that every child deserves access to technology.</p>
@@ -493,68 +484,68 @@
     </div>
   </div>
 
-  <!-- Accomplishments 2025 -->
+  <!-- Accomplishments -->
   <section id="milestones" class="section" style="background:var(--gray-50,#f8f9fa);">
     <div class="container">
       <div class="lab-accomplishments-grid">
         <div data-animate="fade-up">
-          <span class="section-label" data-i18n="lab.milestones.label">Completed in 2025</span>
-          <h2 class="section-title" data-i18n="lab.milestones.title">What We Built Together</h2>
-          <p class="section-subtitle" data-i18n="lab.milestones.subtitle">From laying the foundations to the first ICT lessons — every milestone reached thanks to your support.</p>
+          <span class="section-label">Our Accomplishments</span>
+          <h2 class="section-title">What We Built Together</h2>
+          <p class="section-subtitle">From preparing the room to running the first lessons — here is what we achieved step by step.</p>
           <div class="milestones-grid-compact">
             <div class="milestone-card">
-              <div class="milestone-icon"><i class="fas fa-sun"></i></div>
-              <h4 data-i18n="lab.m1.title">Solar Energy Installation</h4>
-              <p data-i18n="lab.m1.desc">Full solar power system installed.</p>
+              <div class="milestone-icon"><i class="fas fa-hammer"></i></div>
+              <h4>Room Preparation</h4>
+              <p>We furnished the lab with locally-made wooden desks and chairs, creating a proper classroom from scratch.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
-              <div class="milestone-icon"><i class="fas fa-hammer"></i></div>
-              <h4 data-i18n="lab.m2.title">Room Preparation</h4>
-              <p data-i18n="lab.m2.desc">Lab interior fully prepared with local furniture.</p>
+              <div class="milestone-icon"><i class="fas fa-sun"></i></div>
+              <h4>Solar Energy</h4>
+              <p>Solar panels were installed on the roof — the lab now runs entirely on clean, independent energy.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-shield-halved"></i></div>
-              <h4 data-i18n="lab.m3.title">Security Enhancements</h4>
-              <p data-i18n="lab.m3.desc">Burglar bars and cameras installed.</p>
+              <h4>Security</h4>
+              <p>Burglar bars and CCTV cameras were fitted to protect all equipment around the clock.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-wifi"></i></div>
-              <h4 data-i18n="lab.m4.title">Starlink Internet</h4>
-              <p data-i18n="lab.m4.desc">High-speed connectivity for digital learning.</p>
+              <h4>Starlink Internet</h4>
+              <p>A Starlink satellite dish now gives the school fast, reliable internet — for the very first time.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-desktop"></i></div>
-              <h4 data-i18n="lab.m5.title">Computers Delivered</h4>
-              <p data-i18n="lab.m5.desc">All computers and peripherals delivered.</p>
+              <h4>Computers Delivered</h4>
+              <p>10 computers were shipped from Europe and monitors sourced locally, fully equipping the lab.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-gear"></i></div>
-              <h4 data-i18n="lab.m6.title">Technical Setup</h4>
-              <p data-i18n="lab.m6.desc">All hardware and software installed.</p>
+              <h4>Technical Setup</h4>
+              <p>Windows, educational software and child-safe browser settings were configured on every machine.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-user-tie"></i></div>
-              <h4 data-i18n="lab.m7.title">ICT Teacher Hired</h4>
-              <p data-i18n="lab.m7.desc">Qualified ICT teacher selected.</p>
+              <h4>ICT Teacher Hired</h4>
+              <p>After interviews, a qualified ICT teacher was selected to run structured lessons full-time.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-graduation-cap"></i></div>
-              <h4 data-i18n="lab.m8.title">First ICT Lessons</h4>
-              <p data-i18n="lab.m8.desc">First lessons successfully started.</p>
+              <h4>First ICT Lessons</h4>
+              <p>Children held a mouse for the very first time and started learning to type, draw, and explore.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
           </div>
         </div>
         <div class="lab-intro-img-wrap" data-animate="fade-up" data-delay="150">
           <img src="assets/images/Computer Lab/lab-smile.webp" alt="Child smiling at the computer lab" loading="lazy">
-          <div class="lab-intro-img-caption">Bongai Shamwari School, Zimbabwe — 2025</div>
+          <div class="lab-intro-img-caption">Bongai Shamwari School, Zimbabwe</div>
         </div>
       </div>
     </div>
