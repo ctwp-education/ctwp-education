@@ -339,54 +339,65 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .hero-media {
   position: relative;
 }
-/* ── lite-youtube-embed component styles ── */
-lite-youtube {
-  background-color: #000;
-  position: relative;
-  display: block;
-  contain: content;
-  background-position: center center;
-  background-size: cover;
-  cursor: pointer;
-  max-width: 100%;
-}
-lite-youtube > iframe {
-  width: 100%; height: 100%;
-  position: absolute; top: 0; left: 0;
-  border: 0;
-}
-lite-youtube > .lty-playbtn {
-  display: block;
-  width: 68px; height: 48px;
+/* ── Premium YouTube Facade ── */
+.yt-facade {
   position: absolute;
+  inset: 0;
   cursor: pointer;
-  z-index: 1;
+  overflow: hidden;
+  background: #000;
+}
+.yt-facade img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.yt-facade:hover img { transform: scale(1.04); }
+.yt-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.35) 100%);
+  transition: background 0.3s ease;
+}
+.yt-facade:hover .yt-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.25) 100%);
+}
+.yt-play {
+  position: absolute;
   top: 50%; left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  border: 0;
-  background-color: transparent;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="%23f00"/><path d="M45 24 27 14v20" fill="%23fff"/></svg>');
-  filter: grayscale(100%);
-  transition: filter 0.1s cubic-bezier(0,0,.2,1);
-  border-radius: 10%;
+  transform: translate(-50%, -50%);
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.45);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  pointer-events: none;
 }
-lite-youtube:hover > .lty-playbtn,
-lite-youtube .lty-playbtn:focus {
-  filter: none;
+.yt-facade:hover .yt-play {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: rgba(255,255,255,0.28);
+  border-color: rgba(255,255,255,0.8);
 }
-lite-youtube.lyt-activated { cursor: unset; }
-lite-youtube.lyt-activated::before,
-lite-youtube.lyt-activated > .lty-playbtn { display: none; }
+.yt-play svg {
+  width: 30px; height: 30px;
+  margin-left: 5px; /* optical centering of triangle */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
 
 .hero-video {
+  position: relative;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
   border: 1px solid rgba(255,255,255,0.08);
 }
-.hero-video iframe,
-.hero-video lite-youtube {
+.hero-video iframe {
+  position: absolute; inset: 0;
   width: 100%; height: 100%; border: none;
 }
 
@@ -524,6 +535,7 @@ lite-youtube.lyt-activated > .lty-playbtn { display: none; }
   margin-right: auto;
 }
 .journey-video {
+  position: relative;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   overflow: hidden;
@@ -531,6 +543,7 @@ lite-youtube.lyt-activated > .lty-playbtn { display: none; }
   border: 1px solid var(--gray-200);
 }
 .journey-video iframe {
+  position: absolute; inset: 0;
   width: 100%; height: 100%; border: none;
 }
 .journey-intro p {
@@ -682,11 +695,9 @@ lite-youtube.lyt-activated > .lty-playbtn { display: none; }
   background: linear-gradient(135deg, rgba(13,40,24,0.18) 0%, transparent 60%);
   pointer-events: none;
 }
-.phase-slide-media iframe,
-.phase-slide-media lite-youtube {
+.phase-slide-media iframe {
   width: 100%; height: 100%; border: none;
   position: absolute; inset: 0;
-  aspect-ratio: 16 / 9;
 }
 .phase-slide.phase-future .phase-slide-img img {
   filter: grayscale(20%);

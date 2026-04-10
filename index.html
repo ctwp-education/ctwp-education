@@ -17,7 +17,7 @@
   <link rel="dns-prefetch" href="https://i.ytimg.com">
 
   <!-- Critical CSS (blocking) -->
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 
   <!-- Non-render-blocking: Google Fonts -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -110,7 +110,11 @@
       </div>
       <div class="hero-media" data-animate="fade-up" data-delay="400">
         <div class="hero-video">
-          <lite-youtube videoid="l9BQB784iMY" playlabel="Play: CTWP Project Overview"></lite-youtube>
+          <div class="yt-facade" data-vid="l9BQB784iMY" role="button" tabindex="0" aria-label="Play CTWP Project Overview">
+            <img src="https://i.ytimg.com/vi/l9BQB784iMY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/l9BQB784iMY/hqdefault.jpg'" alt="CTWP Project Overview" loading="lazy">
+            <div class="yt-overlay"></div>
+            <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
+          </div>
         </div>
       </div>
     </div>
@@ -171,7 +175,11 @@
 
         <div class="journey-layout">
           <div class="journey-video">
-            <lite-youtube videoid="zky_9Jy7_Uo" playlabel="Play: CTWP Project Phases"></lite-youtube>
+            <div class="yt-facade" data-vid="zky_9Jy7_Uo" role="button" tabindex="0" aria-label="Play CTWP Project Phases">
+              <img src="https://i.ytimg.com/vi/zky_9Jy7_Uo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/zky_9Jy7_Uo/hqdefault.jpg'" alt="CTWP Project Phases" loading="lazy">
+              <div class="yt-overlay"></div>
+              <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
+            </div>
           </div>
           <div class="journey-intro">
             <p data-i18n="journey.desc">From discovering real needs across 60+ countries to building and improving a pilot school — watch our journey unfold or explore each phase below.</p>
@@ -215,7 +223,11 @@
               </div>
               <div class="phase-slide phase-completed" data-phase="2">
                 <div class="phase-slide-media">
-                  <lite-youtube videoid="BunAyvuqOao" playlabel="Play: CTWP Design Phase"></lite-youtube>
+                  <div class="yt-facade" data-vid="BunAyvuqOao" role="button" tabindex="0" aria-label="Play CTWP Design Phase">
+                    <img src="https://i.ytimg.com/vi/BunAyvuqOao/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/BunAyvuqOao/hqdefault.jpg'" alt="CTWP Design Phase" loading="lazy">
+                    <div class="yt-overlay"></div>
+                    <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
+                  </div>
                   <div class="phase-badge" data-i18n="badge.completed">Completed</div>
                 </div>
                 <div class="phase-slide-content">
@@ -634,9 +646,26 @@
     </div>
   </div>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.0/src/lite-yt-embed.js"></script>
   <script src="assets/js/i18n.js?v=2"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    /* ── Premium YouTube Facade ── */
+    (function () {
+      function activateFacade(facade) {
+        var vid = facade.dataset.vid;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0&modestbranding=1';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+        facade.replaceWith(iframe);
+      }
+      document.querySelectorAll('.yt-facade').forEach(function (f) {
+        f.addEventListener('click', function () { activateFacade(this); });
+        f.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') activateFacade(this); });
+      });
+    })();
+  </script>
   <script>
     (function () {
       var GDPR_KEY = 'ctwp-gdpr';
