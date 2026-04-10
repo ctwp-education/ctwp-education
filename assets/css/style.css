@@ -1418,11 +1418,15 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   border-top: 2px solid var(--orange-500);
   padding: 1.1rem 2rem;
   z-index: 99999;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+  display: none;
+  transform: translateY(110%);
   box-shadow: 0 -6px 32px rgba(0,0,0,0.35);
 }
-.gdpr-banner.gdpr-visible { transform: translateY(0); }
+.gdpr-banner.gdpr-visible {
+  display: block;
+  transform: translateY(0);
+  transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+}
 .gdpr-inner {
   max-width: 1200px;
   margin: 0 auto;

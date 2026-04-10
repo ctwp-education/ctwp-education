@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
   <link rel="icon" type="image/webp" href="assets/images/Logos/ctwp logo round.webp">
   <style>
     /* Subpage Hero Banner */
@@ -506,23 +506,38 @@
     </div>
   </div>
 
-  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/i18n.js?v=2"></script>
   <script src="assets/js/main.js"></script>
   <script>
     (function () {
       var GDPR_KEY = 'ctwp-gdpr';
       var banner = document.getElementById('gdprBanner');
       if (!banner) return;
+      function hideBanner() {
+        banner.style.transition = 'transform 0.4s ease';
+        banner.style.transform = 'translateY(110%)';
+      }
+      function showBanner() {
+        banner.style.display = 'block';
+        banner.style.transform = 'translateY(110%)';
+        banner.style.transition = 'none';
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            banner.style.transition = 'transform 0.45s cubic-bezier(.4,0,.2,1)';
+            banner.style.transform = 'translateY(0)';
+          });
+        });
+      }
       if (!localStorage.getItem(GDPR_KEY)) {
-        setTimeout(function () { banner.classList.add('gdpr-visible'); }, 900);
+        setTimeout(showBanner, 900);
       }
       document.getElementById('gdprAccept').addEventListener('click', function () {
         localStorage.setItem(GDPR_KEY, 'accepted');
-        banner.classList.remove('gdpr-visible');
+        hideBanner();
       });
       document.getElementById('gdprDecline').addEventListener('click', function () {
         localStorage.setItem(GDPR_KEY, 'declined');
-        banner.classList.remove('gdpr-visible');
+        hideBanner();
       });
     })();
   </script>
