@@ -38,7 +38,7 @@ const translations = {
     'lab.ns3.title': 'Launch Full ICT Curriculum', 'lab.ns3.desc': 'Begin the first official teaching term of ICT as a structured subject at Bongai Shamwari — turning the pilot lessons into a complete digital education program.',
     'lab.contact.label': 'Get in Touch', 'lab.contact.title': 'Contact the Project Team',
     'lab.contact.subtitle': 'Questions about the lab, partnership opportunities, or how to contribute? Reach out directly.',
-    'lab.contact.lars.role': 'Digital Montessori Project Lead', 'lab.contact.christa.role': 'Chairman',
+    'lab.contact.lars.role': 'CDO of Bongai', 'lab.contact.christa.role': 'Chairman',
     'lab.cta.title': 'Help Us Keep the Lab Running', 'lab.cta.subtitle': 'Your donation directly funds the ICT teacher\'s salary, new equipment, and the continued education of children who have never had access to a computer before.',
     'lab.cta.btn1': 'Donate Now', 'lab.cta.btn2': 'Bongai Shamwari Website', 'lab.cta.btn3': '← Back to CTWP',
     /* About */
@@ -191,7 +191,7 @@ const translations = {
     'lab.ns3.title': 'Vollständigen ICT-Lehrplan starten', 'lab.ns3.desc': 'Das erste offizielle Unterrichtshalbjahr mit IT als strukturiertem Schulfach an der Bongai Shamwari Schule beginnen.',
     'lab.contact.label': 'Kontakt', 'lab.contact.title': 'Das Projektteam kontaktieren',
     'lab.contact.subtitle': 'Fragen zum Lab, Partnerschaftsmöglichkeiten oder wie Sie beitragen können? Wenden Sie sich direkt an uns.',
-    'lab.contact.lars.role': 'Digital Montessori Projektleiter', 'lab.contact.christa.role': 'Vorsitzende',
+    'lab.contact.lars.role': 'CDO von Bongai', 'lab.contact.christa.role': 'Vorsitzende',
     'lab.cta.title': 'Helfen Sie uns, das Lab am Laufen zu halten', 'lab.cta.subtitle': 'Ihre Spende finanziert direkt das Gehalt der ICT-Lehrkraft, neue Ausstattung und die Bildung von Kindern, die noch nie Zugang zu einem Computer hatten.',
     'lab.cta.btn1': 'Jetzt spenden', 'lab.cta.btn2': 'Bongai Shamwari Website', 'lab.cta.btn3': '← Zurück zu CTWP',
     /* About */
