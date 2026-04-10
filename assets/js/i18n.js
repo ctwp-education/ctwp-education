@@ -117,6 +117,11 @@ const translations = {
     'sub.teachers.badge': 'For Educators & Teachers', 'sub.teachers.title': 'Free Teaching Resources',
     'sub.teachers.desc': 'Curated tools and platforms to help you plan lessons, manage classrooms, assess students, and grow professionally.',
     'sub.teachers.back': 'Back to Resources',
+    /* GDPR */
+    'gdpr.title': 'Cookie & Storage Notice',
+    'gdpr.text': 'We use browser local storage solely to remember your language preference. No tracking cookies or personal data are collected or shared.',
+    'gdpr.accept': 'Accept',
+    'gdpr.decline': 'Decline',
   },
   de: {
     /* Navbar */
@@ -235,6 +240,11 @@ const translations = {
     'sub.teachers.badge': 'Für Lehrerinnen & Lehrer', 'sub.teachers.title': 'Kostenlose Lehrressourcen',
     'sub.teachers.desc': 'Kuratierte Tools und Plattformen für Unterrichtsplanung, Klassenmanagement, Schülerbewertung und berufliche Weiterentwicklung.',
     'sub.teachers.back': 'Zurück zu Ressourcen',
+    /* GDPR */
+    'gdpr.title': 'Cookie- & Speicherhinweis',
+    'gdpr.text': 'Wir verwenden den lokalen Browser-Speicher ausschliesslich, um deine Spracheinstellung zu speichern. Es werden keine Tracking-Cookies oder persönliche Daten erfasst oder weitergegeben.',
+    'gdpr.accept': 'Akzeptieren',
+    'gdpr.decline': 'Ablehnen',
   }
 };
 

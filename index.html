@@ -601,7 +601,40 @@
   </footer>
 
   <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- GDPR Cookie Banner -->
+  <div id="gdprBanner" class="gdpr-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="gdpr-inner">
+      <div class="gdpr-text">
+        <strong data-i18n="gdpr.title">Cookie &amp; Storage Notice</strong>
+        <p data-i18n="gdpr.text">We use browser local storage solely to remember your language preference. No tracking cookies or personal data are collected or shared.</p>
+      </div>
+      <div class="gdpr-actions">
+        <button class="gdpr-btn gdpr-accept" id="gdprAccept" data-i18n="gdpr.accept">Accept</button>
+        <button class="gdpr-btn gdpr-decline" id="gdprDecline" data-i18n="gdpr.decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var GDPR_KEY = 'ctwp-gdpr';
+      var banner = document.getElementById('gdprBanner');
+      if (!banner) return;
+      if (!localStorage.getItem(GDPR_KEY)) {
+        setTimeout(function () { banner.classList.add('gdpr-visible'); }, 900);
+      }
+      document.getElementById('gdprAccept').addEventListener('click', function () {
+        localStorage.setItem(GDPR_KEY, 'accepted');
+        banner.classList.remove('gdpr-visible');
+      });
+      document.getElementById('gdprDecline').addEventListener('click', function () {
+        localStorage.setItem(GDPR_KEY, 'declined');
+        banner.classList.remove('gdpr-visible');
+      });
+    })();
+  </script>
 </body>
 </html>
