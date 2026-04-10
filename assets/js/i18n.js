@@ -11,6 +11,7 @@ const translations = {
     'hero.cta.resources': 'Explore Resources', 'hero.cta.support': 'Support Us', 'hero.cta.about': 'About the Project',
     'stat.countries': 'Countries Visited', 'stat.schools': 'Schools Visited',
     'stat.students': 'Students Reached', 'stat.labs': 'Computer Lab Built', 'stat.labs.cta': 'See the Lab →',
+    'lab.btn': 'See the Computer Lab →', 'lab.banner': 'Explore our Computer Lab in Zimbabwe →',
     /* About */
     'about.label': 'About the Project', 'about.title': 'What We Do',
     'vision.title': 'Our Vision',
@@ -134,6 +135,7 @@ const translations = {
     'hero.cta.resources': 'Ressourcen entdecken', 'hero.cta.support': 'Unterstützen', 'hero.cta.about': 'Über das Projekt',
     'stat.countries': 'Besuchte Länder', 'stat.schools': 'Besuchte Schulen',
     'stat.students': 'Erreichte Schüler', 'stat.labs': 'Computerraum errichtet', 'stat.labs.cta': 'Zum Computer Lab →',
+    'lab.btn': 'Zum Computer Lab →', 'lab.banner': 'Unser Computer Lab in Simbabwe entdecken →',
     /* About */
     'about.label': 'Über das Projekt', 'about.title': 'Was wir tun',
     'vision.title': 'Unsere Vision',

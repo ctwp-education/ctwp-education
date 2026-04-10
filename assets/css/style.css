@@ -444,12 +444,62 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .stat-item-link:hover .stat-number,
 .stat-item-link:hover .stat-plus { color: var(--orange-400); }
 .stat-cta {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--orange-400);
-  margin-top: 0.4rem;
+  display: inline-block;
+  font-size: 0.68rem;
+  color: #1a1a1a;
+  background: var(--orange-400);
+  margin-top: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.28rem 0.8rem;
+  border-radius: var(--radius-full);
+  transition: background var(--transition), transform var(--transition);
+}
+.stat-item-link:hover .stat-cta {
+  background: #f7903c;
+  transform: translateY(-1px);
+}
+/* Phase 3 lab button */
+.phase-lab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  background: var(--orange-500);
+  color: var(--white);
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-full);
+  transition: background var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+.phase-lab-btn:hover {
+  background: var(--orange-400);
+  transform: translateY(-1px);
+}
+/* Below-slider lab banner */
+.phase-lab-banner {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.phase-lab-banner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--orange-500), var(--orange-400));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 20px rgba(240, 104, 48, 0.35);
+}
+.phase-lab-banner a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(240, 104, 48, 0.5);
 }
 
 /* ---------- About ---------- */
