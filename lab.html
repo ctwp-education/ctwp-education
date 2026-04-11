@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- v15 -->
+  <!-- v16 -->
   <meta name="description" content="How CTWP Educational Empowerment and Bongai Shamwari e.V. built the first solar-powered computer lab for disadvantaged children in Mutare, Zimbabwe — bringing digital education to those who need it most.">
   <meta name="keywords" content="computer lab Zimbabwe, digital education Zimbabwe, Mutare Zimbabwe school, CTWP computer lab, Bongai Shamwari, educational technology Africa, solar powered school Zimbabwe">
   <meta name="author" content="CTWP Educational Empowerment">
@@ -219,26 +219,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 80px;
+      height: 80px;
     }
     .lab-partner-logo-wrap img {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
-      filter: drop-shadow(0 1px 4px rgba(0,0,0,0.08));
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));
     }
     .lab-partner-divider {
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      padding: 0 0.85rem;
+      padding: 0 1rem;
+      flex-shrink: 0;
     }
     .lab-partner-divider-line {
-      width: 16px;
+      width: 14px;
       height: 1px;
-      background: var(--gray-200, #e5e7eb);
+      background: var(--gray-300, #d1d5db);
     }
     .lab-partner-divider-x {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--gray-300, #d1d5db);
       font-weight: 300;
       line-height: 1;
@@ -246,7 +249,6 @@
     .lab-partner-tag {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
       font-size: 0.58rem;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -257,9 +259,8 @@
       border-radius: var(--radius-full);
       padding: 0.22rem 0.65rem;
       white-space: nowrap;
-      margin-left: 0.75rem;
+      margin-left: 1rem;
     }
-    .lab-partner-tag i { font-size: 0.55rem; }
     /* Text below logo row */
     .lab-partner-text-col {
       display: flex;
@@ -696,7 +697,7 @@
             <div class="lab-partner-logo-wrap">
               <img src="assets/images/Computer Lab/lab-bongai-logo.webp" alt="Bongai Shamwari e.V.">
             </div>
-            <span class="lab-partner-tag"><i class="fas fa-handshake-simple"></i> Joint Initiative</span>
+            <span class="lab-partner-tag">Joint Initiative</span>
           </div>
           <!-- Text -->
           <div class="lab-partner-text-col">
