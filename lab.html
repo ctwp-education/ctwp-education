@@ -407,10 +407,13 @@
 
     /* Gallery videos row */
     .lab-gallery-videos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       margin-top: 1.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .lab-gallery-videos-label {
       text-align: center;
@@ -439,7 +442,7 @@
       .milestones-grid-compact { grid-template-columns: 1fr; }
       .open-points-grid { grid-template-columns: 1fr; }
       .lab-gallery-grid { grid-template-columns: 1fr 1fr; }
-      .lab-gallery-videos { grid-template-columns: 1fr; }
+      .lab-gallery-videos { max-width: 100%; }
     }
   </style>
 </head>
@@ -766,14 +769,14 @@
       <div class="lab-gallery-videos" data-animate="fade-up">
         <div class="hero-video">
           <div class="yt-facade" data-vid="1Sggbi2LR88" role="button" tabindex="0" aria-label="Play Computer Lab video">
-            <img src="https://i.ytimg.com/vi/1Sggbi2LR88/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1Sggbi2LR88/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy">
+            <img class="yt-thumb" data-vid="1Sggbi2LR88" src="https://i.ytimg.com/vi/1Sggbi2LR88/sddefault.jpg" alt="Computer Lab Zimbabwe — Digital Literacy at Bongai Shamwari" loading="lazy">
             <div class="yt-overlay"></div>
             <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
           </div>
         </div>
         <div class="hero-video">
           <div class="yt-facade" data-vid="HN6mdXWQsoo" role="button" tabindex="0" aria-label="Play Computer Lab video 2">
-            <img src="https://i.ytimg.com/vi/HN6mdXWQsoo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HN6mdXWQsoo/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy">
+            <img class="yt-thumb" data-vid="HN6mdXWQsoo" src="https://i.ytimg.com/vi/HN6mdXWQsoo/sddefault.jpg" alt="Computer Lab Zimbabwe — First ICT Lessons" loading="lazy">
             <div class="yt-overlay"></div>
             <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
           </div>
@@ -861,6 +864,22 @@
 
   <script src="assets/js/i18n.js?v=2"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    /* ── YouTube thumbnail fallback: sddefault → hqdefault → mqdefault ── */
+    (function () {
+      var qualities = ['sddefault', 'hqdefault', 'mqdefault', 'default'];
+      document.querySelectorAll('img.yt-thumb').forEach(function (img) {
+        var vid = img.dataset.vid;
+        var qi = 0;
+        img.onerror = function () {
+          qi++;
+          if (qi < qualities.length) {
+            img.src = 'https://i.ytimg.com/vi/' + vid + '/' + qualities[qi] + '.jpg';
+          }
+        };
+      });
+    })();
+  </script>
   <script>
     /* ── YouTube Facade ── */
     (function () {
