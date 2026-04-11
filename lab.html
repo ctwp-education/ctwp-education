@@ -58,7 +58,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
-      align-items: end;
+      align-items: center;
     }
     .lab-hero-content { padding-bottom: 4rem; }
     .lab-hero-content .hero-badge {
@@ -101,8 +101,6 @@
       overflow: hidden;
       box-shadow: 0 20px 60px rgba(0,0,0,0.45);
       border: 1px solid rgba(255,255,255,0.08);
-      align-self: end;
-      order: -1;
     }
     .lab-hero-img img {
       position: absolute;
@@ -164,8 +162,8 @@
     .lab-partnership-text { flex: 1; min-width: 200px; }
     .lab-partnership-text p { font-size: 0.87rem; color: var(--gray-600); line-height: 1.65; margin: 0; }
     .lab-partnership-text strong { color: var(--green-800); }
-    .lab-partnership-map { flex-shrink: 0; width: 90px; opacity: 0.85; }
-    .lab-partnership-map svg { width: 100%; height: auto; }
+    .lab-partnership-map { flex-shrink: 0; width: 160px; opacity: 0.9; }
+    .lab-partnership-map svg { width: 100%; height: auto; border-radius: 8px; }
 
     /* Milestone grid — 4 columns */
     .milestones-grid-compact {
@@ -411,11 +409,8 @@
     .lab-gallery-videos {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 1.5rem;
       margin-top: 1.5rem;
-      max-width: 440px;
-      margin-left: auto;
-      margin-right: auto;
     }
     .lab-gallery-videos-label {
       text-align: center;
@@ -444,7 +439,7 @@
       .milestones-grid-compact { grid-template-columns: 1fr; }
       .open-points-grid { grid-template-columns: 1fr; }
       .lab-gallery-grid { grid-template-columns: 1fr 1fr; }
-      .lab-gallery-videos { grid-template-columns: 1fr; max-width: 220px; }
+      .lab-gallery-videos { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -546,14 +541,96 @@
           <p>This computer lab was realised through the partnership between <strong>CTWP Educational Empowerment</strong> (Switzerland) and <strong>Bongai Shamwari e.V.</strong> (Germany) — connecting European support with Zimbabwean dedication to bring digital education to children who need it most.</p>
         </div>
         <div class="lab-partnership-map" aria-hidden="true">
-          <svg viewBox="0 0 500 560" xmlns="http://www.w3.org/2000/svg">
-            <path class="africa-land" d="M210,18 L260,14 L310,22 L355,38 L385,55 L405,80 L415,110 L420,140 L418,165 L425,185 L435,210 L440,240 L435,265 L428,290 L425,315 L430,335 L438,355 L442,375 L438,395 L428,415 L412,432 L395,448 L375,462 L355,474 L335,484 L315,492 L295,498 L275,502 L255,500 L238,492 L222,480 L210,465 L202,448 L198,430 L195,410 L192,388 L188,365 L182,345 L175,328 L168,312 L160,295 L152,278 L145,260 L138,242 L132,222 L126,202 L120,182 L115,162 L110,142 L108,122 L110,102 L115,82 L125,64 L140,48 L158,34 L178,24 Z"/>
-            <path class="africa-land" d="M138,28 L155,14 L178,8 L210,18 L178,24 L158,34 L140,48 Z"/>
-            <path class="africa-land" d="M110,142 L100,155 L92,170 L88,188 L90,205 L98,218 L110,225 L120,215 L126,202 L120,182 L115,162 Z"/>
-            <path class="africa-land" d="M425,185 L445,195 L462,210 L470,228 L465,245 L455,255 L440,240 L435,210 Z"/>
-            <polygon class="africa-zimbabwe" points="218,370 262,370 268,380 270,395 262,408 240,415 218,408 212,395 212,380"/>
-            <circle class="africa-mutare-pulse" cx="261" cy="382" r="5" fill="var(--orange-300,#f9a86d)" opacity="0.55"/>
-            <circle cx="261" cy="382" r="5" fill="#fff" stroke="var(--orange-500)" stroke-width="2.5"/>
+          <!--
+            Regional map: East/Southern Africa
+            Countries shown: Tanzania, Malawi, Zambia, Mozambique, Zimbabwe (highlighted), Botswana, South Africa, Namibia
+            ViewBox 0 0 400 420 — approx lon 20E–40E, lat 5S–35S
+            Scale: x=(lon-20)/20*400, y=(lat-5)/30*420
+            Key coords (lon,lat → x,y):
+              Zambia NW (22,-8)→(40,42), NE (33,-8)→(260,42), SE (33,-18)→(260,182), SW (22,-18)→(40,182)
+              Zimbabwe W (26,-18)→(120,182), E (33,-18)→(260,182), SE (33,-22)→(260,238), SW (26,-22)→(120,238)
+              Mozambique W coast approx lon33 lat-10 to -26
+              Tanzania S (30,-11)→(200,126), etc
+              Mutare: lon32.66 lat-18.97 → x=253,y=195
+          -->
+          <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <defs>
+              <filter id="map-shadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+              </filter>
+            </defs>
+
+            <!-- Ocean background -->
+            <rect width="400" height="420" fill="#ddeeff" rx="8"/>
+
+            <!-- Tanzania -->
+            <path fill="#c8d8c8" stroke="#fff" stroke-width="1.2" d="
+              M200,0 L280,0 L290,20 L295,50 L290,80 L285,110 L280,130 L260,140
+              L240,150 L220,155 L200,150 L185,140 L175,120 L170,95 L172,65 L180,35 Z"/>
+
+            <!-- Malawi (thin sliver on east side) -->
+            <path fill="#b8ccb8" stroke="#fff" stroke-width="1" d="
+              M280,130 L290,115 L295,130 L290,160 L285,185 L278,200 L270,195
+              L268,175 L272,155 L278,140 Z"/>
+
+            <!-- Zambia -->
+            <path fill="#c8d8c8" stroke="#fff" stroke-width="1.2" d="
+              M40,42 L130,30 L180,35 L200,50 L200,150 L185,140 L160,145
+              L145,155 L130,150 L120,155 L100,150 L80,155 L60,148 L40,140 Z"/>
+
+            <!-- Mozambique (east of Zimbabwe) -->
+            <path fill="#b8ccb8" stroke="#fff" stroke-width="1" d="
+              M260,140 L280,130 L278,140 L272,155 L268,175 L270,195 L265,220
+              L260,245 L255,265 L250,285 L245,305 L250,330 L245,360 L235,380
+              L225,395 L215,410 L200,420 L220,420 L240,410 L260,390 L275,365
+              L280,340 L282,310 L280,280 L278,255 L275,235 L272,210 L268,190
+              L268,170 L272,155 Z"/>
+
+            <!-- Zimbabwe — HIGHLIGHTED -->
+            <path class="africa-zimbabwe" stroke="#fff" stroke-width="1.5" d="
+              M120,155 L130,150 L145,155 L160,145 L185,140 L200,150 L220,155
+              L240,150 L260,140 L268,155 L268,175 L265,200 L260,225 L255,245
+              L240,250 L220,255 L200,255 L180,252 L160,248 L140,242 L120,235
+              L108,220 L105,200 L108,180 L115,165 Z"/>
+
+            <!-- Botswana (south-west of Zimbabwe) -->
+            <path fill="#c8d8c8" stroke="#fff" stroke-width="1.2" d="
+              M40,140 L60,148 L80,155 L100,150 L108,165 L105,200 L108,220
+              L120,235 L110,250 L100,265 L85,270 L65,268 L45,260 L28,248
+              L20,230 L18,210 L22,190 L30,170 L38,155 Z"/>
+
+            <!-- Namibia (west) -->
+            <path fill="#c8d8c8" stroke="#fff" stroke-width="1.2" d="
+              M0,80 L18,80 L20,100 L22,130 L20,160 L18,190 L20,210
+              L18,230 L20,248 L10,260 L0,265 Z"/>
+
+            <!-- South Africa (south) -->
+            <path fill="#c8d8c8" stroke="#fff" stroke-width="1.2" d="
+              M20,248 L28,248 L45,260 L65,268 L85,270 L100,265 L110,250
+              L120,235 L140,242 L160,248 L180,252 L200,255 L220,255 L240,250
+              L255,245 L260,265 L255,285 L250,305 L245,330 L250,360 L240,380
+              L225,395 L210,410 L195,420 L170,420 L145,415 L120,405 L95,390
+              L75,375 L58,358 L45,338 L35,315 L28,290 L22,268 Z"/>
+
+            <!-- Country borders & labels -->
+            <text x="230" y="70" text-anchor="middle" font-size="9" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">TANZANIA</text>
+            <text x="95" y="90" text-anchor="middle" font-size="9" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">ZAMBIA</text>
+            <text x="285" y="165" text-anchor="middle" font-size="7.5" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">MALAWI</text>
+            <text x="272" y="240" text-anchor="middle" font-size="7.5" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">MOZAM-</text>
+            <text x="272" y="250" text-anchor="middle" font-size="7.5" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">BIQUE</text>
+            <text x="68" y="215" text-anchor="middle" font-size="9" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">BOTSWANA</text>
+            <text x="8" y="180" text-anchor="middle" font-size="7.5" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600" transform="rotate(-90,8,180)">NAMIBIA</text>
+            <text x="150" y="345" text-anchor="middle" font-size="9" fill="#5a7a5a" font-family="Inter,sans-serif" font-weight="600">SOUTH AFRICA</text>
+
+            <!-- Zimbabwe label -->
+            <text x="188" y="205" text-anchor="middle" font-size="10" font-weight="800" fill="white" font-family="Inter,sans-serif" opacity="0.95">ZIMBABWE</text>
+
+            <!-- Mutare marker (lon32.66,lat-18.97) on Zimbabwe/Mozambique border → approx x=253,y=196 -->
+            <circle class="africa-mutare-pulse" cx="255" cy="196" r="6" fill="#f97316" opacity="0.55"/>
+            <circle cx="255" cy="196" r="6" fill="#fff" stroke="#f97316" stroke-width="2.5"/>
+
+            <!-- Mutare label -->
+            <text x="242" y="188" text-anchor="middle" font-size="8" font-weight="700" fill="#1e293b" font-family="Inter,sans-serif">Mutare</text>
           </svg>
         </div>
       </div>
@@ -629,6 +706,12 @@
           <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Sponsor now</a>
         </div>
         <div class="milestone-card open-point-card">
+          <div class="milestone-icon op-icon-orange"><i class="fas fa-satellite-dish"></i></div>
+          <h4>Internet Costs</h4>
+          <p>The Starlink subscription must be funded monthly to keep the lab connected to the world.</p>
+          <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Donate</a>
+        </div>
+        <div class="milestone-card open-point-card">
           <div class="milestone-icon op-icon-orange"><i class="fas fa-print"></i></div>
           <h4>Printer &amp; Projector</h4>
           <p>A printer, projector, and classroom display are still missing from the lab.</p>
@@ -638,12 +721,6 @@
           <div class="milestone-icon op-icon-orange"><i class="fas fa-box-open"></i></div>
           <h4>Remaining Supplies</h4>
           <p>Mouse pads, USB sticks, dust covers, shelves, and ICT schoolbooks are outstanding.</p>
-          <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Donate</a>
-        </div>
-        <div class="milestone-card open-point-card">
-          <div class="milestone-icon op-icon-orange"><i class="fas fa-book-open"></i></div>
-          <h4>ICT Curriculum Launch</h4>
-          <p>Fund the first full ICT teaching term — turning pilot lessons into a structured digital education programme.</p>
           <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Donate</a>
         </div>
       </div>
@@ -673,7 +750,7 @@
           <img src="assets/images/Computer Lab/lab-teacher.webp" alt="ICT teacher with student" loading="lazy">
         </div>
         <div class="lab-gimg">
-          <img src="assets/images/Computer Lab/lab-drawing.webp" alt="Child drawing on computer" loading="lazy">
+          <img src="assets/images/Computer Lab/lab-smile.webp" alt="Child smiling at the computer" loading="lazy">
         </div>
         <div class="lab-gimg">
           <img src="assets/images/Computer Lab/lab-teamwork.webp" alt="Teacher supporting child at computer" loading="lazy">
@@ -684,22 +761,19 @@
         <div class="lab-gimg">
           <img src="assets/images/Computer Lab/lab-inclusive.webp" alt="Inclusive learning — child with disability" loading="lazy">
         </div>
-        <div class="lab-gimg">
-          <img src="assets/images/Computer Lab/lab-smile.webp" alt="Child smiling at the computer" loading="lazy">
-        </div>
       </div>
       <p class="lab-gallery-videos-label">Video Impressions</p>
       <div class="lab-gallery-videos" data-animate="fade-up">
-        <div class="lab-yt-short">
+        <div class="hero-video">
           <div class="yt-facade" data-vid="1Sggbi2LR88" role="button" tabindex="0" aria-label="Play Computer Lab video">
-            <img src="https://i.ytimg.com/vi/1Sggbi2LR88/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1Sggbi2LR88/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            <img src="https://i.ytimg.com/vi/1Sggbi2LR88/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1Sggbi2LR88/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy">
             <div class="yt-overlay"></div>
             <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
           </div>
         </div>
-        <div class="lab-yt-short">
+        <div class="hero-video">
           <div class="yt-facade" data-vid="HN6mdXWQsoo" role="button" tabindex="0" aria-label="Play Computer Lab video 2">
-            <img src="https://i.ytimg.com/vi/HN6mdXWQsoo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HN6mdXWQsoo/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+            <img src="https://i.ytimg.com/vi/HN6mdXWQsoo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HN6mdXWQsoo/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy">
             <div class="yt-overlay"></div>
             <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
           </div>
