@@ -387,6 +387,176 @@
     }
     .lab-cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
+    /* Open points */
+    .open-points-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--orange-500);
+      margin: 1.75rem 0 0.75rem;
+    }
+    .open-points-label::before, .open-points-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-200);
+    }
+    .open-points-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .open-point-card {
+      background: var(--white);
+      border: 1.5px dashed var(--orange-300, #f9b17a);
+      border-radius: var(--radius-lg);
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .open-point-card .op-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #fff4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .open-point-card .op-icon i { color: var(--orange-500); font-size: 0.8rem; }
+    .open-point-card h5 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .open-point-card p {
+      font-size: 0.7rem;
+      color: var(--gray-500);
+      line-height: 1.45;
+      margin: 0;
+      flex: 1;
+    }
+    .open-point-card .op-donate {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--orange-500);
+      text-decoration: none;
+      margin-top: 0.2rem;
+      transition: color var(--transition);
+    }
+    .open-point-card .op-donate:hover { color: #c0410f; }
+    .open-point-card .op-donate i { font-size: 0.6rem; }
+    @media (max-width: 700px) {
+      .open-points-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Collaboration logos */
+    .lab-collab-logos {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .lab-collab-logos img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .lab-collab-x {
+      font-size: 1.4rem;
+      color: var(--gray-400);
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    /* Africa map section */
+    .lab-africa-section { background: var(--white); padding: 4rem 0; }
+    .lab-africa-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .lab-africa-text .section-label { margin-bottom: 0.5rem; }
+    .lab-africa-text h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--gray-900);
+      margin: 0 0 1rem;
+      line-height: 1.2;
+    }
+    .lab-africa-text p {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .lab-africa-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+    }
+    .lab-africa-fact {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+    .lab-africa-fact i { color: var(--orange-500); width: 16px; flex-shrink: 0; }
+    .lab-africa-map-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .lab-africa-map-wrap svg {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      filter: drop-shadow(0 6px 20px rgba(0,0,0,0.10));
+    }
+    .africa-land { fill: #e2e8f0; }
+    .africa-zimbabwe { fill: var(--orange-500); }
+    .africa-mutare-pulse {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: mutare-pulse 1.8s ease-out infinite;
+    }
+    @keyframes mutare-pulse {
+      0%   { opacity: 0.55; transform: scale(1); }
+      100% { opacity: 0; transform: scale(3); }
+    }
+
+    /* Gallery videos row */
+    .lab-gallery-videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lab-gallery-videos-label {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .lab-hero-inner { grid-template-columns: 1fr; }
@@ -396,11 +566,16 @@
       .lab-gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .lab-gimg-wide { grid-column: span 1; aspect-ratio: 1 !important; }
       .lab-contacts-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .lab-africa-inner { grid-template-columns: 1fr; }
+      .lab-africa-map-wrap { order: -1; }
+      .lab-africa-map-wrap svg { max-width: 220px; }
+      .lab-gallery-videos { max-width: 100%; }
     }
     @media (max-width: 600px) {
       .milestones-grid-compact { grid-template-columns: 1fr; }
       .lab-gallery-grid { grid-template-columns: 1fr 1fr; }
       .nextstep-item { flex-direction: column; gap: 1rem; }
+      .lab-gallery-videos { grid-template-columns: 1fr; max-width: 220px; }
     }
   </style>
 </head>
@@ -454,7 +629,7 @@
       <div class="lab-hero-content" data-animate="fade-up">
         <div class="hero-badge">
           <span class="fi fi-zw" style="font-size:1em;"></span>
-          Zimbabwe · Bongai Shamwari
+          Zimbabwe · Mutare · Bongai Shamwari
         </div>
         <h1>Our <em>Computer Lab</em> in Zimbabwe</h1>
         <p data-i18n="lab.hero.subtitle">A fully equipped digital learning lab for disadvantaged and disabled children — powered by solar energy, Starlink internet, and the belief that every child deserves access to technology.</p>
@@ -489,6 +664,11 @@
     <div class="container">
       <div class="lab-accomplishments-grid">
         <div data-animate="fade-up">
+          <div class="lab-collab-logos">
+            <img src="assets/images/Logos/ctwp logo round.webp" alt="CTWP Educational Empowerment">
+            <span class="lab-collab-x">×</span>
+            <img src="assets/images/Computer Lab/lab-bongai-logo.webp" alt="Bongai Shamwari e.V.">
+          </div>
           <span class="section-label">Our Accomplishments</span>
           <h2 class="section-title">What We Built Together</h2>
           <p class="section-subtitle">From preparing the room to running the first lessons — here is what we achieved step by step.</p>
@@ -520,7 +700,7 @@
             <div class="milestone-card">
               <div class="milestone-icon"><i class="fas fa-desktop"></i></div>
               <h4>Computers Delivered</h4>
-              <p>10 computers were shipped from Europe and monitors sourced locally, fully equipping the lab.</p>
+              <p>Computers were shipped from Europe and monitors sourced locally, fully equipping the lab.</p>
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
             <div class="milestone-card">
@@ -542,10 +722,92 @@
               <span class="milestone-done"><i class="fas fa-check"></i> Done</span>
             </div>
           </div>
+
+          <div class="open-points-label">Still needed — can you help?</div>
+          <div class="open-points-grid">
+            <div class="open-point-card">
+              <div class="op-icon"><i class="fas fa-chalkboard-user"></i></div>
+              <h5>ICT Teacher Salary</h5>
+              <p>We need ongoing sponsors to fund the full-time ICT educator each year.</p>
+              <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Sponsor now</a>
+            </div>
+            <div class="open-point-card">
+              <div class="op-icon"><i class="fas fa-print"></i></div>
+              <h5>Printer &amp; Projector</h5>
+              <p>A printer, projector, and classroom display are still missing from the lab.</p>
+              <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Donate</a>
+            </div>
+            <div class="open-point-card">
+              <div class="op-icon"><i class="fas fa-box-open"></i></div>
+              <h5>Remaining Supplies</h5>
+              <p>Mouse pads, USB sticks, dust covers, shelves, and ICT schoolbooks are outstanding.</p>
+              <a href="https://bongai-shamwari.org/en/donations-digital-education/" target="_blank" rel="noopener" class="op-donate"><i class="fas fa-heart"></i> Donate</a>
+            </div>
+          </div>
         </div>
         <div class="lab-intro-img-wrap" data-animate="fade-up" data-delay="150">
           <img src="assets/images/Computer Lab/lab-smile.webp" alt="Child smiling at the computer lab" loading="lazy">
           <div class="lab-intro-img-caption">Bongai Shamwari School, Zimbabwe</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Africa Map -->
+  <section class="lab-africa-section">
+    <div class="container">
+      <div class="lab-africa-inner">
+        <div class="lab-africa-text" data-animate="fade-up">
+          <span class="section-label">Where We Work</span>
+          <h3>Zimbabwe — <em style="font-style:italic;color:var(--orange-500);">Mutare</em></h3>
+          <p>The Bongai Shamwari kindergarten and school is located in <strong>Mutare</strong>, Zimbabwe's fourth-largest city, situated near the border with Mozambique in the Eastern Highlands. The region faces high levels of poverty and limited access to digital infrastructure — making this computer lab a true first for many children.</p>
+          <div class="lab-africa-facts">
+            <div class="lab-africa-fact"><i class="fas fa-location-dot"></i> Mutare, Manicaland Province, Zimbabwe</div>
+            <div class="lab-africa-fact"><i class="fas fa-school"></i> Bongai Shamwari Kindergarten &amp; School</div>
+            <div class="lab-africa-fact"><i class="fas fa-globe-africa"></i> Southern Africa · 18.97°S, 32.66°E</div>
+          </div>
+        </div>
+        <div class="lab-africa-map-wrap" data-animate="fade-up" data-delay="150">
+          <!-- Simplified Africa SVG with Zimbabwe highlighted and Mutare marker -->
+          <svg viewBox="0 0 500 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Africa with Zimbabwe highlighted">
+            <title>Africa map — Zimbabwe highlighted, Mutare marked</title>
+            <!-- Africa outline (simplified) -->
+            <path class="africa-land" d="
+              M210,18 L260,14 L310,22 L355,38 L385,55 L405,80 L415,110
+              L420,140 L418,165 L425,185 L435,210 L440,240 L435,265
+              L428,290 L425,315 L430,335 L438,355 L442,375 L438,395
+              L428,415 L412,432 L395,448 L375,462 L355,474 L335,484
+              L315,492 L295,498 L275,502 L255,500 L238,492 L222,480
+              L210,465 L202,448 L198,430 L195,410 L192,388 L188,365
+              L182,345 L175,328 L168,312 L160,295 L152,278 L145,260
+              L138,242 L132,222 L126,202 L120,182 L115,162 L110,142
+              L108,122 L110,102 L115,82 L125,64 L140,48 L158,34 L178,24 Z
+            "/>
+            <!-- Morocco / North bulge -->
+            <path class="africa-land" d="M138,28 L155,14 L178,8 L210,18 L178,24 L158,34 L140,48 Z"/>
+            <!-- West Africa bump -->
+            <path class="africa-land" d="M110,142 L100,155 L92,170 L88,188 L90,205 L98,218 L110,225 L120,215 L126,202 L120,182 L115,162 Z"/>
+            <!-- Horn of Africa -->
+            <path class="africa-land" d="M425,185 L445,195 L462,210 L470,228 L465,245 L455,255 L440,240 L435,210 Z"/>
+
+            <!-- Zimbabwe (approx position in southern Africa) -->
+            <!-- Zimbabwe is roughly at lat -17 to -22.5, lon 25.2 to 33.1 -->
+            <!-- In this 500x560 viewBox, mapping Africa's extent: lon 17W-51E, lat 37N-35S -->
+            <!-- Scaling: x = (lon + 17) / 68 * 380 + 60, y = (37 - lat) / 72 * 500 + 20 -->
+            <!-- Zimbabwe corners approx: -->
+            <!-- NW: lon25.2, lat-17 → x=218, y=370  NE: lon33.1, lat-17 → x=262, y=370 -->
+            <!-- SW: lon25.2, lat-22.5 → x=218, y=408  SE: lon33.1, lat-22.5 → x=262, y=408 -->
+            <polygon class="africa-zimbabwe" points="218,370 262,370 268,380 270,395 262,408 240,415 218,408 212,395 212,380"/>
+
+            <!-- Mutare marker: lon32.66, lat-18.97 → x=261, y=382 -->
+            <circle cx="261" cy="382" r="5" fill="#fff" stroke="var(--orange-500)" stroke-width="2.5"/>
+            <circle class="africa-mutare-pulse" cx="261" cy="382" r="5" fill="var(--orange-300,#f9a86d)" opacity="0.55"/>
+
+            <!-- Label: Zimbabwe -->
+            <text x="240" y="395" text-anchor="middle" font-size="9" font-weight="700" fill="white" font-family="Inter,sans-serif" opacity="0.9">ZIMBABWE</text>
+            <!-- Label: Mutare -->
+            <text x="261" y="372" text-anchor="middle" font-size="8" font-weight="600" fill="var(--gray-800,#1e293b)" font-family="Inter,sans-serif">Mutare</text>
+          </svg>
         </div>
       </div>
     </div>
@@ -584,6 +846,9 @@
         <div class="lab-gimg">
           <img src="assets/images/Computer Lab/lab-inclusive.webp" alt="Inclusive learning — child with disability" loading="lazy">
         </div>
+      </div>
+      <p class="lab-gallery-videos-label">Video Impressions</p>
+      <div class="lab-gallery-videos" data-animate="fade-up">
         <div class="lab-yt-short">
           <div class="yt-facade" data-vid="1Sggbi2LR88" role="button" tabindex="0" aria-label="Play Computer Lab video">
             <img src="https://i.ytimg.com/vi/1Sggbi2LR88/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1Sggbi2LR88/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
@@ -592,8 +857,8 @@
           </div>
         </div>
         <div class="lab-yt-short">
-          <div class="yt-facade" data-vid="1Sggbi2LR88" role="button" tabindex="0" aria-label="Play Computer Lab video 2">
-            <img src="https://i.ytimg.com/vi/1Sggbi2LR88/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/1Sggbi2LR88/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          <div class="yt-facade" data-vid="HN6mdXWQsoo" role="button" tabindex="0" aria-label="Play Computer Lab video 2">
+            <img src="https://i.ytimg.com/vi/HN6mdXWQsoo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HN6mdXWQsoo/hqdefault.jpg'" alt="Computer Lab Zimbabwe" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
             <div class="yt-overlay"></div>
             <div class="yt-play"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6,3 20,12 6,21" fill="white"/></svg></div>
           </div>
