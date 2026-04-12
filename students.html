@@ -55,15 +55,15 @@
 
   <!-- Non-render-blocking: Google Fonts -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript></noscript>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Non-render-blocking: Font Awesome -->
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript></noscript>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
   <!-- Non-render-blocking: Flag icons -->
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript></noscript>
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"></noscript>
 
   <link rel="preload" as="image" href="assets/images/Logos/ctwp logo round.webp" type="image/webp" fetchpriority="high">
   
@@ -570,8 +570,8 @@
     </div>
   </div>
 
-  <script src="assets/js/i18n.js?v=2"></script>
-  <script src="assets/js/main.js"></script>
+  <script defer src="assets/js/i18n.js?v=2"></script>
+  <script defer src="assets/js/main.js"></script>
   <script>
     (function () {
       var GDPR_KEY = 'ctwp-gdpr';
