@@ -248,6 +248,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   white-space: nowrap;
 }
 .nav-btn-lab:hover { border-color: var(--white); }
+.nav-btn-lab.active { border-color: var(--orange-500); color: var(--orange-400); }
 
 /* Language Toggle */
 .lang-toggle {
