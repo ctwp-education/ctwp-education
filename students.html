@@ -66,13 +66,11 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"></noscript>
 
   <link rel="preload" as="image" href="assets/images/Logos/ctwp logo round.webp" type="image/webp" fetchpriority="high">
-  
-  
-  
-  <link rel="stylesheet" href="assets/css/style.css?v=15">
+
+  <link rel="stylesheet" href="assets/css/style.css?v=16">
   <link rel="icon" type="image/webp" href="assets/images/Logos/ctwp logo round.webp">
   <style>
-    /* Subpage Hero Banner */
+    /* ── Subpage Hero ─────────────────────────────────── */
     .subpage-hero {
       background: var(--green-900);
       color: var(--white);
@@ -101,7 +99,7 @@
       color: var(--gray-400);
       font-size: 1.05rem;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 1.5rem;
     }
     .subpage-hero .back-link {
       display: inline-flex;
@@ -113,60 +111,247 @@
       margin-bottom: 1.5rem;
       transition: color var(--transition);
     }
-    .subpage-hero .back-link:hover {
-      color: var(--orange-400);
-    }
+    .subpage-hero .back-link:hover { color: var(--orange-400); }
 
-    /* Category Header */
-    .category-icon {
-      display: inline-flex;
-      align-items: center;
+    /* Hero stats strip */
+    .hero-stats {
+      display: flex;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-sm);
-      background: var(--green-50);
-      color: var(--green-600);
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
-    /* Resource Cards as Links */
-    a.resource-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
+    /* ── Subjects Navigation ──────────────────────────── */
+    .subjects-nav {
+      position: sticky;
+      top: 4.5rem;
+      z-index: 200;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      overflow-x: auto;
+      scrollbar-width: none;
     }
-    .resource-card .card-header {
+    .subjects-nav::-webkit-scrollbar { display: none; }
+    .subjects-nav-inner {
+      display: flex;
+      min-width: max-content;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .subject-tab {
       display: flex;
       align-items: center;
+      gap: 0.45rem;
+      padding: 0.85rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .subject-tab:hover { color: var(--gray-900); }
+    .subject-tab.active { color: var(--gray-900); border-bottom-color: var(--orange-500); }
+    .tab-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Subject Sections ─────────────────────────────── */
+    .subject-section {
+      scroll-margin-top: calc(4.5rem + 44px);
+    }
+    .section-alt { background: var(--gray-50); }
+
+    /* Section header with subject color accent */
+    .subject-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
+    .subject-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+    .subject-header-text .section-label {
+      margin-bottom: 0.25rem;
+    }
+    .subject-header-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 400;
+      color: var(--gray-900);
+      margin: 0 0 0.3rem;
+    }
+    .subject-header-text p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* ── Resource Cards ───────────────────────────────── */
+    a.resource-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      border-top: 3px solid transparent;
+    }
+    /* Subject-specific top border colors */
+    .sec-math     .resource-card { border-top-color: #3b82f6; }
+    .sec-science  .resource-card { border-top-color: #16a34a; }
+    .sec-reading  .resource-card { border-top-color: #7c3aed; }
+    .sec-coding   .resource-card { border-top-color: #0ea5e9; }
+    .sec-languages .resource-card { border-top-color: #f97316; }
+    .sec-history  .resource-card { border-top-color: #b45309; }
+    .sec-arts     .resource-card { border-top-color: #db2777; }
+    .sec-ai       .resource-card { border-top-color: #6366f1; }
+    .sec-study    .resource-card { border-top-color: #0d9488; }
+
+    /* Subject hover border */
+    .sec-math     .resource-card:hover { border-color: #3b82f6; }
+    .sec-science  .resource-card:hover { border-color: #16a34a; }
+    .sec-reading  .resource-card:hover { border-color: #7c3aed; }
+    .sec-coding   .resource-card:hover { border-color: #0ea5e9; }
+    .sec-languages .resource-card:hover { border-color: #f97316; }
+    .sec-history  .resource-card:hover { border-color: #b45309; }
+    .sec-arts     .resource-card:hover { border-color: #db2777; }
+    .sec-ai       .resource-card:hover { border-color: #6366f1; }
+    .sec-study    .resource-card:hover { border-color: #0d9488; }
+
+    /* Card icon area */
+    .card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .sec-math     .card-icon { background: #eff6ff; color: #3b82f6; }
+    .sec-science  .card-icon { background: #f0fdf4; color: #16a34a; }
+    .sec-reading  .card-icon { background: #f5f3ff; color: #7c3aed; }
+    .sec-coding   .card-icon { background: #f0f9ff; color: #0ea5e9; }
+    .sec-languages .card-icon { background: #fff7ed; color: #f97316; }
+    .sec-history  .card-icon { background: #fffbeb; color: #b45309; }
+    .sec-arts     .card-icon { background: #fdf2f8; color: #db2777; }
+    .sec-ai       .card-icon { background: #eef2ff; color: #6366f1; }
+    .sec-study    .card-icon { background: #f0fdfa; color: #0d9488; }
+
+    /* Override default green icon color */
+    .resource-card i { color: inherit; margin-bottom: 0; font-size: 1rem; }
+
+    /* Card top row */
+    .card-top {
+      display: flex;
+      align-items: flex-start;
       gap: 0.75rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
-    .resource-card .card-header i {
+    .card-meta { flex: 1; min-width: 0; }
+    .card-meta h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--gray-900);
+      margin: 0 0 0.3rem;
+    }
+
+    /* Grade badges */
+    .grade-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .grade-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: var(--radius-full);
+      background: var(--gray-100);
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* Top Pick badge */
+    .top-pick-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Card description */
+    .resource-card p {
+      font-size: 0.84rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      flex: 1;
       margin-bottom: 0;
-      font-size: 1.1rem;
     }
-    .resource-card .card-header h4 {
-      margin-bottom: 0;
-    }
-    .resource-card .card-link {
+
+    /* Card link arrow */
+    .card-link {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--orange-500);
       font-weight: 500;
-      margin-top: 0.75rem;
+      margin-top: 0.85rem;
       transition: gap var(--transition);
     }
-    a.resource-card:hover .card-link {
-      gap: 0.6rem;
+    a.resource-card:hover .card-link { gap: 0.6rem; }
+
+    /* 4-column grid on large screens */
+    .resource-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
-    /* Alternating section backgrounds */
-    .section-alt {
-      background: var(--gray-50);
+    @media (max-width: 640px) {
+      .subjects-nav-inner { padding: 0 1rem; }
+      .hero-stats { gap: 1.5rem; }
+      .subject-header { flex-direction: column; gap: 0.75rem; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -226,292 +411,738 @@
         <span data-i18n="sub.students.badge">K–12 Learning Tools</span>
       </div>
       <h1 data-i18n="sub.students.title">Resources for School Students (K-12)</h1>
-      <p data-i18n="sub.students.desc">Curated free platforms to help you learn anything — from coding and languages to science, math, and AI. Perfect for ages 6–18.</p>
-    </div>
-  </section>
-
-  <!-- Free Online Courses -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-graduation-cap"></i></div>
-        <span class="section-label section-label-orange">Learn Anything</span>
-        <h2 class="section-title">Free Online Courses</h2>
-      </div>
-      <div class="resource-grid">
-        <a href="https://www.khanacademy.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-play-circle"></i>
-            <h4>Khan Academy</h4>
-          </div>
-          <p>Free courses in math, science, computing, economics, and more with practice exercises.</p>
-          <span class="card-link">Visit khanacademy.org <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.coursera.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-university"></i>
-            <h4>Coursera</h4>
-          </div>
-          <p>Audit university-level courses for free from top institutions worldwide.</p>
-          <span class="card-link">Visit coursera.org <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.edx.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-chalkboard"></i>
-            <h4>edX</h4>
-          </div>
-          <p>Free courses from Harvard, MIT, and other leading universities.</p>
-          <span class="card-link">Visit edx.org <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://ocw.mit.edu" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-book-open"></i>
-            <h4>MIT OpenCourseWare</h4>
-          </div>
-          <p>Free lecture notes, exams, and videos from MIT — no registration required.</p>
-          <span class="card-link">Visit ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-laptop-code"></i>
-            <h4>freeCodeCamp</h4>
-          </div>
-          <p>Learn to code for free with interactive lessons and earn certifications.</p>
-          <span class="card-link">Visit freecodecamp.org <i class="fas fa-arrow-right"></i></span>
-        </a>
+      <p data-i18n="sub.students.desc">36 curated free tools across 9 subjects — for every grade level, every curiosity.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>36</strong><span>Free Tools</span></div>
+        <div class="hero-stat"><strong>9</strong><span>Subjects</span></div>
+        <div class="hero-stat"><strong>K–12</strong><span>All Grades</span></div>
+        <div class="hero-stat"><strong>100%</strong><span>Free</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Coding & Programming -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-code"></i></div>
-        <span class="section-label section-label-orange">Build & Create</span>
-        <h2 class="section-title">Coding & Programming</h2>
-      </div>
-      <div class="resource-grid">
-        <a href="https://www.codecademy.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-terminal"></i>
-            <h4>Codecademy</h4>
-          </div>
-          <p>Interactive coding lessons in Python, JavaScript, HTML/CSS, and more.</p>
-          <span class="card-link">Visit codecademy.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://scratch.mit.edu" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-puzzle-piece"></i>
-            <h4>Scratch</h4>
-          </div>
-          <p>Visual programming for beginners — create stories, games, and animations.</p>
-          <span class="card-link">Visit scratch.mit.edu <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://cs50.harvard.edu" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-microchip"></i>
-            <h4>CS50 by Harvard</h4>
-          </div>
-          <p>Harvard's renowned introduction to computer science, free and online.</p>
-          <span class="card-link">Visit cs50.harvard.edu <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.theodinproject.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-route"></i>
-            <h4>The Odin Project</h4>
-          </div>
-          <p>Full-stack web development curriculum — completely free and open source.</p>
-          <span class="card-link">Visit theodinproject.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.w3schools.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-globe"></i>
-            <h4>W3Schools</h4>
-          </div>
-          <p>Beginner-friendly tutorials and references for web technologies.</p>
-          <span class="card-link">Visit w3schools.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
+  <!-- ── Sticky Subject Navigation ── -->
+  <nav class="subjects-nav" aria-label="Jump to subject">
+    <div class="subjects-nav-inner">
+      <a href="#math"      class="subject-tab" data-tab="math">      <span class="tab-dot" style="background:#3b82f6"></span> Math</a>
+      <a href="#science"   class="subject-tab" data-tab="science">   <span class="tab-dot" style="background:#16a34a"></span> Science</a>
+      <a href="#reading"   class="subject-tab" data-tab="reading">   <span class="tab-dot" style="background:#7c3aed"></span> Reading &amp; Writing</a>
+      <a href="#coding"    class="subject-tab" data-tab="coding">    <span class="tab-dot" style="background:#0ea5e9"></span> Coding &amp; Tech</a>
+      <a href="#languages" class="subject-tab" data-tab="languages"> <span class="tab-dot" style="background:#f97316"></span> Languages</a>
+      <a href="#history"   class="subject-tab" data-tab="history">   <span class="tab-dot" style="background:#b45309"></span> History &amp; Society</a>
+      <a href="#arts"      class="subject-tab" data-tab="arts">      <span class="tab-dot" style="background:#db2777"></span> Arts &amp; Music</a>
+      <a href="#ai-tools"  class="subject-tab" data-tab="ai-tools">  <span class="tab-dot" style="background:#6366f1"></span> AI Learning</a>
+      <a href="#study"     class="subject-tab" data-tab="study">     <span class="tab-dot" style="background:#0d9488"></span> Study Skills</a>
     </div>
-  </section>
+  </nav>
 
-  <!-- Languages -->
-  <section class="section">
+  <!-- ════════════════════════════════════════════════════
+       1. MATH
+  ═══════════════════════════════════════════════════════ -->
+  <section id="math" class="section subject-section sec-math">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-language"></i></div>
-        <span class="section-label section-label-orange">Speak the World</span>
-        <h2 class="section-title">Languages</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#eff6ff;color:#3b82f6"><i class="fas fa-square-root-alt"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Numbers &amp; Logic</span>
+          <h2>Math</h2>
+          <p>From counting to calculus — interactive practice for every grade.</p>
+        </div>
       </div>
       <div class="resource-grid">
-        <a href="https://www.duolingo.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-comments"></i>
-            <h4>Duolingo</h4>
-          </div>
-          <p>Gamified language learning with bite-sized lessons in 40+ languages.</p>
-          <span class="card-link">Visit duolingo.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.bbc.co.uk/learningenglish" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-headphones"></i>
-            <h4>BBC Learning English</h4>
-          </div>
-          <p>Free English lessons, videos, and quizzes from the BBC.</p>
-          <span class="card-link">Visit bbc.co.uk/learningenglish <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.openculture.com/freelanguagelessons" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-book"></i>
-            <h4>Open Culture Languages</h4>
-          </div>
-          <p>Curated collection of free language lessons in 48+ languages.</p>
-          <span class="card-link">Visit openculture.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- AI Tools for Learning -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-robot"></i></div>
-        <span class="section-label section-label-orange">Learn Smarter</span>
-        <h2 class="section-title">AI Tools for Learning</h2>
-      </div>
-      <div class="resource-grid">
-        <a href="https://chat.openai.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-message"></i>
-            <h4>ChatGPT</h4>
+        <a href="https://www.khanacademy.org/math" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="card-meta">
+              <h4>Khan Academy Math</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
           </div>
-          <p>AI assistant for explanations, writing help, brainstorming, and tutoring.</p>
-          <span class="card-link">Visit chat.openai.com <i class="fas fa-arrow-right"></i></span>
+          <p>Complete K-12 math curriculum with video lessons, practice exercises, and instant feedback.</p>
+          <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-brain"></i>
-            <h4>Claude AI</h4>
-          </div>
-          <p>Helpful AI for research, analysis, coding help, and thoughtful explanations.</p>
-          <span class="card-link">Visit claude.ai <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://gemini.google.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-sparkles"></i>
-            <h4>Google Gemini</h4>
-          </div>
-          <p>Google's AI for creative tasks, learning, and multimodal exploration.</p>
-          <span class="card-link">Visit gemini.google.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-search"></i>
-            <h4>Perplexity</h4>
-          </div>
-          <p>AI-powered search engine that provides sourced answers to your questions.</p>
-          <span class="card-link">Visit perplexity.ai <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-note-sticky"></i>
-            <h4>NotebookLM</h4>
-          </div>
-          <p>Google's AI notebook that helps you understand and organize your study materials.</p>
-          <span class="card-link">Visit notebooklm.google.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Science & Math -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-flask"></i></div>
-        <span class="section-label section-label-orange">Explore & Calculate</span>
-        <h2 class="section-title">Science & Math</h2>
-      </div>
-      <div class="resource-grid">
-        <a href="https://phet.colorado.edu" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-atom"></i>
-            <h4>PhET Simulations</h4>
-          </div>
-          <p>Interactive science and math simulations from the University of Colorado.</p>
-          <span class="card-link">Visit phet.colorado.edu <i class="fas fa-arrow-right"></i></span>
-        </a>
         <a href="https://www.desmos.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-chart-line"></i>
-            <h4>Desmos</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="card-meta">
+              <h4>Desmos</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
           </div>
-          <p>Beautiful, free graphing calculator and interactive math activities.</p>
-          <span class="card-link">Visit desmos.com <i class="fas fa-arrow-right"></i></span>
+          <p>Beautiful graphing calculator and interactive classroom activities for algebra and beyond.</p>
+          <span class="card-link">desmos.com <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://www.wolframalpha.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-calculator"></i>
-            <h4>Wolfram Alpha</h4>
-          </div>
-          <p>Computational knowledge engine for math, science, and data questions.</p>
-          <span class="card-link">Visit wolframalpha.com <i class="fas fa-arrow-right"></i></span>
-        </a>
+
         <a href="https://www.geogebra.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-shapes"></i>
-            <h4>GeoGebra</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-shapes"></i></div>
+            <div class="card-meta">
+              <h4>GeoGebra</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
           </div>
-          <p>Free tools for geometry, algebra, calculus, and 3D graphing.</p>
-          <span class="card-link">Visit geogebra.org <i class="fas fa-arrow-right"></i></span>
+          <p>Dynamic tools for geometry, algebra, statistics, and 3D graphing — all free in the browser.</p>
+          <span class="card-link">geogebra.org <i class="fas fa-arrow-right"></i></span>
         </a>
+
+        <a href="https://www.prodigygame.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+            <div class="card-meta">
+              <h4>Prodigy Math</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+              </div>
+            </div>
+          </div>
+          <p>Gamified math adventure that adapts to each student's level and aligns to school curriculum.</p>
+          <span class="card-link">prodigygame.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- Reading & Research -->
-  <section class="section section-alt">
+  <!-- ════════════════════════════════════════════════════
+       2. SCIENCE
+  ═══════════════════════════════════════════════════════ -->
+  <section id="science" class="section section-alt subject-section sec-science">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-book-reader"></i></div>
-        <span class="section-label section-label-orange">Read & Discover</span>
-        <h2 class="section-title">Reading & Research</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0fdf4;color:#16a34a"><i class="fas fa-flask"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Explore &amp; Discover</span>
+          <h2>Science</h2>
+          <p>Hands-on simulations and resources for biology, chemistry, physics, and earth science.</p>
+        </div>
       </div>
       <div class="resource-grid">
+
+        <a href="https://phet.colorado.edu" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-atom"></i></div>
+            <div class="card-meta">
+              <h4>PhET Simulations</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>150+ research-based interactive simulations in physics, chemistry, biology, and math from the University of Colorado.</p>
+          <span class="card-link">phet.colorado.edu <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.ck12.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-book-open"></i></div>
+            <div class="card-meta">
+              <h4>CK-12</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Free adaptive science and math textbooks, simulations, and practice questions — fully customizable.</p>
+          <span class="card-link">ck12.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://kids.nationalgeographic.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+            <div class="card-meta">
+              <h4>National Geographic Kids</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+              </div>
+            </div>
+          </div>
+          <p>Engaging science articles, wildlife videos, and quizzes that spark curiosity in young learners.</p>
+          <span class="card-link">kids.nationalgeographic.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.youtube.com/@crashcourse" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-play-circle"></i></div>
+            <div class="card-meta">
+              <h4>Crash Course Science</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Fast-paced, entertaining video series covering biology, chemistry, physics, and environmental science.</p>
+          <span class="card-link">youtube.com/@crashcourse <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       3. READING & WRITING
+  ═══════════════════════════════════════════════════════ -->
+  <section id="reading" class="section subject-section sec-reading">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f5f3ff;color:#7c3aed"><i class="fas fa-pen-nib"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Read &amp; Write</span>
+          <h2>Reading &amp; Writing</h2>
+          <p>Build literacy, grammar, and critical thinking through great texts and guided practice.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://www.commonlit.org" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+            <div class="card-meta">
+              <h4>CommonLit</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Free reading passages — fiction, nonfiction, and poetry — with comprehension questions and guided discussion.</p>
+          <span class="card-link">commonlit.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.noredink.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-pencil-alt"></i></div>
+            <div class="card-meta">
+              <h4>NoRedInk</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Adaptive grammar and writing practice that personalises exercises based on your interests and level.</p>
+          <span class="card-link">noredink.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://newsela.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+            <div class="card-meta">
+              <h4>Newsela</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Current events articles published at five adjustable reading levels — great for building real-world literacy.</p>
+          <span class="card-link">newsela.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
         <a href="https://www.gutenberg.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-book-open"></i>
-            <h4>Project Gutenberg</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-feather-alt"></i></div>
+            <div class="card-meta">
+              <h4>Project Gutenberg</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
           </div>
-          <p>Over 70,000 free eBooks — classic literature and historical texts.</p>
-          <span class="card-link">Visit gutenberg.org <i class="fas fa-arrow-right"></i></span>
+          <p>Over 70,000 free eBooks — classic literature and historical texts with no registration required.</p>
+          <span class="card-link">gutenberg.org <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://scholar.google.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-microscope"></i>
-            <h4>Google Scholar</h4>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       4. CODING & TECH
+  ═══════════════════════════════════════════════════════ -->
+  <section id="coding" class="section section-alt subject-section sec-coding">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0f9ff;color:#0ea5e9"><i class="fas fa-code"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Build &amp; Create</span>
+          <h2>Coding &amp; Tech</h2>
+          <p>Learn to build websites, games, and apps — from first blocks to real programming.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://scratch.mit.edu" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <div class="card-meta">
+              <h4>Scratch</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+              </div>
+            </div>
           </div>
-          <p>Search engine for scholarly articles, theses, and academic papers.</p>
-          <span class="card-link">Visit scholar.google.com <i class="fas fa-arrow-right"></i></span>
+          <p>MIT's visual block-based coding platform — create interactive games, stories, and animations without typing a line of code.</p>
+          <span class="card-link">scratch.mit.edu <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fab fa-wikipedia-w"></i>
-            <h4>Wikipedia</h4>
+
+        <a href="https://code.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="card-meta">
+              <h4>Code.org</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+              </div>
+            </div>
           </div>
-          <p>The free encyclopedia — millions of articles on every topic imaginable.</p>
-          <span class="card-link">Visit wikipedia.org <i class="fas fa-arrow-right"></i></span>
+          <p>Structured coding courses from kindergarten through middle school, including the famous Hour of Code.</p>
+          <span class="card-link">code.org <i class="fas fa-arrow-right"></i></span>
         </a>
+
+        <a href="https://cs50.harvard.edu" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-microchip"></i></div>
+            <div class="card-meta">
+              <h4>CS50 by Harvard</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Harvard's world-renowned introduction to computer science — rigorous, free, and available to everyone.</p>
+          <span class="card-link">cs50.harvard.edu <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.codecademy.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-terminal"></i></div>
+            <div class="card-meta">
+              <h4>Codecademy</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Interactive lessons in Python, JavaScript, HTML/CSS, SQL, and more — code directly in the browser.</p>
+          <span class="card-link">codecademy.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       5. LANGUAGES
+  ═══════════════════════════════════════════════════════ -->
+  <section id="languages" class="section subject-section sec-languages">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#fff7ed;color:#f97316"><i class="fas fa-language"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Speak the World</span>
+          <h2>Languages</h2>
+          <p>Learn a new language or master English with the world's best free tools.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://www.duolingo.com" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-comments"></i></div>
+            <div class="card-meta">
+              <h4>Duolingo</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Gamified bite-sized lessons in 40+ languages. Daily streaks and fun exercises make learning stick.</p>
+          <span class="card-link">duolingo.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.bbc.co.uk/learningenglish" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-headphones"></i></div>
+            <div class="card-meta">
+              <h4>BBC Learning English</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Professional English lessons, video content, grammar guides, and quizzes — all from the BBC.</p>
+          <span class="card-link">bbc.co.uk/learningenglish <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.languagetransfer.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-microphone"></i></div>
+            <div class="card-meta">
+              <h4>Language Transfer</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Free audio courses for Spanish, French, Arabic, and more — using a thinking-based method that builds real fluency fast.</p>
+          <span class="card-link">languagetransfer.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.clozemaster.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-align-left"></i></div>
+            <div class="card-meta">
+              <h4>Clozemaster</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Vocabulary training through thousands of fill-in-the-blank sentences in real-world context — ideal for advancing beyond beginner level.</p>
+          <span class="card-link">clozemaster.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       6. HISTORY & SOCIETY
+  ═══════════════════════════════════════════════════════ -->
+  <section id="history" class="section section-alt subject-section sec-history">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#fffbeb;color:#b45309"><i class="fas fa-landmark"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Past &amp; Present</span>
+          <h2>History &amp; Society</h2>
+          <p>Understand the world through history, civics, and primary sources.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://www.youtube.com/@crashcourse" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-video"></i></div>
+            <div class="card-meta">
+              <h4>Crash Course History</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Entertaining and well-researched short videos on world history, US history, and social studies — free on YouTube.</p>
+          <span class="card-link">youtube.com/@crashcourse <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://learninglab.si.edu" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-museum"></i></div>
+            <div class="card-meta">
+              <h4>Smithsonian Learning Lab</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Millions of digitised artefacts, images, and primary sources from the Smithsonian Institution for classroom and self-study.</p>
+          <span class="card-link">learninglab.si.edu <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.icivics.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="card-meta">
+              <h4>iCivics</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+              </div>
+            </div>
+          </div>
+          <p>Free games and lessons on government, democracy, and civic participation — designed to make civics engaging.</p>
+          <span class="card-link">icivics.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://sheg.stanford.edu" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-scroll"></i></div>
+            <div class="card-meta">
+              <h4>Stanford History (SHEG)</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Document-based lessons that teach students to analyse and evaluate historical sources with critical thinking.</p>
+          <span class="card-link">sheg.stanford.edu <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       7. ARTS & MUSIC
+  ═══════════════════════════════════════════════════════ -->
+  <section id="arts" class="section subject-section sec-arts">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#fdf2f8;color:#db2777"><i class="fas fa-palette"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Create &amp; Express</span>
+          <h2>Arts &amp; Music</h2>
+          <p>Explore creativity through music, design, and the world's greatest art collections.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://musiclab.chromeexperiments.com" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-music"></i></div>
+            <div class="card-meta">
+              <h4>Chrome Music Lab</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+              </div>
+            </div>
+          </div>
+          <p>Playful browser experiments that let you see, hear, and play with music — no prior experience needed.</p>
+          <span class="card-link">musiclab.chromeexperiments.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://musescore.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-music"></i></div>
+            <div class="card-meta">
+              <h4>MuseScore</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Free music notation software and a huge library of sheet music — compose, print, and share your own pieces.</p>
+          <span class="card-link">musescore.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://artsandculture.google.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-images"></i></div>
+            <div class="card-meta">
+              <h4>Google Arts &amp; Culture</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Virtual tours of 2,000+ museums worldwide and high-resolution access to the world's greatest artworks.</p>
+          <span class="card-link">artsandculture.google.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.tinkercad.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-cube"></i></div>
+            <div class="card-meta">
+              <h4>Tinkercad</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+              </div>
+            </div>
+          </div>
+          <p>Free browser-based 3D design tool from Autodesk — great for digital art, engineering projects, and 3D printing.</p>
+          <span class="card-link">tinkercad.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       8. AI LEARNING
+  ═══════════════════════════════════════════════════════ -->
+  <section id="ai-tools" class="section section-alt subject-section sec-ai">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#eef2ff;color:#6366f1"><i class="fas fa-robot"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Learn Smarter</span>
+          <h2>AI Learning</h2>
+          <p>Use AI as a tutor, research assistant, and study partner — responsibly.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://www.khanacademy.org/khan-labs" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="card-meta">
+              <h4>Khanmigo</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">K–5</span>
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Khan Academy's AI tutor — guides you through problems with questions instead of giving answers, building real understanding.</p>
+          <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-sticky-note"></i></div>
+            <div class="card-meta">
+              <h4>NotebookLM</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Upload your notes, textbooks, or PDFs and let Google's AI help you summarise, quiz yourself, and understand complex material.</p>
+          <span class="card-link">notebooklm.google.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-search"></i></div>
+            <div class="card-meta">
+              <h4>Perplexity AI</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>AI-powered search that gives cited, sourced answers — great for research that needs to be fact-checked.</p>
+          <span class="card-link">perplexity.ai <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <div class="card-meta">
+              <h4>Claude AI</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Thoughtful AI assistant for in-depth explanations, essay feedback, coding help, and careful analysis of complex topics.</p>
+          <span class="card-link">claude.ai <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       9. STUDY SKILLS
+  ═══════════════════════════════════════════════════════ -->
+  <section id="study" class="section subject-section sec-study">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0fdfa;color:#0d9488"><i class="fas fa-brain"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Work Smarter</span>
+          <h2>Study Skills</h2>
+          <p>Tools for memory, focus, and independent learning — skills that help across every subject.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
+        <a href="https://apps.ankiweb.net" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="card-meta">
+              <h4>Anki</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>The gold standard in spaced-repetition flashcards — shows you cards right before you forget them, maximising long-term memory.</p>
+          <span class="card-link">apps.ankiweb.net <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://quizlet.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-clone"></i></div>
+            <div class="card-meta">
+              <h4>Quizlet</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">6–8</span>
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Create or use millions of existing flashcard sets — with games, practice tests, and match modes.</p>
+          <span class="card-link">quizlet.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.wolframalpha.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-calculator"></i></div>
+            <div class="card-meta">
+              <h4>Wolfram Alpha</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
+          </div>
+          <p>Step-by-step computational engine for math, science, and data — shows its working so you actually learn.</p>
+          <span class="card-link">wolframalpha.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
         <a href="https://openstax.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-atlas"></i>
-            <h4>OpenStax</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-atlas"></i></div>
+            <div class="card-meta">
+              <h4>OpenStax</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">9–12</span>
+              </div>
+            </div>
           </div>
-          <p>Free, peer-reviewed textbooks for college and high school courses.</p>
-          <span class="card-link">Visit openstax.org <i class="fas fa-arrow-right"></i></span>
+          <p>Free peer-reviewed textbooks for high school and university — biology, physics, chemistry, maths, and more.</p>
+          <span class="card-link">openstax.org <i class="fas fa-arrow-right"></i></span>
         </a>
+
       </div>
     </div>
   </section>
@@ -572,8 +1203,32 @@
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=4"></script>
+  <script defer src="assets/js/i18n.js?v=5"></script>
   <script defer src="assets/js/main.js"></script>
+  <script>
+    /* Subject tab active state on scroll */
+    (function () {
+      var tabs = document.querySelectorAll('.subject-tab');
+      var sections = Array.from(tabs).map(function (t) {
+        return document.querySelector(t.getAttribute('href'));
+      });
+      var navH = document.querySelector('.subjects-nav').offsetHeight;
+      var topH = parseFloat(getComputedStyle(document.documentElement).fontSize) * 4.5;
+
+      function onScroll() {
+        var offset = topH + navH + 8;
+        var active = 0;
+        sections.forEach(function (s, i) {
+          if (s && s.getBoundingClientRect().top <= offset) active = i;
+        });
+        tabs.forEach(function (t, i) {
+          t.classList.toggle('active', i === active);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
   <script>
     (function () {
       var GDPR_KEY = 'ctwp-gdpr';

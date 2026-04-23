@@ -139,7 +139,7 @@ const translations = {
     'footer.copyright': '© 2026 CTWP Educational Empowerment. All rights reserved.',
     /* Subpages */
     'sub.students.badge': 'K–12 Learning Tools', 'sub.students.title': 'Resources for School Students (K-12)',
-    'sub.students.desc': 'Curated free platforms to help you learn anything — from coding and languages to science, math, and AI. Perfect for ages 6–18.',
+    'sub.students.desc': '36 curated free tools across 9 subjects — for every grade level, every curiosity.',
     'sub.students.back': 'Back to Resources',
     'sub.uni.badge': 'Higher Education Tools', 'sub.uni.title': 'Resources for University Students',
     'sub.uni.desc': 'Free platforms for research, open courseware, textbooks, productivity, and AI tools — everything you need to thrive in higher education.',
@@ -292,7 +292,7 @@ const translations = {
     'footer.copyright': '© 2026 CTWP Educational Empowerment. Alle Rechte vorbehalten.',
     /* Subpages */
     'sub.students.badge': 'K–12 Lernmittel', 'sub.students.title': 'Ressourcen für Schülerinnen & Schüler (K-12)',
-    'sub.students.desc': 'Kuratierte kostenlose Plattformen für alles Wissenswerte — von Programmieren und Sprachen bis zu Naturwissenschaften, Mathematik und KI. Für Altersgruppen 6–18.',
+    'sub.students.desc': '36 kuratierte kostenlose Tools in 9 Fächern — für jede Klassenstufe, jeden Wissensdrang.',
     'sub.students.back': 'Zurück zu Ressourcen',
     'sub.uni.badge': 'Hochschulbildung', 'sub.uni.title': 'Ressourcen für Studierende',
     'sub.uni.desc': 'Kostenlose Plattformen für Forschung, offene Kurse, Lehrbücher, Produktivität und KI-Tools — alles für ein erfolgreiches Studium.',
