@@ -66,109 +66,265 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"></noscript>
 
   <link rel="preload" as="image" href="assets/images/Logos/ctwp logo round.webp" type="image/webp" fetchpriority="high">
-  
-  
-  
-  <link rel="stylesheet" href="assets/css/style.css?v=15">
+
+  <link rel="stylesheet" href="assets/css/style.css?v=18">
   <link rel="icon" type="image/webp" href="assets/images/Logos/ctwp logo round.webp">
   <style>
-    /* Subpage Hero Banner */
+    /* ── Subpage Hero ─────────────────────────────────── */
     .subpage-hero {
       background: var(--green-900);
       color: var(--white);
-      padding: 7rem 0 3rem;
+      padding: 8rem 0 3rem;
       text-align: center;
     }
-    .subpage-hero .section-label {
-      color: var(--orange-300);
+    .subpage-hero .hero-badge {
+      display: inline-block;
+      background: rgba(76, 175, 80, 0.15);
+      color: var(--green-300);
+      padding: 0.4rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
     .subpage-hero h1 {
       font-family: var(--font-display);
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 400;
       margin-bottom: 0.75rem;
     }
     .subpage-hero p {
       color: var(--gray-400);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 1.5rem;
     }
     .subpage-hero .back-link {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--green-300);
-      text-decoration: none;
-      font-size: 0.9rem;
+      color: var(--orange-300);
+      font-size: 0.85rem;
+      font-weight: 500;
       margin-bottom: 1.5rem;
       transition: color var(--transition);
     }
-    .subpage-hero .back-link:hover {
-      color: var(--orange-400);
+    .subpage-hero .back-link:hover { color: var(--orange-400); }
+
+    /* Hero stats strip */
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
-    /* Category Section Header */
-    .category-header {
+    /* ── Category Navigation ──────────────────────────── */
+    .subjects-nav {
+      position: sticky;
+      top: 4.5rem;
+      z-index: 200;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .subjects-nav::-webkit-scrollbar { display: none; }
+    .subjects-nav-inner {
+      display: flex;
+      min-width: max-content;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .subject-tab {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.75rem;
+      gap: 0.45rem;
+      padding: 0.85rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
     }
-    .category-header i {
-      font-size: 1.25rem;
-      color: var(--orange-500);
-      width: 2.5rem;
-      height: 2.5rem;
+    .subject-tab:hover { color: var(--gray-900); }
+    .subject-tab.active { color: var(--gray-900); border-bottom-color: var(--orange-500); }
+    .tab-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Sections ─────────────────────────────────────── */
+    .subject-section { scroll-margin-top: calc(4.5rem + 44px); }
+    .section-alt { background: var(--gray-50); }
+
+    .subject-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
+    .subject-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--orange-100);
-      border-radius: var(--radius-sm);
+      font-size: 1.35rem;
       flex-shrink: 0;
     }
-    .category-header h3 {
+    .subject-header-text .section-label { margin-bottom: 0.25rem; }
+    .subject-header-text h2 {
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
       font-weight: 400;
-      color: var(--green-900);
+      color: var(--gray-900);
+      margin: 0 0 0.3rem;
+    }
+    .subject-header-text p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      margin: 0;
     }
 
-    /* Resource card link styling */
-    .resource-card {
-      display: block;
+    /* ── Resource Cards ───────────────────────────────── */
+    a.resource-card {
+      display: flex;
+      flex-direction: column;
       text-decoration: none;
       color: inherit;
+      border-top: 3px solid transparent;
     }
-    .resource-card .card-link {
+
+    .sec-lessons  .resource-card { border-top-color: #16a34a; }
+    .sec-ai       .resource-card { border-top-color: #6366f1; }
+    .sec-classroom .resource-card { border-top-color: #3b82f6; }
+    .sec-assessment .resource-card { border-top-color: #b45309; }
+    .sec-profdev  .resource-card { border-top-color: #0d9488; }
+    .sec-digital  .resource-card { border-top-color: #0ea5e9; }
+
+    .sec-lessons  .resource-card:hover { border-color: #16a34a; }
+    .sec-ai       .resource-card:hover { border-color: #6366f1; }
+    .sec-classroom .resource-card:hover { border-color: #3b82f6; }
+    .sec-assessment .resource-card:hover { border-color: #b45309; }
+    .sec-profdev  .resource-card:hover { border-color: #0d9488; }
+    .sec-digital  .resource-card:hover { border-color: #0ea5e9; }
+
+    .card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .sec-lessons  .card-icon { background: #f0fdf4; color: #16a34a; }
+    .sec-ai       .card-icon { background: #eef2ff; color: #6366f1; }
+    .sec-classroom .card-icon { background: #eff6ff; color: #3b82f6; }
+    .sec-assessment .card-icon { background: #fffbeb; color: #b45309; }
+    .sec-profdev  .card-icon { background: #f0fdfa; color: #0d9488; }
+    .sec-digital  .card-icon { background: #f0f9ff; color: #0ea5e9; }
+
+    .resource-card i { color: inherit; margin-bottom: 0; font-size: 1rem; }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+    .card-meta { flex: 1; min-width: 0; }
+    .card-meta h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--gray-900);
+      margin: 0 0 0.3rem;
+    }
+
+    .grade-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .grade-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: var(--radius-full);
+      background: var(--gray-100);
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .top-pick-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    .resource-card p {
+      font-size: 0.84rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .card-link {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--green-600);
-      margin-top: 0.75rem;
-      transition: color var(--transition);
-    }
-    .resource-card:hover .card-link {
+      font-size: 0.78rem;
       color: var(--orange-500);
+      font-weight: 500;
+      margin-top: 0.85rem;
+      transition: gap var(--transition);
+    }
+    a.resource-card:hover .card-link { gap: 0.6rem; }
+
+    .resource-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
-    /* Spacing between category sections */
-    .category-block {
-      margin-bottom: 4rem;
-    }
-    .category-block:last-child {
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 768px) {
-      .subpage-hero h1 {
-        font-size: 1.75rem;
-      }
-      .subpage-hero {
-        padding: 6rem 0 2rem;
-      }
+    @media (max-width: 640px) {
+      .subjects-nav-inner { padding: 0 1rem; }
+      .hero-stats { gap: 1.5rem; }
+      .subject-header { flex-direction: column; gap: 0.75rem; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -181,7 +337,6 @@
   </script>
 </head>
 <body>
-
   <!-- Navigation -->
   <header id="navbar">
     <nav class="nav-container">
@@ -225,238 +380,487 @@
       <a href="index.html#resources" class="back-link">
         <i class="fas fa-arrow-left"></i> <span data-i18n="sub.teachers.back">Back to Resources</span>
       </a>
-      <span class="section-label" data-i18n="sub.teachers.badge">For Educators &amp; Teachers</span>
+      <div class="hero-badge">
+        <span data-i18n="sub.teachers.badge">For Educators &amp; Teachers</span>
+      </div>
       <h1 data-i18n="sub.teachers.title">Free Teaching Resources</h1>
-      <p data-i18n="sub.teachers.desc">Curated tools and platforms to help you plan lessons, manage classrooms, assess students, and grow professionally.</p>
+      <p data-i18n="sub.teachers.desc">24 curated free tools across 6 categories — plan, teach, assess, and grow as an educator.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>24</strong><span>Free Tools</span></div>
+        <div class="hero-stat"><strong>6</strong><span>Categories</span></div>
+        <div class="hero-stat"><strong>All Grades</strong><span>Primary to Secondary</span></div>
+        <div class="hero-stat"><strong>100%</strong><span>Free</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- Resources -->
-  <section class="section">
+  <!-- ── Sticky Category Navigation ── -->
+  <nav class="subjects-nav" aria-label="Jump to category">
+    <div class="subjects-nav-inner">
+      <a href="#lesson-planning" class="subject-tab" data-tab="lesson-planning"><span class="tab-dot" style="background:#16a34a"></span> Lesson Planning</a>
+      <a href="#ai-tools"        class="subject-tab" data-tab="ai-tools">       <span class="tab-dot" style="background:#6366f1"></span> AI Teaching Tools</a>
+      <a href="#classroom"       class="subject-tab" data-tab="classroom">      <span class="tab-dot" style="background:#3b82f6"></span> Classroom Management</a>
+      <a href="#assessment"      class="subject-tab" data-tab="assessment">     <span class="tab-dot" style="background:#b45309"></span> Assessment &amp; Feedback</a>
+      <a href="#profdev"         class="subject-tab" data-tab="profdev">        <span class="tab-dot" style="background:#0d9488"></span> Professional Development</a>
+      <a href="#digital"         class="subject-tab" data-tab="digital">        <span class="tab-dot" style="background:#0ea5e9"></span> Digital &amp; Coding</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════
+       1. LESSON PLANNING & CURRICULUM
+  ═══════════════════════════════════════════════════════ -->
+  <section id="lesson-planning" class="section subject-section sec-lessons">
     <div class="container">
-
-      <!-- 1. Lesson Planning & Curriculum -->
-      <div class="category-block">
-        <div class="category-header">
-          <i class="fas fa-book-open"></i>
-          <h3>Lesson Planning &amp; Curriculum</h3>
-        </div>
-        <div class="resource-grid">
-          <a href="https://www.khanacademy.org/teacher" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-graduation-cap"></i>
-            <h4>Khan Academy Teacher Tools</h4>
-            <p>Assign lessons, track progress, and access free K-12 curriculum aligned to standards.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://openstax.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-book"></i>
-            <h4>OpenStax</h4>
-            <p>Free, peer-reviewed textbooks for college and high school courses.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.ck12.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-atom"></i>
-            <h4>CK-12</h4>
-            <p>Customizable textbooks, interactive simulations, and adaptive practice for STEM subjects.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.oercommons.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-folder-open"></i>
-            <h4>OER Commons</h4>
-            <p>Search thousands of open educational resources shared by educators worldwide.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.tes.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-chalkboard"></i>
-            <h4>TES Resources</h4>
-            <p>Millions of free and paid teaching resources, lesson plans, and worksheets.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0fdf4;color:#16a34a"><i class="fas fa-book-open"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Prepare &amp; Plan</span>
+          <h2>Lesson Planning &amp; Curriculum</h2>
+          <p>Standards-aligned materials, customisable textbooks, and open resources to build better lessons faster.</p>
         </div>
       </div>
+      <div class="resource-grid">
 
-      <!-- 2. AI Teaching Tools -->
-      <div class="category-block">
-        <div class="category-header">
-          <i class="fas fa-robot"></i>
-          <h3>AI Teaching Tools</h3>
-        </div>
-        <div class="resource-grid">
-          <a href="https://chat.openai.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-comments"></i>
-            <h4>ChatGPT for Education</h4>
-            <p>Generate lesson ideas, quizzes, rubrics, and differentiated materials with AI.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-brain"></i>
-            <h4>Claude AI</h4>
-            <p>AI assistant for lesson planning, feedback writing, and curriculum development.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://quillbot.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-pen-fancy"></i>
-            <h4>Quillbot</h4>
-            <p>Paraphrasing, grammar checking, and summarization tools for content creation.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://diffit.me" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-layer-group"></i>
-            <h4>Diffit</h4>
-            <p>AI-powered tool to create differentiated reading materials at any level.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.magicschool.ai" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-wand-magic-sparkles"></i>
-            <h4>MagicSchool AI</h4>
-            <p>AI tools built specifically for teachers — worksheets, IEPs, rubrics, and more.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
+        <a href="https://www.khanacademy.org/teacher" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="card-meta">
+              <h4>Khan Academy Teacher Tools</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Assign lessons, track student progress, and access a full K-12 curriculum aligned to standards — all free.</p>
+          <span class="card-link">khanacademy.org/teacher <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.ck12.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-atom"></i></div>
+            <div class="card-meta">
+              <h4>CK-12</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Fully customisable free textbooks, simulations, and adaptive practice — create your own flexbook for your class.</p>
+          <span class="card-link">ck12.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.oercommons.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+            <div class="card-meta">
+              <h4>OER Commons</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Search and share thousands of open educational resources — lesson plans, activities, and materials from educators worldwide.</p>
+          <span class="card-link">oercommons.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.tes.com/teaching-resources" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+            <div class="card-meta">
+              <h4>TES Resources</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Millions of free teacher-made lesson plans, worksheets, and activities across all subjects and age groups.</p>
+          <span class="card-link">tes.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       2. AI TEACHING TOOLS
+  ═══════════════════════════════════════════════════════ -->
+  <section id="ai-tools" class="section section-alt subject-section sec-ai">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#eef2ff;color:#6366f1"><i class="fas fa-robot"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Teach Smarter</span>
+          <h2>AI Teaching Tools</h2>
+          <p>AI assistants built for educators — generate materials, differentiate content, and save hours of prep time.</p>
         </div>
       </div>
+      <div class="resource-grid">
 
-      <!-- 3. Classroom Management -->
-      <div class="category-block">
-        <div class="category-header">
-          <i class="fas fa-users-rectangle"></i>
-          <h3>Classroom Management</h3>
-        </div>
-        <div class="resource-grid">
-          <a href="https://classroom.google.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fab fa-google"></i>
-            <h4>Google Classroom</h4>
-            <p>Distribute assignments, communicate with students, and organize class materials.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://kahoot.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-gamepad"></i>
-            <h4>Kahoot</h4>
-            <p>Create fun, interactive quizzes and games to engage students in any subject.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://quizlet.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-clone"></i>
-            <h4>Quizlet</h4>
-            <p>Flashcard sets, study modes, and live classroom activities for memorization.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://padlet.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-note-sticky"></i>
-            <h4>Padlet</h4>
-            <p>Collaborative digital boards for brainstorming, discussions, and sharing ideas.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.mentimeter.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-chart-bar"></i>
-            <h4>Mentimeter</h4>
-            <p>Live polls, word clouds, and Q&amp;A to make presentations interactive.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
+        <a href="https://www.magicschool.ai" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <div class="card-meta">
+              <h4>MagicSchool AI</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>AI tools built specifically for teachers — create worksheets, rubrics, IEPs, lesson plans, and parent emails in seconds.</p>
+          <span class="card-link">magicschool.ai <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://diffit.me" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="card-meta">
+              <h4>Diffit</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>AI-powered tool that instantly generates differentiated reading materials at any grade level from any topic or URL.</p>
+          <span class="card-link">diffit.me <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <div class="card-meta">
+              <h4>Claude AI</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Thoughtful AI assistant for lesson planning, writing feedback, curriculum design, and creating tailored student explanations.</p>
+          <span class="card-link">claude.ai <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://chat.openai.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-comments"></i></div>
+            <div class="card-meta">
+              <h4>ChatGPT for Education</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Generate quiz questions, discussion prompts, rubrics, and differentiated materials — a fast starting point for any lesson.</p>
+          <span class="card-link">chat.openai.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       3. CLASSROOM MANAGEMENT
+  ═══════════════════════════════════════════════════════ -->
+  <section id="classroom" class="section subject-section sec-classroom">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#eff6ff;color:#3b82f6"><i class="fas fa-users-rectangle"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Organise &amp; Engage</span>
+          <h2>Classroom Management</h2>
+          <p>Tools to distribute work, run interactive sessions, and keep students engaged — in-person or remote.</p>
         </div>
       </div>
+      <div class="resource-grid">
 
-      <!-- 4. Assessment & Feedback -->
-      <div class="category-block">
-        <div class="category-header">
-          <i class="fas fa-clipboard-check"></i>
-          <h3>Assessment &amp; Feedback</h3>
-        </div>
-        <div class="resource-grid">
-          <a href="https://docs.google.com/forms" target="_blank" rel="noopener" class="resource-card">
-            <i class="fab fa-google"></i>
-            <h4>Google Forms</h4>
-            <p>Build quizzes, surveys, and self-grading assessments for free.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.formative.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-pen-to-square"></i>
-            <h4>Formative</h4>
-            <p>Real-time student responses and instant feedback on assignments.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.socrative.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-square-poll-vertical"></i>
-            <h4>Socrative</h4>
-            <p>Quick quizzes, exit tickets, and space race games for formative assessment.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.rubric-maker.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-table-cells"></i>
-            <h4>Rubric Maker</h4>
-            <p>Generate customizable rubrics for any subject or assignment type.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
+        <a href="https://classroom.google.com" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fab fa-google"></i></div>
+            <div class="card-meta">
+              <h4>Google Classroom</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Distribute assignments, communicate with students and parents, collect work, and organise class materials — all free.</p>
+          <span class="card-link">classroom.google.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://kahoot.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+            <div class="card-meta">
+              <h4>Kahoot!</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Create game-based quizzes and surveys that students join live — hugely motivating for review and warm-ups.</p>
+          <span class="card-link">kahoot.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://padlet.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-note-sticky"></i></div>
+            <div class="card-meta">
+              <h4>Padlet</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Collaborative digital boards for brainstorming, sharing ideas, and structured discussions — works on any device.</p>
+          <span class="card-link">padlet.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.mentimeter.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="card-meta">
+              <h4>Mentimeter</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Secondary</span>
+              </div>
+            </div>
+          </div>
+          <p>Live polls, word clouds, and Q&amp;A for interactive presentations — great for gauging understanding in real time.</p>
+          <span class="card-link">mentimeter.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       4. ASSESSMENT & FEEDBACK
+  ═══════════════════════════════════════════════════════ -->
+  <section id="assessment" class="section section-alt subject-section sec-assessment">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#fffbeb;color:#b45309"><i class="fas fa-clipboard-check"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Measure &amp; Improve</span>
+          <h2>Assessment &amp; Feedback</h2>
+          <p>Build quizzes, track understanding, and give meaningful feedback — efficiently and for free.</p>
         </div>
       </div>
+      <div class="resource-grid">
 
-      <!-- 5. Professional Development -->
-      <div class="category-block">
-        <div class="category-header">
-          <i class="fas fa-award"></i>
-          <h3>Professional Development</h3>
-        </div>
-        <div class="resource-grid">
-          <a href="https://www.coursera.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-university"></i>
-            <h4>Coursera for Teachers</h4>
-            <p>Free and auditable courses on pedagogy, technology integration, and leadership.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.edx.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-laptop-code"></i>
-            <h4>edX Teaching Courses</h4>
-            <p>University-level courses on teaching methods, education policy, and edtech.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.unesco.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-globe"></i>
-            <h4>UNESCO ICT Competency Framework</h4>
-            <p>International framework for integrating technology into teaching practice.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.iste.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-certificate"></i>
-            <h4>ISTE Standards</h4>
-            <p>Standards and resources for effective use of technology in education.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
+        <a href="https://docs.google.com/forms" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fab fa-google"></i></div>
+            <div class="card-meta">
+              <h4>Google Forms</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Build quizzes, surveys, and self-grading assessments in minutes — responses feed straight into a Google Sheet for analysis.</p>
+          <span class="card-link">docs.google.com/forms <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.formative.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-pen-to-square"></i></div>
+            <div class="card-meta">
+              <h4>Formative</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>See student responses in real time as they work — perfect for live formative assessment and instant targeted feedback.</p>
+          <span class="card-link">formative.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.socrative.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-square-poll-vertical"></i></div>
+            <div class="card-meta">
+              <h4>Socrative</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Quick quizzes, exit tickets, and competitive space-race games to check comprehension — results available instantly.</p>
+          <span class="card-link">socrative.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.rubric-maker.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-table-cells"></i></div>
+            <div class="card-meta">
+              <h4>Rubric Maker</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Generate clear, customisable rubrics for any subject or assignment type in seconds — printable and shareable.</p>
+          <span class="card-link">rubric-maker.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       5. PROFESSIONAL DEVELOPMENT
+  ═══════════════════════════════════════════════════════ -->
+  <section id="profdev" class="section subject-section sec-profdev">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0fdfa;color:#0d9488"><i class="fas fa-award"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Grow as an Educator</span>
+          <h2>Professional Development</h2>
+          <p>Free courses, frameworks, and certifications to deepen your pedagogy and stay current with edtech.</p>
         </div>
       </div>
+      <div class="resource-grid">
 
-      <!-- 6. Digital Literacy & Coding -->
-      <div class="category-block">
-        <div class="category-header">
-          <i class="fas fa-code"></i>
-          <h3>Digital Literacy &amp; Coding</h3>
-        </div>
-        <div class="resource-grid">
-          <a href="https://code.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-terminal"></i>
-            <h4>Code.org</h4>
-            <p>Free coding curriculum and activities for students of all ages, with teacher dashboards.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://scratch.mit.edu/educators" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-puzzle-piece"></i>
-            <h4>Scratch for Educators</h4>
-            <p>Visual programming platform with educator guides and creative computing curriculum.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://www.csunplugged.org" target="_blank" rel="noopener" class="resource-card">
-            <i class="fas fa-lightbulb"></i>
-            <h4>CS Unplugged</h4>
-            <p>Teach computer science concepts without a computer using hands-on activities.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
-          <a href="https://learndigital.withgoogle.com" target="_blank" rel="noopener" class="resource-card">
-            <i class="fab fa-google"></i>
-            <h4>Google Digital Garage</h4>
-            <p>Free courses on digital skills, data, and online tools with certifications.</p>
-            <span class="card-link">Visit <i class="fas fa-external-link-alt"></i></span>
-          </a>
+        <a href="https://www.coursera.org/search?query=teaching" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-university"></i></div>
+            <div class="card-meta">
+              <h4>Coursera for Teachers</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Audit free courses on pedagogy, educational technology, leadership, and inclusive teaching from top universities worldwide.</p>
+          <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://edu.google.com/intl/ALL_us/for-educators/certification-programs/" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fab fa-google"></i></div>
+            <div class="card-meta">
+              <h4>Google Educator Certification</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Free training and certification programs for integrating Google tools into your classroom — Level 1, 2, and Trainer.</p>
+          <span class="card-link">edu.google.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.unesco.org/en/digital-education/ict-competency-framework" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-globe"></i></div>
+            <div class="card-meta">
+              <h4>UNESCO ICT Framework</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>The international benchmark for ICT integration in teaching — guides schools and governments on best practice globally.</p>
+          <span class="card-link">unesco.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.edx.org/search?q=teaching+education" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="card-meta">
+              <h4>edX Teaching Courses</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Secondary</span>
+              </div>
+            </div>
+          </div>
+          <p>University-level courses on teaching methods, education policy, and edtech from Harvard, MIT, and other institutions.</p>
+          <span class="card-link">edx.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       6. DIGITAL LITERACY & CODING
+  ═══════════════════════════════════════════════════════ -->
+  <section id="digital" class="section section-alt subject-section sec-digital">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0f9ff;color:#0ea5e9"><i class="fas fa-code"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Build Digital Skills</span>
+          <h2>Digital Literacy &amp; Coding</h2>
+          <p>Teach coding and computational thinking even without a computer science background.</p>
         </div>
       </div>
+      <div class="resource-grid">
 
+        <a href="https://code.org/teach" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-terminal"></i></div>
+            <div class="card-meta">
+              <h4>Code.org for Teachers</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Primary</span>
+                <span class="grade-badge">Secondary</span>
+              </div>
+            </div>
+          </div>
+          <p>Complete free coding curriculum with teacher dashboards, lesson guides, and professional development — no prior experience needed.</p>
+          <span class="card-link">code.org/teach <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://scratch.mit.edu/educators" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
+            <div class="card-meta">
+              <h4>Scratch for Educators</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Primary</span>
+              </div>
+            </div>
+          </div>
+          <p>Visual block-based programming with a complete educator guide, creative computing curriculum, and classroom management tools.</p>
+          <span class="card-link">scratch.mit.edu/educators <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.csunplugged.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="card-meta">
+              <h4>CS Unplugged</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Primary</span>
+                <span class="grade-badge">Secondary</span>
+              </div>
+            </div>
+          </div>
+          <p>Teach core computer science concepts — algorithms, binary, networks — with hands-on activities that need no computers at all.</p>
+          <span class="card-link">csunplugged.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://learndigital.withgoogle.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fab fa-google"></i></div>
+            <div class="card-meta">
+              <h4>Google Digital Garage</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Grades</span>
+              </div>
+            </div>
+          </div>
+          <p>Free certified courses on digital skills, data fundamentals, and online tools — useful for both teacher upskilling and classroom use.</p>
+          <span class="card-link">learndigital.withgoogle.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
     </div>
   </section>
 
@@ -516,8 +920,32 @@
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=6"></script>
+  <script defer src="assets/js/i18n.js?v=8"></script>
   <script defer src="assets/js/main.js"></script>
+  <script>
+    /* Category tab active state on scroll */
+    (function () {
+      var tabs = document.querySelectorAll('.subject-tab');
+      var sections = Array.from(tabs).map(function (t) {
+        return document.querySelector(t.getAttribute('href'));
+      });
+      var navH = document.querySelector('.subjects-nav').offsetHeight;
+      var topH = parseFloat(getComputedStyle(document.documentElement).fontSize) * 4.5;
+
+      function onScroll() {
+        var offset = topH + navH + 8;
+        var active = 0;
+        sections.forEach(function (s, i) {
+          if (s && s.getBoundingClientRect().top <= offset) active = i;
+        });
+        tabs.forEach(function (t, i) {
+          t.classList.toggle('active', i === active);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
   <script>
     (function () {
       var GDPR_KEY = 'ctwp-gdpr';
