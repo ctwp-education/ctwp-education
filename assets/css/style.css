@@ -213,6 +213,26 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 .nav-link:hover, .nav-link.active { color: var(--white); }
 
+/* Nav Lab button */
+.nav-btn-lab {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 1rem;
+  margin-left: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--orange-500);
+  border-radius: var(--radius-full);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+}
+.nav-btn-lab:hover {
+  background: var(--orange-400);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(234, 88, 12, 0.4);
+}
+
 /* Language Toggle */
 .lang-toggle {
   display: flex; align-items: center; gap: 0.25rem;
