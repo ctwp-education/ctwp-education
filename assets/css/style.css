@@ -221,16 +221,19 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   margin-left: 0.4rem;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--white);
-  background: var(--orange-500);
+  color: var(--orange-400);
+  background: transparent;
+  border: 1.5px solid var(--orange-400);
   border-radius: var(--radius-full);
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
   white-space: nowrap;
 }
 .nav-btn-lab:hover {
-  background: var(--orange-400);
+  background: var(--orange-500);
+  border-color: var(--orange-500);
+  color: var(--white);
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 3px 10px rgba(234, 88, 12, 0.35);
 }
 
 /* Language Toggle */
