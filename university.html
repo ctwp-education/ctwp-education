@@ -66,13 +66,11 @@
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"></noscript>
 
   <link rel="preload" as="image" href="assets/images/Logos/ctwp logo round.webp" type="image/webp" fetchpriority="high">
-  
-  
-  
-  <link rel="stylesheet" href="assets/css/style.css?v=15">
+
+  <link rel="stylesheet" href="assets/css/style.css?v=17">
   <link rel="icon" type="image/webp" href="assets/images/Logos/ctwp logo round.webp">
   <style>
-    /* Subpage Hero Banner */
+    /* ── Subpage Hero ─────────────────────────────────── */
     .subpage-hero {
       background: var(--green-900);
       color: var(--white);
@@ -101,7 +99,7 @@
       color: var(--gray-400);
       font-size: 1.05rem;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 1.5rem;
     }
     .subpage-hero .back-link {
       display: inline-flex;
@@ -113,60 +111,228 @@
       margin-bottom: 1.5rem;
       transition: color var(--transition);
     }
-    .subpage-hero .back-link:hover {
-      color: var(--orange-400);
-    }
+    .subpage-hero .back-link:hover { color: var(--orange-400); }
 
-    /* Category Icon */
-    .category-icon {
-      display: inline-flex;
-      align-items: center;
+    /* Hero stats strip */
+    .hero-stats {
+      display: flex;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-sm);
-      background: var(--green-50);
-      color: var(--green-600);
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-size: 0.78rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
-    /* Resource Cards as Links */
-    a.resource-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
+    /* ── Category Navigation ──────────────────────────── */
+    .subjects-nav {
+      position: sticky;
+      top: 4.5rem;
+      z-index: 200;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      overflow-x: auto;
+      scrollbar-width: none;
     }
-    .resource-card .card-header {
+    .subjects-nav::-webkit-scrollbar { display: none; }
+    .subjects-nav-inner {
+      display: flex;
+      min-width: max-content;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .subject-tab {
       display: flex;
       align-items: center;
+      gap: 0.45rem;
+      padding: 0.85rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .subject-tab:hover { color: var(--gray-900); }
+    .subject-tab.active { color: var(--gray-900); border-bottom-color: var(--orange-500); }
+    .tab-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Sections ─────────────────────────────────────── */
+    .subject-section { scroll-margin-top: calc(4.5rem + 44px); }
+    .section-alt { background: var(--gray-50); }
+
+    .subject-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
+    .subject-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+    .subject-header-text .section-label { margin-bottom: 0.25rem; }
+    .subject-header-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 400;
+      color: var(--gray-900);
+      margin: 0 0 0.3rem;
+    }
+    .subject-header-text p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* ── Resource Cards ───────────────────────────────── */
+    a.resource-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      border-top: 3px solid transparent;
+    }
+
+    /* Category-specific top border */
+    .sec-courseware .resource-card  { border-top-color: #3b82f6; }
+    .sec-textbooks  .resource-card  { border-top-color: #7c3aed; }
+    .sec-research   .resource-card  { border-top-color: #16a34a; }
+    .sec-writing    .resource-card  { border-top-color: #b45309; }
+    .sec-ai         .resource-card  { border-top-color: #6366f1; }
+    .sec-coding     .resource-card  { border-top-color: #0ea5e9; }
+
+    /* Category-specific hover border */
+    .sec-courseware .resource-card:hover { border-color: #3b82f6; }
+    .sec-textbooks  .resource-card:hover { border-color: #7c3aed; }
+    .sec-research   .resource-card:hover { border-color: #16a34a; }
+    .sec-writing    .resource-card:hover { border-color: #b45309; }
+    .sec-ai         .resource-card:hover { border-color: #6366f1; }
+    .sec-coding     .resource-card:hover { border-color: #0ea5e9; }
+
+    /* Card icon */
+    .card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .sec-courseware .card-icon { background: #eff6ff; color: #3b82f6; }
+    .sec-textbooks  .card-icon { background: #f5f3ff; color: #7c3aed; }
+    .sec-research   .card-icon { background: #f0fdf4; color: #16a34a; }
+    .sec-writing    .card-icon { background: #fffbeb; color: #b45309; }
+    .sec-ai         .card-icon { background: #eef2ff; color: #6366f1; }
+    .sec-coding     .card-icon { background: #f0f9ff; color: #0ea5e9; }
+
+    /* Override default green icon */
+    .resource-card i { color: inherit; margin-bottom: 0; font-size: 1rem; }
+
+    /* Card top row */
+    .card-top {
+      display: flex;
+      align-items: flex-start;
       gap: 0.75rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
-    .resource-card .card-header i {
+    .card-meta { flex: 1; min-width: 0; }
+    .card-meta h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--gray-900);
+      margin: 0 0 0.3rem;
+    }
+
+    /* Level badges */
+    .grade-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .grade-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.12rem 0.45rem;
+      border-radius: var(--radius-full);
+      background: var(--gray-100);
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* Top Pick badge */
+    .top-pick-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #b45309;
+      background: #fef3c7;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Card body */
+    .resource-card p {
+      font-size: 0.84rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      flex: 1;
       margin-bottom: 0;
-      font-size: 1.1rem;
     }
-    .resource-card .card-header h4 {
-      margin-bottom: 0;
-    }
-    .resource-card .card-link {
+    .card-link {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--orange-500);
       font-weight: 500;
-      margin-top: 0.75rem;
+      margin-top: 0.85rem;
       transition: gap var(--transition);
     }
-    a.resource-card:hover .card-link {
-      gap: 0.6rem;
+    a.resource-card:hover .card-link { gap: 0.6rem; }
+
+    .resource-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
-    /* Alternating section backgrounds */
-    .section-alt {
-      background: var(--gray-50);
+    @media (max-width: 640px) {
+      .subjects-nav-inner { padding: 0 1rem; }
+      .hero-stats { gap: 1.5rem; }
+      .subject-header { flex-direction: column; gap: 0.75rem; }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -226,308 +392,484 @@
         <span data-i18n="sub.uni.badge">Higher Education Tools</span>
       </div>
       <h1 data-i18n="sub.uni.title">Resources for University Students</h1>
-      <p data-i18n="sub.uni.desc">Free platforms for research, open courseware, textbooks, productivity, and AI tools — everything you need to thrive in higher education.</p>
+      <p data-i18n="sub.uni.desc">24 curated free tools across 6 categories — courseware, research, writing, AI, and more.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>24</strong><span>Free Tools</span></div>
+        <div class="hero-stat"><strong>6</strong><span>Categories</span></div>
+        <div class="hero-stat"><strong>All Levels</strong><span>Bachelor to PhD</span></div>
+        <div class="hero-stat"><strong>100%</strong><span>Free</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- Open Courseware & Lectures -->
-  <section class="section">
+  <!-- ── Sticky Category Navigation ── -->
+  <nav class="subjects-nav" aria-label="Jump to category">
+    <div class="subjects-nav-inner">
+      <a href="#courseware" class="subject-tab" data-tab="courseware"><span class="tab-dot" style="background:#3b82f6"></span> Open Courseware</a>
+      <a href="#textbooks"  class="subject-tab" data-tab="textbooks"> <span class="tab-dot" style="background:#7c3aed"></span> Textbooks &amp; Reading</a>
+      <a href="#research"   class="subject-tab" data-tab="research">  <span class="tab-dot" style="background:#16a34a"></span> Research &amp; Citation</a>
+      <a href="#writing"    class="subject-tab" data-tab="writing">   <span class="tab-dot" style="background:#b45309"></span> Writing &amp; Productivity</a>
+      <a href="#ai-tools"   class="subject-tab" data-tab="ai-tools">  <span class="tab-dot" style="background:#6366f1"></span> AI Study Tools</a>
+      <a href="#coding"     class="subject-tab" data-tab="coding">    <span class="tab-dot" style="background:#0ea5e9"></span> Coding &amp; Data</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════
+       1. OPEN COURSEWARE
+  ═══════════════════════════════════════════════════════ -->
+  <section id="courseware" class="section subject-section sec-courseware">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-university"></i></div>
-        <span class="section-label section-label-orange">Learn from the Best</span>
-        <h2 class="section-title">Open Courseware &amp; Lectures</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#eff6ff;color:#3b82f6"><i class="fas fa-university"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Learn from the Best</span>
+          <h2>Open Courseware</h2>
+          <p>Full courses from MIT, Harvard, Stanford, and more — free to audit, no enrolment needed.</p>
+        </div>
       </div>
       <div class="resource-grid">
+
         <a href="https://ocw.mit.edu" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-microchip"></i>
-            <h4>MIT OpenCourseWare</h4>
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-microchip"></i></div>
+            <div class="card-meta">
+              <h4>MIT OpenCourseWare</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Free lecture notes, problem sets, exams, and videos from MIT's full course catalog — no registration needed.</p>
-          <span class="card-link">Visit ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
+          <p>Complete lecture notes, problem sets, exams, and videos from MIT's entire course catalog — no sign-up required.</p>
+          <span class="card-link">ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
         </a>
+
         <a href="https://www.coursera.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-graduation-cap"></i>
-            <h4>Coursera (Audit Free)</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="card-meta">
+              <h4>Coursera (Audit Free)</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Audit thousands of university-level courses from institutions like Yale, Duke, and Stanford at no cost.</p>
-          <span class="card-link">Visit coursera.org <i class="fas fa-arrow-right"></i></span>
+          <p>Audit thousands of university-level courses from Yale, Duke, Stanford, and more at no cost — click "Audit" at enrolment.</p>
+          <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
         </a>
+
         <a href="https://www.edx.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-chalkboard"></i>
-            <h4>edX</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+            <div class="card-meta">
+              <h4>edX</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Bachelor</span>
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
           </div>
-          <p>Free courses from Harvard, MIT, and other top universities across engineering, business, humanities, and more.</p>
-          <span class="card-link">Visit edx.org <i class="fas fa-arrow-right"></i></span>
+          <p>Free courses from Harvard, MIT, and 160+ institutions — covering engineering, business, humanities, and data science.</p>
+          <span class="card-link">edx.org <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://www.youtube.com/@MIT" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fab fa-youtube"></i>
-            <h4>MIT, Yale &amp; Stanford on YouTube</h4>
-          </div>
-          <p>Full university lecture series available free on YouTube — search by university and course name.</p>
-          <span class="card-link">Visit youtube.com <i class="fas fa-arrow-right"></i></span>
-        </a>
+
         <a href="https://nptel.ac.in" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-book-open"></i>
-            <h4>NPTEL</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-flask"></i></div>
+            <div class="card-meta">
+              <h4>NPTEL</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Bachelor</span>
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
           </div>
-          <p>High-quality engineering and science lectures from India's top IIT institutions, free and certifiable.</p>
-          <span class="card-link">Visit nptel.ac.in <i class="fas fa-arrow-right"></i></span>
+          <p>High-quality engineering, science, and management lectures from India's top IIT and IISc institutions — free and certifiable.</p>
+          <span class="card-link">nptel.ac.in <i class="fas fa-arrow-right"></i></span>
         </a>
+
       </div>
     </div>
   </section>
 
-  <!-- Free Textbooks & Academic Resources -->
-  <section class="section section-alt">
+  <!-- ════════════════════════════════════════════════════
+       2. TEXTBOOKS & READING
+  ═══════════════════════════════════════════════════════ -->
+  <section id="textbooks" class="section section-alt subject-section sec-textbooks">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-book"></i></div>
-        <span class="section-label section-label-orange">Read for Free</span>
-        <h2 class="section-title">Free Textbooks &amp; Academic Resources</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f5f3ff;color:#7c3aed"><i class="fas fa-book-open"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Read for Free</span>
+          <h2>Textbooks &amp; Reading</h2>
+          <p>Free peer-reviewed textbooks, open-access journals, and millions of academic texts.</p>
+        </div>
       </div>
       <div class="resource-grid">
+
         <a href="https://openstax.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-atlas"></i>
-            <h4>OpenStax</h4>
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-atlas"></i></div>
+            <div class="card-meta">
+              <h4>OpenStax</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Bachelor</span>
+              </div>
+            </div>
           </div>
-          <p>Peer-reviewed, free textbooks for introductory college courses in science, math, economics, and more.</p>
-          <span class="card-link">Visit openstax.org <i class="fas fa-arrow-right"></i></span>
+          <p>Peer-reviewed, freely available textbooks for introductory courses in physics, biology, chemistry, economics, and more.</p>
+          <span class="card-link">openstax.org <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://www.gutenberg.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-scroll"></i>
-            <h4>Project Gutenberg</h4>
-          </div>
-          <p>Over 70,000 free eBooks — essential for humanities, literature, and history students.</p>
-          <span class="card-link">Visit gutenberg.org <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://archive.org/details/texts" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-archive"></i>
-            <h4>Internet Archive — Books</h4>
-          </div>
-          <p>Borrow millions of digitized books and academic texts online for free with a free account.</p>
-          <span class="card-link">Visit archive.org <i class="fas fa-arrow-right"></i></span>
-        </a>
+
         <a href="https://doaj.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-newspaper"></i>
-            <h4>DOAJ — Open Access Journals</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+            <div class="card-meta">
+              <h4>DOAJ — Open Access Journals</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
           </div>
-          <p>Directory of thousands of peer-reviewed open-access journals across all disciplines.</p>
-          <span class="card-link">Visit doaj.org <i class="fas fa-arrow-right"></i></span>
+          <p>Directory of thousands of peer-reviewed open-access academic journals across every discipline — no paywall.</p>
+          <span class="card-link">doaj.org <i class="fas fa-arrow-right"></i></span>
         </a>
+
+        <a href="https://archive.org/details/texts" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-archive"></i></div>
+            <div class="card-meta">
+              <h4>Internet Archive — Books</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>Borrow and read millions of digitised books and academic texts online for free with a free account.</p>
+          <span class="card-link">archive.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.gutenberg.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-feather-alt"></i></div>
+            <div class="card-meta">
+              <h4>Project Gutenberg</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>Over 70,000 free eBooks — essential reading for humanities, literature, history, and philosophy students.</p>
+          <span class="card-link">gutenberg.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- Research Tools -->
-  <section class="section">
+  <!-- ════════════════════════════════════════════════════
+       3. RESEARCH & CITATION
+  ═══════════════════════════════════════════════════════ -->
+  <section id="research" class="section subject-section sec-research">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-microscope"></i></div>
-        <span class="section-label section-label-orange">Find & Cite</span>
-        <h2 class="section-title">Research Tools</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0fdf4;color:#16a34a"><i class="fas fa-microscope"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Find &amp; Cite</span>
+          <h2>Research &amp; Citation</h2>
+          <p>Search scholarly literature, organise sources, and visualise connections between papers.</p>
+        </div>
       </div>
       <div class="resource-grid">
+
         <a href="https://scholar.google.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-search"></i>
-            <h4>Google Scholar</h4>
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-search"></i></div>
+            <div class="card-meta">
+              <h4>Google Scholar</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Search millions of scholarly articles, theses, books, and conference papers across all fields.</p>
-          <span class="card-link">Visit scholar.google.com <i class="fas fa-arrow-right"></i></span>
+          <p>Search millions of scholarly articles, theses, books, and conference papers across all disciplines — free.</p>
+          <span class="card-link">scholar.google.com <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://www.semanticscholar.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-brain"></i>
-            <h4>Semantic Scholar</h4>
-          </div>
-          <p>AI-powered academic search engine that surfaces the most relevant and influential research papers.</p>
-          <span class="card-link">Visit semanticscholar.org <i class="fas fa-arrow-right"></i></span>
-        </a>
+
         <a href="https://www.zotero.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-bookmark"></i>
-            <h4>Zotero</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-bookmark"></i></div>
+            <div class="card-meta">
+              <h4>Zotero</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Free reference manager to collect, organize, cite, and share your research sources effortlessly.</p>
-          <span class="card-link">Visit zotero.org <i class="fas fa-arrow-right"></i></span>
+          <p>Free reference manager to collect, organise, cite, and share sources — with browser plugins for one-click saving.</p>
+          <span class="card-link">zotero.org <i class="fas fa-arrow-right"></i></span>
         </a>
+
+        <a href="https://www.semanticscholar.org" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <div class="card-meta">
+              <h4>Semantic Scholar</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>AI-powered academic search that surfaces the most influential and relevant research, with citation context.</p>
+          <span class="card-link">semanticscholar.org <i class="fas fa-arrow-right"></i></span>
+        </a>
+
         <a href="https://www.connectedpapers.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-diagram-project"></i>
-            <h4>Connected Papers</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-diagram-project"></i></div>
+            <div class="card-meta">
+              <h4>Connected Papers</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
           </div>
-          <p>Visualize the relationship between academic papers and discover relevant prior and derivative works.</p>
-          <span class="card-link">Visit connectedpapers.com <i class="fas fa-arrow-right"></i></span>
+          <p>Visualise the web of academic papers around any work — perfect for mapping a field before writing a literature review.</p>
+          <span class="card-link">connectedpapers.com <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://www.refseek.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-globe"></i>
-            <h4>RefSeek</h4>
-          </div>
-          <p>Academic search engine covering over a billion documents from journals, encyclopedias, and universities.</p>
-          <span class="card-link">Visit refseek.com <i class="fas fa-arrow-right"></i></span>
-        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- AI Tools for University -->
-  <section class="section section-alt">
+  <!-- ════════════════════════════════════════════════════
+       4. WRITING & PRODUCTIVITY
+  ═══════════════════════════════════════════════════════ -->
+  <section id="writing" class="section section-alt subject-section sec-writing">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-robot"></i></div>
-        <span class="section-label section-label-orange">Study Smarter</span>
-        <h2 class="section-title">AI Tools for University</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#fffbeb;color:#b45309"><i class="fas fa-pen-to-square"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Write &amp; Organise</span>
+          <h2>Writing &amp; Productivity</h2>
+          <p>Write better essays, manage your knowledge, and stay organised through your degree.</p>
+        </div>
       </div>
       <div class="resource-grid">
-        <a href="https://chat.openai.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-message"></i>
-            <h4>ChatGPT</h4>
-          </div>
-          <p>AI assistant for brainstorming, explaining complex topics, writing drafts, and exam preparation.</p>
-          <span class="card-link">Visit chat.openai.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-brain"></i>
-            <h4>Claude AI</h4>
-          </div>
-          <p>Excellent for deep analysis, long-document understanding, essay feedback, and research summaries.</p>
-          <span class="card-link">Visit claude.ai <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-note-sticky"></i>
-            <h4>NotebookLM</h4>
-          </div>
-          <p>Upload your lecture notes and papers — AI summarizes, answers questions, and generates study guides.</p>
-          <span class="card-link">Visit notebooklm.google.com <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-magnifying-glass"></i>
-            <h4>Perplexity AI</h4>
-          </div>
-          <p>AI-powered search with cited sources — ideal for quick academic queries and literature reviews.</p>
-          <span class="card-link">Visit perplexity.ai <i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://consensus.app" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-check-double"></i>
-            <h4>Consensus</h4>
-          </div>
-          <p>Search and summarize findings from peer-reviewed research papers using AI — great for literature reviews.</p>
-          <span class="card-link">Visit consensus.app <i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Productivity & Writing -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-pen-to-square"></i></div>
-        <span class="section-label section-label-orange">Write & Organise</span>
-        <h2 class="section-title">Productivity &amp; Writing</h2>
-      </div>
-      <div class="resource-grid">
         <a href="https://www.notion.so" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-table-columns"></i>
-            <h4>Notion</h4>
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-table-columns"></i></div>
+            <div class="card-meta">
+              <h4>Notion</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>All-in-one workspace for notes, project planning, databases, and collaboration — free for students.</p>
-          <span class="card-link">Visit notion.so <i class="fas fa-arrow-right"></i></span>
+          <p>All-in-one workspace for notes, project planning, databases, and collaboration — free for students with an edu email.</p>
+          <span class="card-link">notion.so <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://obsidian.md" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-network-wired"></i>
-            <h4>Obsidian</h4>
-          </div>
-          <p>Powerful linked note-taking app for building your personal knowledge base — free for personal use.</p>
-          <span class="card-link">Visit obsidian.md <i class="fas fa-arrow-right"></i></span>
-        </a>
+
         <a href="https://www.overleaf.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-file-code"></i>
-            <h4>Overleaf</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-file-code"></i></div>
+            <div class="card-meta">
+              <h4>Overleaf</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Bachelor</span>
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
           </div>
-          <p>Free online LaTeX editor for writing academic papers, theses, and scientific reports collaboratively.</p>
-          <span class="card-link">Visit overleaf.com <i class="fas fa-arrow-right"></i></span>
+          <p>Free online LaTeX editor for writing academic papers, theses, and scientific reports — real-time collaboration built in.</p>
+          <span class="card-link">overleaf.com <i class="fas fa-arrow-right"></i></span>
         </a>
+
+        <a href="https://obsidian.md" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="card-meta">
+              <h4>Obsidian</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>Powerful linked note-taking app for building a personal knowledge base — connects ideas across all your notes.</p>
+          <span class="card-link">obsidian.md <i class="fas fa-arrow-right"></i></span>
+        </a>
+
         <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-spell-check"></i>
-            <h4>Grammarly</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-spell-check"></i></div>
+            <div class="card-meta">
+              <h4>Grammarly</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>AI-powered writing assistant for grammar, clarity, and style checks in essays and assignments.</p>
-          <span class="card-link">Visit grammarly.com <i class="fas fa-arrow-right"></i></span>
+          <p>AI writing assistant that checks grammar, clarity, tone, and style — free browser extension works everywhere you write.</p>
+          <span class="card-link">grammarly.com <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://anki.apps.ankiweb.net" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-layer-group"></i>
-            <h4>Anki</h4>
-          </div>
-          <p>Spaced-repetition flashcard app used by medical and law students worldwide — free and highly effective.</p>
-          <span class="card-link">Visit apps.ankiweb.net <i class="fas fa-arrow-right"></i></span>
-        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- Coding & Data Science -->
-  <section class="section section-alt">
+  <!-- ════════════════════════════════════════════════════
+       5. AI STUDY TOOLS
+  ═══════════════════════════════════════════════════════ -->
+  <section id="ai-tools" class="section subject-section sec-ai">
     <div class="container">
-      <div class="section-header">
-        <div class="category-icon"><i class="fas fa-code"></i></div>
-        <span class="section-label section-label-orange">Build & Analyse</span>
-        <h2 class="section-title">Coding &amp; Data Science</h2>
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#eef2ff;color:#6366f1"><i class="fas fa-robot"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Study Smarter</span>
+          <h2>AI Study Tools</h2>
+          <p>AI assistants that help you research, write, understand, and prepare for exams — use them responsibly.</p>
+        </div>
       </div>
       <div class="resource-grid">
+
+        <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="resource-card">
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-sticky-note"></i></div>
+            <div class="card-meta">
+              <h4>NotebookLM</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>Upload lecture notes, papers, and PDFs — AI generates summaries, answers your questions, and creates study guides from your own material.</p>
+          <span class="card-link">notebooklm.google.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://consensus.app" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-check-double"></i></div>
+            <div class="card-meta">
+              <h4>Consensus</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
+          </div>
+          <p>Ask a research question and get AI-summarised findings from peer-reviewed papers — ideal for literature reviews.</p>
+          <span class="card-link">consensus.app <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-magnifying-glass"></i></div>
+            <div class="card-meta">
+              <h4>Perplexity AI</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>AI-powered search with cited, sourced answers — great for quick academic queries without leaving a browser tab.</p>
+          <span class="card-link">perplexity.ai <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <div class="card-meta">
+              <h4>Claude AI</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
+          </div>
+          <p>Excellent for deep analysis, long-document understanding, essay feedback, and working through complex academic concepts.</p>
+          <span class="card-link">claude.ai <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       6. CODING & DATA SCIENCE
+  ═══════════════════════════════════════════════════════ -->
+  <section id="coding" class="section section-alt subject-section sec-coding">
+    <div class="container">
+      <div class="subject-header">
+        <div class="subject-icon" style="background:#f0f9ff;color:#0ea5e9"><i class="fas fa-code"></i></div>
+        <div class="subject-header-text">
+          <span class="section-label section-label-orange">Build &amp; Analyse</span>
+          <h2>Coding &amp; Data Science</h2>
+          <p>Write code, run analyses, and build projects — straight from the browser, no setup needed.</p>
+        </div>
+      </div>
+      <div class="resource-grid">
+
         <a href="https://colab.research.google.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fab fa-google"></i>
-            <h4>Google Colab</h4>
+          <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+          <div class="card-top">
+            <div class="card-icon"><i class="fab fa-google"></i></div>
+            <div class="card-meta">
+              <h4>Google Colab</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">Bachelor</span>
+                <span class="grade-badge">Master · PhD</span>
+              </div>
+            </div>
           </div>
-          <p>Free cloud-based Jupyter notebooks — run Python, machine learning, and data analysis with no setup.</p>
-          <span class="card-link">Visit colab.research.google.com <i class="fas fa-arrow-right"></i></span>
+          <p>Free cloud-based Jupyter notebooks — run Python, machine learning, and data analysis with GPU access and no local setup.</p>
+          <span class="card-link">colab.research.google.com <i class="fas fa-arrow-right"></i></span>
         </a>
+
         <a href="https://www.kaggle.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-chart-bar"></i>
-            <h4>Kaggle</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="card-meta">
+              <h4>Kaggle</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Free datasets, notebooks, and competitions to learn data science and machine learning hands-on.</p>
-          <span class="card-link">Visit kaggle.com <i class="fas fa-arrow-right"></i></span>
+          <p>Free datasets, notebooks, competitions, and courses to learn data science and machine learning completely hands-on.</p>
+          <span class="card-link">kaggle.com <i class="fas fa-arrow-right"></i></span>
         </a>
+
         <a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fas fa-laptop-code"></i>
-            <h4>freeCodeCamp</h4>
+          <div class="card-top">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="card-meta">
+              <h4>freeCodeCamp</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Free full-stack web development curriculum with certifications in JavaScript, Python, and data analysis.</p>
-          <span class="card-link">Visit freecodecamp.org <i class="fas fa-arrow-right"></i></span>
+          <p>Free full-stack web development curriculum with certifications in JavaScript, Python, data analysis, and machine learning.</p>
+          <span class="card-link">freecodecamp.org <i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener" class="resource-card">
-          <div class="card-header">
-            <i class="fab fa-github"></i>
-            <h4>GitHub (Student Pack)</h4>
+
+        <a href="https://education.github.com" target="_blank" rel="noopener" class="resource-card">
+          <div class="card-top">
+            <div class="card-icon"><i class="fab fa-github"></i></div>
+            <div class="card-meta">
+              <h4>GitHub Education</h4>
+              <div class="grade-badges">
+                <span class="grade-badge">All Levels</span>
+              </div>
+            </div>
           </div>
-          <p>Version control and collaboration platform — students get free access to premium tools via GitHub Education.</p>
-          <span class="card-link">Visit github.com <i class="fas fa-arrow-right"></i></span>
+          <p>Students get free access to GitHub Copilot, premium dev tools, and cloud credits via the GitHub Student Developer Pack.</p>
+          <span class="card-link">education.github.com <i class="fas fa-arrow-right"></i></span>
         </a>
+
       </div>
     </div>
   </section>
@@ -588,8 +930,32 @@
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=5"></script>
+  <script defer src="assets/js/i18n.js?v=6"></script>
   <script defer src="assets/js/main.js"></script>
+  <script>
+    /* Category tab active state on scroll */
+    (function () {
+      var tabs = document.querySelectorAll('.subject-tab');
+      var sections = Array.from(tabs).map(function (t) {
+        return document.querySelector(t.getAttribute('href'));
+      });
+      var navH = document.querySelector('.subjects-nav').offsetHeight;
+      var topH = parseFloat(getComputedStyle(document.documentElement).fontSize) * 4.5;
+
+      function onScroll() {
+        var offset = topH + navH + 8;
+        var active = 0;
+        sections.forEach(function (s, i) {
+          if (s && s.getBoundingClientRect().top <= offset) active = i;
+        });
+        tabs.forEach(function (t, i) {
+          t.classList.toggle('active', i === active);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
   <script>
     (function () {
       var GDPR_KEY = 'ctwp-gdpr';
