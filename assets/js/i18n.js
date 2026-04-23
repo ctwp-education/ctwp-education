@@ -3,7 +3,7 @@ const translations = {
   en: {
     /* Navbar */
     'nav.about': 'About', 'nav.work': 'Our Work', 'nav.resources': 'Resources',
-    'nav.support': 'Support Us', 'nav.contact': 'Contact',
+    'nav.support': 'Support Us', 'nav.contact': 'Contact', 'nav.lab': 'Our Lab',
     /* Hero */
     'hero.badge': 'Free Education for Every Learner',
     'hero.title': 'Empowering the world through <em>Education</em>',
@@ -156,7 +156,7 @@ const translations = {
   de: {
     /* Navbar */
     'nav.about': 'Über uns', 'nav.work': 'Unsere Arbeit', 'nav.resources': 'Ressourcen',
-    'nav.support': 'Unterstützen', 'nav.contact': 'Kontakt',
+    'nav.support': 'Unterstützen', 'nav.contact': 'Kontakt', 'nav.lab': 'Unser Lab',
     /* Hero */
     'hero.badge': 'Kostenlose Bildung für alle Lernenden',
     'hero.title': 'Die Welt durch <em>Bildung</em> stärken',
