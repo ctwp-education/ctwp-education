@@ -138,8 +138,8 @@ const translations = {
     'footer.support': 'Support Us', 'footer.contact': 'Contact Us',
     'footer.copyright': '© 2026 CTWP Educational Empowerment. All rights reserved.',
     /* Subpages */
-    'sub.students.badge': 'K–12 Learning Tools', 'sub.students.title': 'Resources for School Students (K-12)',
-    'sub.students.desc': '90 curated free tools across 9 subjects. Pick a topic below to see the top 10.',
+    'sub.students.badge': 'K–12 Future-Ready Skills', 'sub.students.title': 'Resources for School Students (K-12)',
+    'sub.students.desc': '144 curated free tools across 12 future-ready life skills — covering ages 3 to 18. Each tool is tagged with its pricing model and age range.',
     'sub.students.back': 'Back to Resources',
     'sub.uni.badge': 'Higher Education Tools', 'sub.uni.title': 'Resources for University Students',
     'sub.uni.desc': '60 curated free tools across 6 topics. Pick a topic below to see the top 10.',
@@ -291,8 +291,8 @@ const translations = {
     'footer.support': 'Unterstützen', 'footer.contact': 'Kontakt',
     'footer.copyright': '© 2026 CTWP Educational Empowerment. Alle Rechte vorbehalten.',
     /* Subpages */
-    'sub.students.badge': 'K–12 Lernmittel', 'sub.students.title': 'Ressourcen für Schülerinnen & Schüler (K-12)',
-    'sub.students.desc': '90 kuratierte kostenlose Tools in 9 Fächern. Wähle unten ein Thema und sieh die Top 10.',
+    'sub.students.badge': 'K–12 Zukunftskompetenzen', 'sub.students.title': 'Ressourcen für Schülerinnen & Schüler (K-12)',
+    'sub.students.desc': '144 kuratierte kostenlose Tools für 12 zukunftsrelevante Lebenskompetenzen — von 3 bis 18 Jahre. Jedes Tool ist mit Preismodell und Altersbereich gekennzeichnet.',
     'sub.students.back': 'Zurück zu Ressourcen',
     'sub.uni.badge': 'Hochschulbildung', 'sub.uni.title': 'Ressourcen für Studierende',
     'sub.uni.desc': '60 kuratierte kostenlose Tools in 6 Themen. Wähle unten ein Thema und sieh die Top 10.',
