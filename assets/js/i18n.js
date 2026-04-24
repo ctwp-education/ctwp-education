@@ -139,13 +139,13 @@ const translations = {
     'footer.copyright': '© 2026 CTWP Educational Empowerment. All rights reserved.',
     /* Subpages */
     'sub.students.badge': 'K–12 Learning Tools', 'sub.students.title': 'Resources for School Students (K-12)',
-    'sub.students.desc': '37 curated free tools across 9 subjects — for every grade level, every curiosity.',
+    'sub.students.desc': '90 curated free tools across 9 subjects. Pick a topic below to see the top 10.',
     'sub.students.back': 'Back to Resources',
     'sub.uni.badge': 'Higher Education Tools', 'sub.uni.title': 'Resources for University Students',
-    'sub.uni.desc': '24 curated free tools across 6 categories — courseware, research, writing, AI, and more.',
+    'sub.uni.desc': '60 curated free tools across 6 topics. Pick a topic below to see the top 10.',
     'sub.uni.back': 'Back to Resources',
     'sub.teachers.badge': 'For Educators & Teachers', 'sub.teachers.title': 'Free Teaching Resources',
-    'sub.teachers.desc': '24 curated free tools across 6 categories — plan, teach, assess, and grow as an educator.',
+    'sub.teachers.desc': '60 curated free tools across 6 topics. Pick a topic below to see the top 10.',
     'sub.teachers.back': 'Back to Resources',
     /* GDPR */
     'gdpr.title': 'Cookie & Storage Notice',
@@ -292,13 +292,13 @@ const translations = {
     'footer.copyright': '© 2026 CTWP Educational Empowerment. Alle Rechte vorbehalten.',
     /* Subpages */
     'sub.students.badge': 'K–12 Lernmittel', 'sub.students.title': 'Ressourcen für Schülerinnen & Schüler (K-12)',
-    'sub.students.desc': '37 kuratierte kostenlose Tools in 9 Fächern — für jede Klassenstufe, jeden Wissensdrang.',
+    'sub.students.desc': '90 kuratierte kostenlose Tools in 9 Fächern. Wähle unten ein Thema und sieh die Top 10.',
     'sub.students.back': 'Zurück zu Ressourcen',
     'sub.uni.badge': 'Hochschulbildung', 'sub.uni.title': 'Ressourcen für Studierende',
-    'sub.uni.desc': '24 kuratierte kostenlose Tools in 6 Kategorien — Kurse, Recherche, Schreiben, KI und mehr.',
+    'sub.uni.desc': '60 kuratierte kostenlose Tools in 6 Themen. Wähle unten ein Thema und sieh die Top 10.',
     'sub.uni.back': 'Zurück zu Ressourcen',
     'sub.teachers.badge': 'Für Lehrerinnen & Lehrer', 'sub.teachers.title': 'Kostenlose Lehrressourcen',
-    'sub.teachers.desc': '24 kuratierte kostenlose Tools in 6 Kategorien — planen, unterrichten, bewerten und wachsen als Lehrkraft.',
+    'sub.teachers.desc': '60 kuratierte kostenlose Tools in 6 Themen. Wähle unten ein Thema und sieh die Top 10.',
     'sub.teachers.back': 'Zurück zu Ressourcen',
     /* GDPR */
     'gdpr.title': 'Cookie- & Speicherhinweis',
