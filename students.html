@@ -107,69 +107,86 @@
       letter-spacing: 0.06em;
     }
 
-    /* ── Skill Picker Grid ───────────────────────────── */
+    /* ── Skill Picker ────────────────────────────────── */
     .skill-picker {
-      background: #ffffff;
-      border-bottom: 1px solid var(--gray-200);
-      padding: 2rem 0 1.75rem;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 3.25rem 0 2.5rem;
     }
-    .skill-picker-label {
+    .skill-picker-heading {
       text-align: center;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-      margin-bottom: 1.1rem;
+      margin-bottom: 2rem;
+      padding: 0 1.5rem;
+    }
+    .skill-picker-heading .section-label {
+      margin-bottom: 0.75rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: var(--radius-full);
+    }
+    .skill-picker-heading h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+      font-weight: 400;
+      color: var(--gray-900);
+      line-height: 1.3;
+      margin: 0;
+    }
+    .skill-picker-heading h2 em {
+      font-style: italic;
+      color: var(--green-700);
     }
     .skill-picker-inner {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.6rem;
-      max-width: 820px;
+      gap: 0.55rem;
+      max-width: 880px;
       margin: 0 auto;
       padding: 0 2rem;
     }
     .subject-tab {
-      flex: 0 0 calc(25% - 0.46rem);
+      flex: 0 0 calc(25% - 0.42rem);
       min-width: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 0.7rem 0.75rem;
+      gap: 0.48rem;
+      padding: 0.72rem 0.9rem;
       font-family: var(--font-body);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      color: var(--chip-color, var(--gray-600));
-      background-color: #ffffff;
-      border: 1.5px solid var(--chip-color, var(--gray-300));
-      border-radius: 0.6rem;
+      letter-spacing: 0.01em;
+      color: var(--gray-700);
+      background-color: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: var(--radius-full);
       text-align: center;
       cursor: pointer;
-      transition: background-color 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
       line-height: 1.3;
     }
     .subject-tab:not(.chip-active):hover {
-      background-color: #f9fafb;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-      transform: translateY(-1px);
+      color: var(--chip-color, var(--gray-900));
+      border-color: var(--chip-color, var(--gray-400));
+      box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+      transform: translateY(-2px);
     }
     .subject-tab.chip-active {
       background-color: var(--chip-color);
-      color: #ffffff;
+      color: var(--white);
       border-color: var(--chip-color);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
     }
-    .subject-tab.chip-active:hover { transform: translateY(-1px); }
+    .subject-tab.chip-active:hover { transform: translateY(-2px); }
     .chip-icon {
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       flex-shrink: 0;
-      opacity: 0.85;
+      opacity: 0.7;
+      color: var(--chip-color, currentColor);
     }
-    .subject-tab.chip-active .chip-icon { opacity: 1; }
+    .subject-tab:not(.chip-active):hover .chip-icon { opacity: 1; }
+    .subject-tab.chip-active .chip-icon { opacity: 1; color: currentColor; }
 
     /* ── Panels (only one visible at a time) ─────────── */
     .panel {
@@ -226,32 +243,32 @@
       color: inherit;
       border-top: 3px solid transparent;
     }
-    .sec-literacy   .resource-card { border-top-color: #7c3aed; }
-    .sec-math       .resource-card { border-top-color: #3b82f6; }
-    .sec-science    .resource-card { border-top-color: #16a34a; }
+    .sec-literacy   .resource-card { border-top-color: #5b21b6; }
+    .sec-math       .resource-card { border-top-color: #0369a1; }
+    .sec-science    .resource-card { border-top-color: #047857; }
     .sec-history    .resource-card { border-top-color: #b45309; }
-    .sec-coding     .resource-card { border-top-color: #0ea5e9; }
-    .sec-ai         .resource-card { border-top-color: #6366f1; }
-    .sec-critical   .resource-card { border-top-color: #0d9488; }
-    .sec-mental     .resource-card { border-top-color: #db2777; }
-    .sec-finance    .resource-card { border-top-color: #059669; }
-    .sec-life       .resource-card { border-top-color: #ea580c; }
-    .sec-values     .resource-card { border-top-color: #a16207; }
+    .sec-coding     .resource-card { border-top-color: #0891b2; }
+    .sec-ai         .resource-card { border-top-color: #6d28d9; }
+    .sec-critical   .resource-card { border-top-color: #1f2937; }
+    .sec-mental     .resource-card { border-top-color: #be185d; }
+    .sec-finance    .resource-card { border-top-color: #ca8a04; }
+    .sec-life       .resource-card { border-top-color: #e8561d; }
+    .sec-values     .resource-card { border-top-color: #134e4a; }
     .sec-creativity .resource-card { border-top-color: #c026d3; }
-    .sec-learn      .resource-card { border-top-color: #dc2626; }
-    .sec-literacy   .resource-card:hover { border-color: #7c3aed; }
-    .sec-math       .resource-card:hover { border-color: #3b82f6; }
-    .sec-science    .resource-card:hover { border-color: #16a34a; }
+    .sec-learn      .resource-card { border-top-color: #991b1b; }
+    .sec-literacy   .resource-card:hover { border-color: #5b21b6; }
+    .sec-math       .resource-card:hover { border-color: #0369a1; }
+    .sec-science    .resource-card:hover { border-color: #047857; }
     .sec-history    .resource-card:hover { border-color: #b45309; }
-    .sec-coding     .resource-card:hover { border-color: #0ea5e9; }
-    .sec-ai         .resource-card:hover { border-color: #6366f1; }
-    .sec-critical   .resource-card:hover { border-color: #0d9488; }
-    .sec-mental     .resource-card:hover { border-color: #db2777; }
-    .sec-finance    .resource-card:hover { border-color: #059669; }
-    .sec-life       .resource-card:hover { border-color: #ea580c; }
-    .sec-values     .resource-card:hover { border-color: #a16207; }
+    .sec-coding     .resource-card:hover { border-color: #0891b2; }
+    .sec-ai         .resource-card:hover { border-color: #6d28d9; }
+    .sec-critical   .resource-card:hover { border-color: #1f2937; }
+    .sec-mental     .resource-card:hover { border-color: #be185d; }
+    .sec-finance    .resource-card:hover { border-color: #ca8a04; }
+    .sec-life       .resource-card:hover { border-color: #e8561d; }
+    .sec-values     .resource-card:hover { border-color: #134e4a; }
     .sec-creativity .resource-card:hover { border-color: #c026d3; }
-    .sec-learn      .resource-card:hover { border-color: #dc2626; }
+    .sec-learn      .resource-card:hover { border-color: #991b1b; }
     .card-icon {
       width: 36px;
       height: 36px;
@@ -262,19 +279,19 @@
       font-size: 0.95rem;
       flex-shrink: 0;
     }
-    .sec-literacy   .card-icon { background: #f5f3ff; color: #7c3aed; }
-    .sec-math       .card-icon { background: #eff6ff; color: #3b82f6; }
-    .sec-science    .card-icon { background: #f0fdf4; color: #16a34a; }
-    .sec-history    .card-icon { background: #fffbeb; color: #b45309; }
-    .sec-coding     .card-icon { background: #f0f9ff; color: #0ea5e9; }
-    .sec-ai         .card-icon { background: #eef2ff; color: #6366f1; }
-    .sec-critical   .card-icon { background: #f0fdfa; color: #0d9488; }
-    .sec-mental     .card-icon { background: #fdf2f8; color: #db2777; }
-    .sec-finance    .card-icon { background: #ecfdf5; color: #059669; }
-    .sec-life       .card-icon { background: #fff7ed; color: #ea580c; }
-    .sec-values     .card-icon { background: #fefce8; color: #a16207; }
+    .sec-literacy   .card-icon { background: #f5f3ff; color: #5b21b6; }
+    .sec-math       .card-icon { background: #f0f9ff; color: #0369a1; }
+    .sec-science    .card-icon { background: #ecfdf5; color: #047857; }
+    .sec-history    .card-icon { background: #fff7ed; color: #b45309; }
+    .sec-coding     .card-icon { background: #ecfeff; color: #0891b2; }
+    .sec-ai         .card-icon { background: #faf5ff; color: #6d28d9; }
+    .sec-critical   .card-icon { background: #f3f4f6; color: #1f2937; }
+    .sec-mental     .card-icon { background: #fdf2f8; color: #be185d; }
+    .sec-finance    .card-icon { background: #fefce8; color: #ca8a04; }
+    .sec-life       .card-icon { background: var(--orange-100); color: #e8561d; }
+    .sec-values     .card-icon { background: #f0fdfa; color: #134e4a; }
     .sec-creativity .card-icon { background: #fdf4ff; color: #c026d3; }
-    .sec-learn      .card-icon { background: #fef2f2; color: #dc2626; }
+    .sec-learn      .card-icon { background: #fef2f2; color: #991b1b; }
     .resource-card i { color: inherit; margin-bottom: 0; font-size: 0.95rem; }
     .card-top {
       display: flex;
@@ -338,9 +355,9 @@
       letter-spacing: 0.04em;
       line-height: 1.5;
     }
-    .pill-free         { background: #dcfce7; color: #166534; }
-    .pill-free-signup  { background: #dbeafe; color: #1e40af; }
-    .pill-freemium     { background: #fef3c7; color: #b45309; }
+    .pill-free         { background: var(--green-50);   color: var(--green-700); }
+    .pill-free-signup  { background: #e0e7ff;           color: #3730a3; }
+    .pill-freemium     { background: var(--orange-100); color: var(--orange-500); }
 
     .resource-card p {
       font-size: 0.82rem;
@@ -363,79 +380,89 @@
 
     /* ── Filter Bar ──────────────────────────────── */
     .filter-bar {
-      background: #f8fafc;
+      background: var(--white);
       border-bottom: 1px solid var(--gray-200);
-      padding: 0.8rem 0;
+      padding: 1rem 0;
     }
     .filter-bar-inner {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 0.6rem 1.25rem;
-      max-width: 900px;
+      justify-content: center;
+      gap: 0.7rem 1.5rem;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 0 2rem;
     }
     .filter-legend {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.85rem;
       flex-wrap: wrap;
     }
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 0.32rem;
+      gap: 0.4rem;
       font-size: 0.7rem;
       font-weight: 600;
-      color: var(--gray-600);
+      color: var(--gray-700);
       white-space: nowrap;
     }
     .legend-swatch {
       display: inline-block;
-      width: 0.55rem;
-      height: 0.55rem;
+      width: 0.7rem;
+      height: 0.7rem;
       border-radius: 50%;
+      border: 1.5px solid;
     }
-    .legend-swatch.swatch-free     { background: #166534; }
-    .legend-swatch.swatch-signup   { background: #1e40af; }
-    .legend-swatch.swatch-freemium { background: #b45309; }
+    .legend-swatch.swatch-free     { background: var(--green-50);   border-color: var(--green-700); }
+    .legend-swatch.swatch-signup   { background: #e0e7ff;           border-color: #3730a3; }
+    .legend-swatch.swatch-freemium { background: var(--orange-100); border-color: var(--orange-500); }
     .filter-divider {
       width: 1px;
-      height: 1.2rem;
+      height: 1.1rem;
       background: var(--gray-300);
       flex-shrink: 0;
     }
     .filter-group {
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.35rem;
       flex-wrap: wrap;
     }
     .filter-label {
       font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.1em;
       color: var(--gray-500);
-      margin-right: 0.1rem;
+      margin-right: 0.15rem;
       white-space: nowrap;
     }
     .filter-btn {
       font-family: var(--font-body);
       font-size: 0.7rem;
       font-weight: 600;
-      padding: 0.22rem 0.65rem;
+      padding: 0.3rem 0.8rem;
       border-radius: var(--radius-full);
-      border: 1.5px solid var(--gray-300);
-      background: #fff;
+      border: 1px solid var(--gray-300);
+      background: transparent;
       color: var(--gray-600);
       cursor: pointer;
-      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      transition: all 0.18s;
       white-space: nowrap;
+      letter-spacing: 0.02em;
     }
-    .filter-btn:hover { background: var(--gray-100); border-color: var(--gray-400); }
-    .filter-btn.filter-active { background: var(--gray-800); color: #fff; border-color: var(--gray-800); }
+    .filter-btn:hover {
+      border-color: var(--gray-500);
+      color: var(--gray-800);
+    }
+    .filter-btn.filter-active {
+      background: var(--green-700);
+      color: var(--white);
+      border-color: var(--green-700);
+    }
     .panel.has-no-results .resource-grid::after {
       content: "No tools match the current filters — try a different combination.";
       display: block;
@@ -523,21 +550,24 @@
 
   <!-- ── Sticky Subject Tabs ── -->
   <nav class="skill-picker" role="tablist" aria-label="Choose a life skill">
-    <p class="skill-picker-label">Choose a skill area</p>
+    <div class="skill-picker-heading">
+      <span class="section-label section-label-orange">Explore by Skill</span>
+      <h2>Choose one of the <em>13 life skills</em> to discover the best free tools</h2>
+    </div>
     <div class="skill-picker-inner">
-      <button type="button" class="subject-tab chip-active" role="tab" data-tab="literacy"   aria-selected="true"  aria-controls="literacy"   style="--chip-color:#7c3aed"><i class="fas fa-book-open chip-icon"></i> Literacy &amp; Communication</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="math"       aria-selected="false" aria-controls="math"       style="--chip-color:#3b82f6"><i class="fas fa-square-root-alt chip-icon"></i> Math</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="science"    aria-selected="false" aria-controls="science"    style="--chip-color:#16a34a"><i class="fas fa-flask chip-icon"></i> Science</button>
+      <button type="button" class="subject-tab chip-active" role="tab" data-tab="literacy"   aria-selected="true"  aria-controls="literacy"   style="--chip-color:#5b21b6"><i class="fas fa-book-open chip-icon"></i> Literacy &amp; Communication</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="math"       aria-selected="false" aria-controls="math"       style="--chip-color:#0369a1"><i class="fas fa-square-root-alt chip-icon"></i> Math</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="science"    aria-selected="false" aria-controls="science"    style="--chip-color:#047857"><i class="fas fa-flask chip-icon"></i> Science</button>
       <button type="button" class="subject-tab" role="tab" data-tab="history"    aria-selected="false" aria-controls="history"    style="--chip-color:#b45309"><i class="fas fa-globe-americas chip-icon"></i> History &amp; Geography</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="coding"     aria-selected="false" aria-controls="coding"     style="--chip-color:#0ea5e9"><i class="fas fa-code chip-icon"></i> Coding &amp; Computational Thinking</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="ai"         aria-selected="false" aria-controls="ai"         style="--chip-color:#6366f1"><i class="fas fa-robot chip-icon"></i> AI &amp; Digital Literacy</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="critical"   aria-selected="false" aria-controls="critical"   style="--chip-color:#0d9488"><i class="fas fa-lightbulb chip-icon"></i> Critical Thinking</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="mental"     aria-selected="false" aria-controls="mental"     style="--chip-color:#db2777"><i class="fas fa-heart chip-icon"></i> Mental Health &amp; Mindfulness</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="finance"    aria-selected="false" aria-controls="finance"    style="--chip-color:#059669"><i class="fas fa-coins chip-icon"></i> Financial Literacy</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="life"       aria-selected="false" aria-controls="life"       style="--chip-color:#ea580c"><i class="fas fa-utensils chip-icon"></i> Life Skills &amp; Health</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="values"     aria-selected="false" aria-controls="values"     style="--chip-color:#a16207"><i class="fas fa-hands-helping chip-icon"></i> Values &amp; Citizenship</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="coding"     aria-selected="false" aria-controls="coding"     style="--chip-color:#0891b2"><i class="fas fa-code chip-icon"></i> Coding &amp; Computational Thinking</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="ai"         aria-selected="false" aria-controls="ai"         style="--chip-color:#6d28d9"><i class="fas fa-robot chip-icon"></i> AI &amp; Digital Literacy</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="critical"   aria-selected="false" aria-controls="critical"   style="--chip-color:#1f2937"><i class="fas fa-lightbulb chip-icon"></i> Critical Thinking</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="mental"     aria-selected="false" aria-controls="mental"     style="--chip-color:#be185d"><i class="fas fa-heart chip-icon"></i> Mental Health &amp; Mindfulness</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="finance"    aria-selected="false" aria-controls="finance"    style="--chip-color:#ca8a04"><i class="fas fa-coins chip-icon"></i> Financial Literacy</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="life"       aria-selected="false" aria-controls="life"       style="--chip-color:#e8561d"><i class="fas fa-utensils chip-icon"></i> Life Skills &amp; Health</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="values"     aria-selected="false" aria-controls="values"     style="--chip-color:#134e4a"><i class="fas fa-hands-helping chip-icon"></i> Values &amp; Citizenship</button>
       <button type="button" class="subject-tab" role="tab" data-tab="creativity" aria-selected="false" aria-controls="creativity" style="--chip-color:#c026d3"><i class="fas fa-palette chip-icon"></i> Creativity &amp; Making</button>
-      <button type="button" class="subject-tab" role="tab" data-tab="learn"      aria-selected="false" aria-controls="learn"      style="--chip-color:#dc2626"><i class="fas fa-brain chip-icon"></i> Learn How to Learn</button>
+      <button type="button" class="subject-tab" role="tab" data-tab="learn"      aria-selected="false" aria-controls="learn"      style="--chip-color:#991b1b"><i class="fas fa-brain chip-icon"></i> Learn How to Learn</button>
     </div>
   </nav>
 
@@ -575,7 +605,7 @@
     <section id="literacy" class="panel sec-literacy active" role="tabpanel" aria-labelledby="tab-literacy">
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#f5f3ff;color:#7c3aed"><i class="fas fa-book-open"></i></div>
+          <div class="subject-icon" style="background:#f5f3ff;color:#5b21b6"><i class="fas fa-book-open"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Read, Write, Speak</span>
             <h2>Literacy &amp; Communication — 12 Best Free Tools</h2>
@@ -680,7 +710,7 @@
     <section id="math" class="panel sec-math" role="tabpanel" aria-labelledby="tab-math" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#eff6ff;color:#3b82f6"><i class="fas fa-square-root-alt"></i></div>
+          <div class="subject-icon" style="background:#f0f9ff;color:#0369a1"><i class="fas fa-square-root-alt"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Numbers &amp; Logic</span>
             <h2>Math — 12 Best Free Tools</h2>
@@ -782,7 +812,7 @@
     <section id="science" class="panel sec-science" role="tabpanel" aria-labelledby="tab-science" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#f0fdf4;color:#16a34a"><i class="fas fa-flask"></i></div>
+          <div class="subject-icon" style="background:#ecfdf5;color:#047857"><i class="fas fa-flask"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Curiosity &amp; Inquiry</span>
             <h2>Science — 12 Best Free Tools</h2>
@@ -884,7 +914,7 @@
     <section id="history" class="panel sec-history" role="tabpanel" aria-labelledby="tab-history" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#fffbeb;color:#b45309"><i class="fas fa-globe-americas"></i></div>
+          <div class="subject-icon" style="background:#fff7ed;color:#b45309"><i class="fas fa-globe-americas"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Past &amp; Places</span>
             <h2>History &amp; Geography — 12 Best Free Tools</h2>
@@ -986,7 +1016,7 @@
     <section id="coding" class="panel sec-coding" role="tabpanel" aria-labelledby="tab-coding" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#f0f9ff;color:#0ea5e9"><i class="fas fa-code"></i></div>
+          <div class="subject-icon" style="background:#ecfeff;color:#0891b2"><i class="fas fa-code"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Build &amp; Create</span>
             <h2>Coding &amp; Computational Thinking — 12 Best Free Tools</h2>
@@ -1088,7 +1118,7 @@
     <section id="ai" class="panel sec-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#eef2ff;color:#6366f1"><i class="fas fa-robot"></i></div>
+          <div class="subject-icon" style="background:#faf5ff;color:#6d28d9"><i class="fas fa-robot"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Understand the Web &amp; the Machine</span>
             <h2>AI &amp; Digital Literacy — 12 Best Free Tools</h2>
@@ -1190,7 +1220,7 @@
     <section id="critical" class="panel sec-critical" role="tabpanel" aria-labelledby="tab-critical" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#f0fdfa;color:#0d9488"><i class="fas fa-lightbulb"></i></div>
+          <div class="subject-icon" style="background:#f3f4f6;color:#1f2937"><i class="fas fa-lightbulb"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Think Better</span>
             <h2>Critical Thinking &amp; Problem Solving — 12 Best Free Tools</h2>
@@ -1292,7 +1322,7 @@
     <section id="mental" class="panel sec-mental" role="tabpanel" aria-labelledby="tab-mental" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#fdf2f8;color:#db2777"><i class="fas fa-heart"></i></div>
+          <div class="subject-icon" style="background:#fdf2f8;color:#be185d"><i class="fas fa-heart"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Feel Well, Learn Well</span>
             <h2>Mental Health &amp; Mindfulness — 12 Best Free Tools</h2>
@@ -1394,7 +1424,7 @@
     <section id="finance" class="panel sec-finance" role="tabpanel" aria-labelledby="tab-finance" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#ecfdf5;color:#059669"><i class="fas fa-coins"></i></div>
+          <div class="subject-icon" style="background:#fefce8;color:#ca8a04"><i class="fas fa-coins"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Money, Banking, Insurance</span>
             <h2>Financial Literacy — 12 Best Free Tools</h2>
@@ -1496,7 +1526,7 @@
     <section id="life" class="panel sec-life" role="tabpanel" aria-labelledby="tab-life" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#fff7ed;color:#ea580c"><i class="fas fa-utensils"></i></div>
+          <div class="subject-icon" style="background:#fff3e0;color:#e8561d"><i class="fas fa-utensils"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Cook, Move, Live Well</span>
             <h2>Life Skills &amp; Health — 12 Best Free Tools</h2>
@@ -1598,7 +1628,7 @@
     <section id="values" class="panel sec-values" role="tabpanel" aria-labelledby="tab-values" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#fefce8;color:#a16207"><i class="fas fa-hands-helping"></i></div>
+          <div class="subject-icon" style="background:#f0fdfa;color:#134e4a"><i class="fas fa-hands-helping"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Character &amp; Community</span>
             <h2>Values, Ethics &amp; Citizenship — 12 Best Free Tools</h2>
@@ -1802,7 +1832,7 @@
     <section id="learn" class="panel sec-learn" role="tabpanel" aria-labelledby="tab-learn" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#fef2f2;color:#dc2626"><i class="fas fa-brain"></i></div>
+          <div class="subject-icon" style="background:#fef2f2;color:#991b1b"><i class="fas fa-brain"></i></div>
           <div class="subject-header-text">
             <span class="section-label section-label-orange">Study Smarter</span>
             <h2>Learn How to Learn — 12 Best Free Tools</h2>
