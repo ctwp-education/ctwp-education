@@ -200,9 +200,73 @@ const translations = {
     /* Pricing pills + Top Pick badge */
     'pill.free': 'Free', 'pill.free_signup': 'Free (sign-up)', 'pill.freemium': 'Freemium',
     'top_pick': 'Top Pick',
-    'sub.uni.badge': 'Higher Education Tools', 'sub.uni.title': 'Resources for University Students',
-    'sub.uni.desc': '60 curated free tools across 6 topics. Pick a topic below to see the top 10.',
+    'sub.uni.badge': 'Future-Skill Tools for Higher Ed & Lifelong Learners',
+    'sub.uni.title': 'Resources for University Students & Lifelong Learners',
+    'sub.uni.desc': '144 curated free tools across 12 future-skill clusters. Pick a topic below to explore the 12 best resources.',
     'sub.uni.back': 'Back to Resources',
+    /* University: hero stats + audience-grade badges */
+    'uni.stat.tools': 'Free Tools',
+    'uni.stat.topics': 'Future-Skill Topics',
+    'uni.stat.levels.val': 'Undergrad\u2192Adult',
+    'uni.stat.levels.lbl': 'All Levels',
+    'uni.stat.free': 'Free',
+    'uni.grade.undergrad': 'Undergrad',
+    'uni.grade.grad': 'Grad',
+    'uni.grade.phd': 'PhD',
+    'uni.grade.self': 'Self-Learner',
+    'uni.grade.all': 'All Levels',
+    'uni.grade.adult': 'Adult Learner',
+    'uni.grade.switcher': 'Career Switcher',
+    /* University: tab labels */
+    'uni.tab.ai': 'AI Fluency',
+    'uni.tab.coding': 'Coding & Data',
+    'uni.tab.security': 'Cybersecurity',
+    'uni.tab.critical': 'Critical Thinking',
+    'uni.tab.courseware': 'Open Courseware',
+    'uni.tab.research': 'Research',
+    'uni.tab.writing': 'Writing & Speaking',
+    'uni.tab.productivity': 'Productivity',
+    'uni.tab.mental': 'Mental Health',
+    'uni.tab.finance': 'Personal Finance',
+    'uni.tab.career': 'Career & Entrepreneurship',
+    'uni.tab.civic': 'Civic, Media & Climate',
+    /* University: section panel labels + headings + descriptions */
+    'uni.sec.ai.label': 'AI Tutors & Co-pilots',
+    'uni.sec.ai.h2': 'AI Fluency & Co-working with AI \u2014 12 Best Free Resources',
+    'uni.sec.ai.desc': 'Top free assistants, courses on prompt design, and the literacy you need to think with AI rather than against it.',
+    'uni.sec.coding.label': 'Programming & Data Science',
+    'uni.sec.coding.h2': 'Coding & Data Literacy \u2014 12 Best Free Resources',
+    'uni.sec.coding.desc': 'Learn to code, practise with real datasets, and build a portfolio \u2014 free courses, sandboxes and certifications.',
+    'uni.sec.security.label': 'Privacy & Online Safety',
+    'uni.sec.security.h2': 'Cybersecurity & Digital Privacy \u2014 12 Best Free Resources',
+    'uni.sec.security.desc': 'Protect your accounts, data and identity online \u2014 and learn the security skills nobody else is teaching you.',
+    'uni.sec.critical.label': 'Reasoning & Information Literacy',
+    'uni.sec.critical.h2': 'Critical Thinking & Information Literacy \u2014 12 Best Free Resources',
+    'uni.sec.critical.desc': "Evaluate evidence, recognise bias and reason clearly under uncertainty \u2014 the WEF's #1 skill of the next decade.",
+    'uni.sec.courseware.label': 'Lectures & MOOCs',
+    'uni.sec.courseware.h2': 'Open Courseware & Lifelong Learning \u2014 12 Best Free Resources',
+    'uni.sec.courseware.desc': 'Full courses from MIT, Harvard, Stanford, Yale and other top universities \u2014 free to audit, learn anything from anywhere.',
+    'uni.sec.research.label': 'Finding & Citing Sources',
+    'uni.sec.research.h2': 'Research, Citation & Open Knowledge \u2014 12 Best Free Resources',
+    'uni.sec.research.desc': 'Discover peer-reviewed papers, manage citations, and read free open textbooks \u2014 everything for your thesis or paper, free.',
+    'uni.sec.writing.label': 'Essays, Comms & Voice',
+    'uni.sec.writing.h2': 'Writing, Communication & Public Speaking \u2014 12 Best Free Resources',
+    'uni.sec.writing.desc': 'Write cleaner essays, present with confidence, and translate clearly \u2014 the human complement to AI assistance.',
+    'uni.sec.productivity.label': 'Notes, Focus, Deadlines',
+    'uni.sec.productivity.h2': 'Productivity, Focus & Deep Work \u2014 12 Best Free Resources',
+    'uni.sec.productivity.desc': 'Note systems, task managers and focus tools to win back your attention \u2014 the prerequisite for everything else.',
+    'uni.sec.mental.label': 'Wellbeing & Resilience',
+    'uni.sec.mental.h2': 'Mental Health & Resilience \u2014 12 Best Free Resources',
+    'uni.sec.mental.desc': 'Sleep, stress, anxiety and mood \u2014 free, evidence-based resources to support the most important asset you have.',
+    'uni.sec.finance.label': 'Money, Taxes, Investing',
+    'uni.sec.finance.h2': 'Personal Finance & Economic Literacy \u2014 12 Best Free Resources',
+    'uni.sec.finance.desc': 'Budgeting, taxes, compound interest and investing basics \u2014 the financial skills schools rarely teach but you need by 25.',
+    'uni.sec.career.label': 'Job, Networking, Founding',
+    'uni.sec.career.h2': 'Career, Networking & Entrepreneurship \u2014 12 Best Free Resources',
+    'uni.sec.career.desc': 'Land internships, switch careers, freelance, or start a company \u2014 the practical skills for portfolio-career life.',
+    'uni.sec.civic.label': 'Citizenship & Sustainability',
+    'uni.sec.civic.h2': 'Civic, Media & Climate Literacy \u2014 12 Best Free Resources',
+    'uni.sec.civic.desc': 'Big-picture citizenship \u2014 understand democracy, evaluate media, grasp climate science and the ethics of technology.',
     'sub.teachers.badge': 'For Educators & Teachers', 'sub.teachers.title': 'Free Teaching Resources',
     'sub.teachers.desc': '60 curated free tools across 6 topics. Pick a topic below to see the top 10.',
     'sub.teachers.back': 'Back to Resources',
@@ -1030,6 +1094,14 @@ function applyTranslations() {
   document.querySelectorAll('.top-pick-badge').forEach(el => {
     el.innerHTML = '<i class="fas fa-star"></i> ' + t('top_pick');
   });
+  /* University audience-grade badges */
+  document.querySelectorAll('.grade-badge.gb-undergrad').forEach(el => { el.textContent = t('uni.grade.undergrad'); });
+  document.querySelectorAll('.grade-badge.gb-grad').forEach(el => { el.textContent = t('uni.grade.grad'); });
+  document.querySelectorAll('.grade-badge.gb-phd').forEach(el => { el.textContent = t('uni.grade.phd'); });
+  document.querySelectorAll('.grade-badge.gb-self').forEach(el => { el.textContent = t('uni.grade.self'); });
+  document.querySelectorAll('.grade-badge.gb-all').forEach(el => { el.textContent = t('uni.grade.all'); });
+  document.querySelectorAll('.grade-badge.gb-adult').forEach(el => { el.textContent = t('uni.grade.adult'); });
+  document.querySelectorAll('.grade-badge.gb-switcher').forEach(el => { el.textContent = t('uni.grade.switcher'); });
   /* Update toggle button — highlight active language */
   const btn = document.getElementById('langToggle');
   if (btn) {

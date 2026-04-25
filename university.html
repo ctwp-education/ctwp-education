@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="60 free curated tools for university students across 6 topics — open courseware, free textbooks, research, writing, AI study tools, and coding.">
-  <meta name="keywords" content="free university resources, MIT OpenCourseWare, free textbooks, Zotero, Google Scholar, AI study tools, free coding courses">
+  <meta name="description" content="144 free curated tools across 12 future-skill clusters for university students and lifelong learners — AI fluency, coding, critical thinking, mental health, finance, careers and more.">
+  <meta name="keywords" content="free university resources, future skills, AI fluency, critical thinking, personal finance, mental health, career resources, MIT OpenCourseWare, Khan Academy, free MOOCs">
   <meta name="author" content="CTWP Educational Empowerment">
   <meta name="robots" content="index, follow">
-  <title>Free University Student Resources | CTWP Educational Empowerment</title>
+  <title>Free University & Lifelong-Learner Resources | CTWP Educational Empowerment</title>
   <link rel="canonical" href="https://www.ctwp-education.eu.org/university.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.ctwp-education.eu.org/university.html">
   <meta property="og:site_name" content="CTWP Educational Empowerment">
-  <meta property="og:title" content="Free University Student Resources | CTWP Educational Empowerment">
-  <meta property="og:description" content="60 free curated tools for university students across 6 topics.">
+  <meta property="og:title" content="Free University & Lifelong-Learner Resources | CTWP Educational Empowerment">
+  <meta property="og:description" content="144 free tools across 12 future-skill clusters for students and lifelong learners.">
   <meta property="og:image" content="https://www.ctwp-education.eu.org/assets/images/Malawi_Salima_Classroom.webp">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free University Student Resources | CTWP Educational Empowerment">
-  <meta name="twitter:description" content="60 free curated tools for university students across 6 topics.">
+  <meta name="twitter:title" content="Free University & Lifelong-Learner Resources | CTWP Educational Empowerment">
+  <meta name="twitter:description" content="144 free tools across 12 future-skill clusters.">
   <meta name="twitter:image" content="https://www.ctwp-education.eu.org/assets/images/Malawi_Salima_Classroom.webp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {"@type": "WebPage", "@id": "https://www.ctwp-education.eu.org/university.html", "url": "https://www.ctwp-education.eu.org/university.html", "name": "Free University Student Resources", "description": "60 free curated tools for university students across 6 topics.", "isPartOf": {"@id": "https://www.ctwp-education.eu.org/"}, "publisher": {"@type": "NGO", "name": "CTWP Educational Empowerment", "url": "https://www.ctwp-education.eu.org/"}},
-      {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ctwp-education.eu.org/"}, {"@type": "ListItem", "position": 2, "name": "University Resources", "item": "https://www.ctwp-education.eu.org/university.html"}]}
+      {"@type": "WebPage", "@id": "https://www.ctwp-education.eu.org/university.html", "url": "https://www.ctwp-education.eu.org/university.html", "name": "Free University & Lifelong-Learner Resources", "description": "144 free tools across 12 future-skill clusters.", "isPartOf": {"@id": "https://www.ctwp-education.eu.org/"}, "publisher": {"@type": "NGO", "name": "CTWP Educational Empowerment", "url": "https://www.ctwp-education.eu.org/"}},
+      {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ctwp-education.eu.org/"}, {"@type": "ListItem", "position": 2, "name": "University & Lifelong-Learner Resources", "item": "https://www.ctwp-education.eu.org/university.html"}]}
     ]
   }
   </script>
@@ -75,32 +75,58 @@
 
     .resource-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
     a.resource-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; border-top: 3px solid transparent; }
+    .sec-ai  .resource-card { border-top-color: #6366f1; }
+    .sec-coding  .resource-card { border-top-color: #0ea5e9; }
+    .sec-security  .resource-card { border-top-color: #dc2626; }
+    .sec-critical  .resource-card { border-top-color: #f59e0b; }
     .sec-courseware  .resource-card { border-top-color: #3b82f6; }
-    .sec-textbooks   .resource-card { border-top-color: #7c3aed; }
-    .sec-research    .resource-card { border-top-color: #16a34a; }
-    .sec-writing     .resource-card { border-top-color: #f97316; }
-    .sec-ai          .resource-card { border-top-color: #6366f1; }
-    .sec-coding      .resource-card { border-top-color: #0ea5e9; }
+    .sec-research  .resource-card { border-top-color: #16a34a; }
+    .sec-writing  .resource-card { border-top-color: #f97316; }
+    .sec-productivity  .resource-card { border-top-color: #ec4899; }
+    .sec-mental  .resource-card { border-top-color: #14b8a6; }
+    .sec-finance  .resource-card { border-top-color: #84cc16; }
+    .sec-career  .resource-card { border-top-color: #8b5cf6; }
+    .sec-civic  .resource-card { border-top-color: #06b6d4; }
+    .sec-ai  .resource-card:hover { border-color: #6366f1; }
+    .sec-coding  .resource-card:hover { border-color: #0ea5e9; }
+    .sec-security  .resource-card:hover { border-color: #dc2626; }
+    .sec-critical  .resource-card:hover { border-color: #f59e0b; }
     .sec-courseware  .resource-card:hover { border-color: #3b82f6; }
-    .sec-textbooks   .resource-card:hover { border-color: #7c3aed; }
-    .sec-research    .resource-card:hover { border-color: #16a34a; }
-    .sec-writing     .resource-card:hover { border-color: #f97316; }
-    .sec-ai          .resource-card:hover { border-color: #6366f1; }
-    .sec-coding      .resource-card:hover { border-color: #0ea5e9; }
-    .card-icon { width: 36px; height: 36px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+    .sec-research  .resource-card:hover { border-color: #16a34a; }
+    .sec-writing  .resource-card:hover { border-color: #f97316; }
+    .sec-productivity  .resource-card:hover { border-color: #ec4899; }
+    .sec-mental  .resource-card:hover { border-color: #14b8a6; }
+    .sec-finance  .resource-card:hover { border-color: #84cc16; }
+    .sec-career  .resource-card:hover { border-color: #8b5cf6; }
+    .sec-civic  .resource-card:hover { border-color: #06b6d4; }
+    .sec-ai  .card-icon { background: #eef2ff; color: #6366f1; }
+    .sec-coding  .card-icon { background: #f0f9ff; color: #0ea5e9; }
+    .sec-security  .card-icon { background: #fef2f2; color: #dc2626; }
+    .sec-critical  .card-icon { background: #fef3c7; color: #f59e0b; }
     .sec-courseware  .card-icon { background: #eff6ff; color: #3b82f6; }
-    .sec-textbooks   .card-icon { background: #f5f3ff; color: #7c3aed; }
-    .sec-research    .card-icon { background: #f0fdf4; color: #16a34a; }
-    .sec-writing     .card-icon { background: #fff7ed; color: #f97316; }
-    .sec-ai          .card-icon { background: #eef2ff; color: #6366f1; }
-    .sec-coding      .card-icon { background: #f0f9ff; color: #0ea5e9; }
+    .sec-research  .card-icon { background: #f0fdf4; color: #16a34a; }
+    .sec-writing  .card-icon { background: #fff7ed; color: #f97316; }
+    .sec-productivity  .card-icon { background: #fdf2f8; color: #ec4899; }
+    .sec-mental  .card-icon { background: #f0fdfa; color: #14b8a6; }
+    .sec-finance  .card-icon { background: #f7fee7; color: #84cc16; }
+    .sec-career  .card-icon { background: #f5f3ff; color: #8b5cf6; }
+    .sec-civic  .card-icon { background: #ecfeff; color: #06b6d4; }
     .resource-card i { color: inherit; margin-bottom: 0; font-size: 0.95rem; }
+    .card-icon { width: 36px; height: 36px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
     .card-top { display: flex; align-items: flex-start; gap: 0.7rem; margin-bottom: 0.55rem; }
     .card-meta { flex: 1; min-width: 0; }
     .card-meta h4 { font-family: var(--font-display); font-size: 0.98rem; font-weight: 400; color: var(--gray-900); margin: 0 0 0.3rem; }
+
+    /* ── Pricing Pills + Card Pills row ───────────────────────────────── */
+    .card-pills { display: flex; flex-wrap: wrap; gap: 0.28rem; margin-bottom: 0.55rem; align-items: center; }
+    .pricing-pill { display: inline-flex; align-items: center; gap: 0.22rem; font-size: 0.62rem; font-weight: 700; padding: 0.12rem 0.5rem; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.5; }
+    .pill-free         { background: var(--green-50);   color: var(--green-700); }
+    .pill-free-signup  { background: #e0e7ff;           color: #3730a3; }
+    .pill-freemium     { background: var(--orange-100); color: var(--orange-500); }
     .grade-badges { display: flex; flex-wrap: wrap; gap: 0.22rem; }
     .grade-badge { font-size: 0.66rem; font-weight: 600; padding: 0.1rem 0.42rem; border-radius: var(--radius-full); background: var(--gray-100); color: var(--gray-600); line-height: 1.55; }
     .top-pick-badge { display: inline-flex; align-items: center; gap: 0.18rem; font-size: 0.62rem; font-weight: 700; color: #b45309; background: #fef3c7; padding: 0.12rem 0.48rem; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+
     .resource-card p { font-size: 0.82rem; color: var(--gray-500); line-height: 1.55; flex: 1; margin-bottom: 0; }
     .card-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.76rem; color: var(--orange-500); font-weight: 500; margin-top: 0.75rem; transition: gap var(--transition); }
     a.resource-card:hover .card-link { gap: 0.55rem; }
@@ -161,676 +187,1534 @@
       <a href="index.html#resources" class="back-link">
         <i class="fas fa-arrow-left"></i> <span data-i18n="sub.uni.back">Back to Resources</span>
       </a>
-      <div class="hero-badge"><span data-i18n="sub.uni.badge">Higher Education Tools</span></div>
-      <h1 data-i18n="sub.uni.title">Resources for University Students</h1>
-      <p data-i18n="sub.uni.desc">60 curated free tools across 6 topics. Pick a topic below to see the top 10.</p>
+      <div class="hero-badge"><span data-i18n="sub.uni.badge">Future-Skill Tools for Higher Ed &amp; Lifelong Learners</span></div>
+      <h1 data-i18n="sub.uni.title">Resources for University Students &amp; Lifelong Learners</h1>
+      <p data-i18n="sub.uni.desc">144 curated free tools across 12 future-skill clusters. Pick a topic below to explore the 12 best resources.</p>
       <div class="hero-stats">
-        <div class="hero-stat"><strong>60</strong><span>Free Tools</span></div>
-        <div class="hero-stat"><strong>6</strong><span>Topics</span></div>
-        <div class="hero-stat"><strong>Undergrad→PhD</strong><span>All Levels</span></div>
-        <div class="hero-stat"><strong>100%</strong><span>Free</span></div>
+        <div class="hero-stat"><strong>144</strong><span data-i18n="uni.stat.tools">Free Tools</span></div>
+        <div class="hero-stat"><strong>12</strong><span data-i18n="uni.stat.topics">Future-Skill Topics</span></div>
+        <div class="hero-stat"><strong data-i18n="uni.stat.levels.val">Undergrad→Adult</strong><span data-i18n="uni.stat.levels.lbl">All Levels</span></div>
+        <div class="hero-stat"><strong>100%</strong><span data-i18n="uni.stat.free">Free</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ── Sticky Topic Tabs ── -->
+  <!-- ── Sticky Topic Tabs (12) ── -->
   <nav class="subjects-nav" role="tablist" aria-label="Choose topic">
     <div class="subjects-nav-inner">
-      <button type="button" class="subject-tab" role="tab" data-tab="courseware" aria-selected="true"  aria-controls="courseware"><span class="tab-dot" style="background:#3b82f6"></span> Open Courseware <span class="tab-count">10</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="textbooks"  aria-selected="false" aria-controls="textbooks"><span class="tab-dot" style="background:#7c3aed"></span> Textbooks &amp; Reading <span class="tab-count">10</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="research"   aria-selected="false" aria-controls="research"><span class="tab-dot" style="background:#16a34a"></span> Research &amp; Citation <span class="tab-count">10</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="writing"    aria-selected="false" aria-controls="writing"><span class="tab-dot" style="background:#f97316"></span> Writing &amp; Productivity <span class="tab-count">10</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="ai"         aria-selected="false" aria-controls="ai"><span class="tab-dot" style="background:#6366f1"></span> AI Study Tools <span class="tab-count">10</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="coding"     aria-selected="false" aria-controls="coding"><span class="tab-dot" style="background:#0ea5e9"></span> Coding &amp; Data <span class="tab-count">10</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="ai" aria-controls="ai"><span class="tab-dot" style="background:#6366f1"></span> <span data-i18n="uni.tab.ai">AI Fluency</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="coding" aria-controls="coding"><span class="tab-dot" style="background:#0ea5e9"></span> <span data-i18n="uni.tab.coding">Coding & Data</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="security" aria-controls="security"><span class="tab-dot" style="background:#dc2626"></span> <span data-i18n="uni.tab.security">Cybersecurity</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="critical" aria-controls="critical"><span class="tab-dot" style="background:#f59e0b"></span> <span data-i18n="uni.tab.critical">Critical Thinking</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="courseware" aria-controls="courseware"><span class="tab-dot" style="background:#3b82f6"></span> <span data-i18n="uni.tab.courseware">Open Courseware</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="research" aria-controls="research"><span class="tab-dot" style="background:#16a34a"></span> <span data-i18n="uni.tab.research">Research</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="writing" aria-controls="writing"><span class="tab-dot" style="background:#f97316"></span> <span data-i18n="uni.tab.writing">Writing & Speaking</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="productivity" aria-controls="productivity"><span class="tab-dot" style="background:#ec4899"></span> <span data-i18n="uni.tab.productivity">Productivity</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="mental" aria-controls="mental"><span class="tab-dot" style="background:#14b8a6"></span> <span data-i18n="uni.tab.mental">Mental Health</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="finance" aria-controls="finance"><span class="tab-dot" style="background:#84cc16"></span> <span data-i18n="uni.tab.finance">Personal Finance</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="career" aria-controls="career"><span class="tab-dot" style="background:#8b5cf6"></span> <span data-i18n="uni.tab.career">Career & Entrepreneurship</span> <span class="tab-count">12</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="civic" aria-controls="civic"><span class="tab-dot" style="background:#06b6d4"></span> <span data-i18n="uni.tab.civic">Civic, Media & Climate</span> <span class="tab-count">12</span></button>
     </div>
   </nav>
 
   <main>
 
-    <!-- ═══════════════════ OPEN COURSEWARE ═══════════════════ -->
-    <section id="courseware" class="panel sec-courseware active" role="tabpanel" aria-labelledby="tab-courseware">
-      <div class="container">
-        <div class="subject-header">
-          <div class="subject-icon" style="background:#eff6ff;color:#3b82f6"><i class="fas fa-university"></i></div>
-          <div class="subject-header-text">
-            <span class="section-label section-label-orange">Lectures &amp; Courses</span>
-            <h2>Open Courseware — 10 Best Free Platforms</h2>
-            <p>Full courses from MIT, Harvard, Stanford, Yale, and other top universities — free to audit.</p>
-          </div>
-        </div>
-        <div class="resource-grid">
-
-          <a href="https://ocw.mit.edu" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-              <div class="card-meta"><h4>MIT OpenCourseWare</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>2,500+ MIT courses free — lecture notes, problem sets, exams, and often full video lectures.</p>
-            <span class="card-link">ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.coursera.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-              <div class="card-meta"><h4>Coursera (Audit)</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Self-Learner</span></div></div>
-            </div>
-            <p>Audit most courses from Stanford, Yale, Michigan, and more for free — videos and readings included.</p>
-            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.edx.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-school"></i></div>
-              <div class="card-meta"><h4>edX</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>Harvard, MIT, Berkeley courses — free to audit, with optional paid certificates.</p>
-            <span class="card-link">edx.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://online.stanford.edu/free-courses" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-landmark"></i></div>
-              <div class="card-meta"><h4>Stanford Online</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>Curated free courses from Stanford faculty — AI, engineering, medicine, education, and more.</p>
-            <span class="card-link">online.stanford.edu <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://oyc.yale.edu" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book-reader"></i></div>
-              <div class="card-meta"><h4>Open Yale Courses</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>Complete Yale undergraduate lectures — philosophy, economics, astronomy, literature — all free.</p>
-            <span class="card-link">oyc.yale.edu <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.open.edu/openlearn" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-globe-europe"></i></div>
-              <div class="card-meta"><h4>OpenLearn (UK)</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Self-Learner</span></div></div>
-            </div>
-            <p>Free courses from The Open University — 1,000+ topics with statements of participation available.</p>
-            <span class="card-link">open.edu/openlearn <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.saylor.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-certificate"></i></div>
-              <div class="card-meta"><h4>Saylor Academy</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Self-Learner</span></div></div>
-            </div>
-            <p>Self-paced college courses with free certificates — some credit-eligible through ACE partnerships.</p>
-            <span class="card-link">saylor.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://oli.cmu.edu" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-microscope"></i></div>
-              <div class="card-meta"><h4>Carnegie Mellon OLI</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>Research-backed adaptive courses from CMU — statistics, psychology, biology, and logic.</p>
-            <span class="card-link">oli.cmu.edu <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.futurelearn.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-users"></i></div>
-              <div class="card-meta"><h4>FutureLearn</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Self-Learner</span></div></div>
-            </div>
-            <p>Short free courses from European and Commonwealth universities — social, discussion-based learning.</p>
-            <span class="card-link">futurelearn.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.khanacademy.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-play-circle"></i></div>
-              <div class="card-meta"><h4>Khan Academy</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Self-Learner</span></div></div>
-            </div>
-            <p>Foundational courses: calculus, linear algebra, physics, economics, and exam prep — fully free.</p>
-            <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ TEXTBOOKS & READING ═══════════════════ -->
-    <section id="textbooks" class="panel sec-textbooks" role="tabpanel" aria-labelledby="tab-textbooks" hidden>
-      <div class="container">
-        <div class="subject-header">
-          <div class="subject-icon" style="background:#f5f3ff;color:#7c3aed"><i class="fas fa-book"></i></div>
-          <div class="subject-header-text">
-            <span class="section-label section-label-orange">Open Educational Resources</span>
-            <h2>Textbooks &amp; Reading — 10 Best Free Sources</h2>
-            <p>Peer-reviewed open textbooks and academic libraries — no paywalls, fully downloadable.</p>
-          </div>
-        </div>
-        <div class="resource-grid">
-
-          <a href="https://openstax.org" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-atlas"></i></div>
-              <div class="card-meta"><h4>OpenStax</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>Rice University's free peer-reviewed textbooks — biology, physics, economics, sociology, and calculus.</p>
-            <span class="card-link">openstax.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://libretexts.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-books"></i></div>
-              <div class="card-meta"><h4>LibreTexts</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>The largest open-textbook library — chemistry, engineering, humanities, and medicine, freely remixable.</p>
-            <span class="card-link">libretexts.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://open.umn.edu/opentextbooks" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book-open"></i></div>
-              <div class="card-meta"><h4>Open Textbook Library</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>U. Minnesota's curated library of 1,300+ free textbooks with faculty peer reviews for each title.</p>
-            <span class="card-link">open.umn.edu <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://mitpress.mit.edu/open-access" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-flask"></i></div>
-              <div class="card-meta"><h4>MIT Press Open</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
-            </div>
-            <p>Free open-access monographs from MIT Press — AI, cognitive science, linguistics, and economics.</p>
-            <span class="card-link">mitpress.mit.edu <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.gutenberg.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-scroll"></i></div>
-              <div class="card-meta"><h4>Project Gutenberg</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>75,000+ free classic books in the public domain — ideal for literature, history, and philosophy courses.</p>
-            <span class="card-link">gutenberg.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://doabooks.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-search"></i></div>
-              <div class="card-meta"><h4>DOAB</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
-            </div>
-            <p>Directory of Open Access Books — 90,000+ peer-reviewed academic books across every discipline.</p>
-            <span class="card-link">doabooks.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://oapen.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-folder-open"></i></div>
-              <div class="card-meta"><h4>OAPEN</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
-            </div>
-            <p>Open-access academic books focused on humanities and social sciences — downloadable PDFs, no login.</p>
-            <span class="card-link">oapen.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://open.bccampus.ca" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-              <div class="card-meta"><h4>BCcampus OpenEd</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>Free textbooks and OER from British Columbia's post-secondary system — strong on sciences and business.</p>
-            <span class="card-link">open.bccampus.ca <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://archive.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-landmark"></i></div>
-              <div class="card-meta"><h4>Internet Archive</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Millions of free books, academic papers, and historic documents — including the Open Library lending service.</p>
-            <span class="card-link">archive.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://bookboon.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-              <div class="card-meta"><h4>Bookboon</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>1,000+ free student textbooks — engineering, finance, IT, statistics — short and practical.</p>
-            <span class="card-link">bookboon.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ RESEARCH & CITATION ═══════════════════ -->
-    <section id="research" class="panel sec-research" role="tabpanel" aria-labelledby="tab-research" hidden>
-      <div class="container">
-        <div class="subject-header">
-          <div class="subject-icon" style="background:#f0fdf4;color:#16a34a"><i class="fas fa-flask"></i></div>
-          <div class="subject-header-text">
-            <span class="section-label section-label-orange">Finding &amp; Citing Sources</span>
-            <h2>Research &amp; Citation — 10 Best Free Tools</h2>
-            <p>Discover peer-reviewed papers, manage citations, and build bibliographies — everything free.</p>
-          </div>
-        </div>
-        <div class="resource-grid">
-
-          <a href="https://scholar.google.com" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-search"></i></div>
-              <div class="card-meta"><h4>Google Scholar</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>The largest free academic search engine — papers, citations, and often links to free PDFs.</p>
-            <span class="card-link">scholar.google.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.zotero.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-bookmark"></i></div>
-              <div class="card-meta"><h4>Zotero</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Free, open-source reference manager — capture any source with one click, auto-format bibliographies.</p>
-            <span class="card-link">zotero.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.semanticscholar.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-brain"></i></div>
-              <div class="card-meta"><h4>Semantic Scholar</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
-            </div>
-            <p>AI-powered academic search from Allen Institute — surfaces influential citations and related work.</p>
-            <span class="card-link">semanticscholar.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.connectedpapers.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
-              <div class="card-meta"><h4>Connected Papers</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
-            </div>
-            <p>Visual graph of papers related to any key article — a literature-review game changer for thesis work.</p>
-            <span class="card-link">connectedpapers.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://core.ac.uk" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-database"></i></div>
-              <div class="card-meta"><h4>CORE</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>World's largest aggregator of open-access research — 300 million papers across 11,000 repositories.</p>
-            <span class="card-link">core.ac.uk <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://base-search.net" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-              <div class="card-meta"><h4>BASE</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Bielefeld Academic Search Engine — 400M+ documents, deep filtering by license and document type.</p>
-            <span class="card-link">base-search.net <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
-              <div class="card-meta"><h4>PubMed</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>Free NIH database of 35M+ biomedical citations — essential for life sciences, medicine, and psychology.</p>
-            <span class="card-link">pubmed.ncbi.nlm.nih.gov <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://doaj.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-journal-whills"></i></div>
-              <div class="card-meta"><h4>DOAJ</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Directory of Open Access Journals — 20,000+ vetted peer-reviewed journals with free full text.</p>
-            <span class="card-link">doaj.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.jstor.org/open" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-archive"></i></div>
-              <div class="card-meta"><h4>JSTOR Open</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Free access to JSTOR's open scholarship — plus Register & Read for 100 free articles per month.</p>
-            <span class="card-link">jstor.org/open <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.mybib.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-quote-right"></i></div>
-              <div class="card-meta"><h4>MyBib</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
-            </div>
-            <p>Free citation generator — APA, MLA, Chicago, Harvard — no ads and no paywall on any feature.</p>
-            <span class="card-link">mybib.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ WRITING & PRODUCTIVITY ═══════════════════ -->
-    <section id="writing" class="panel sec-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
-      <div class="container">
-        <div class="subject-header">
-          <div class="subject-icon" style="background:#fff7ed;color:#f97316"><i class="fas fa-pen-fancy"></i></div>
-          <div class="subject-header-text">
-            <span class="section-label section-label-orange">Essays, Notes, Focus</span>
-            <h2>Writing &amp; Productivity — 10 Best Free Tools</h2>
-            <p>Write cleaner essays, organise knowledge, and stay on top of deadlines — without paying a cent.</p>
-          </div>
-        </div>
-        <div class="resource-grid">
-
-          <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-spell-check"></i></div>
-              <div class="card-meta"><h4>Grammarly (Free)</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Real-time grammar, spelling, and clarity checks in your browser or Word — the free tier covers the essentials.</p>
-            <span class="card-link">grammarly.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://hemingwayapp.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-highlighter"></i></div>
-              <div class="card-meta"><h4>Hemingway Editor</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Highlights convoluted sentences, passive voice, and adverbs — makes academic writing clearer.</p>
-            <span class="card-link">hemingwayapp.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://languagetool.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-language"></i></div>
-              <div class="card-meta"><h4>LanguageTool</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Open-source grammar checker supporting 30+ languages — great for essays in German, French, Spanish.</p>
-            <span class="card-link">languagetool.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.notion.so/students" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-              <div class="card-meta"><h4>Notion (Students)</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Free Plus plan for students with .edu email — notes, databases, task lists, and wikis all in one workspace.</p>
-            <span class="card-link">notion.so/students <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://obsidian.md" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-network-wired"></i></div>
-              <div class="card-meta"><h4>Obsidian</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Local-first markdown note-taking with back-links — ideal for building a personal academic knowledge graph.</p>
-            <span class="card-link">obsidian.md <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.overleaf.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-file-code"></i></div>
-              <div class="card-meta"><h4>Overleaf</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>Online LaTeX editor — collaborative thesis and paper writing with live preview and journal templates.</p>
-            <span class="card-link">overleaf.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://typst.app" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-bolt"></i></div>
-              <div class="card-meta"><h4>Typst</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
-            </div>
-            <p>Modern open-source alternative to LaTeX — faster compile, cleaner syntax, still produces beautiful PDFs.</p>
-            <span class="card-link">typst.app <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://docs.google.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-file-alt"></i></div>
-              <div class="card-meta"><h4>Google Docs</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Free collaborative word processor with real-time editing, comments, version history, and voice typing.</p>
-            <span class="card-link">docs.google.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://todoist.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-check-square"></i></div>
-              <div class="card-meta"><h4>Todoist</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Clean task manager that handles recurring assignments and deadlines across all your devices.</p>
-            <span class="card-link">todoist.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-          <a href="https://www.forestapp.cc" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-tree"></i></div>
-              <div class="card-meta"><h4>Forest</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Gamified focus timer — plant a virtual tree that dies if you leave the app. Free web version works well.</p>
-            <span class="card-link">forestapp.cc <i class="fas fa-arrow-right"></i></span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════ AI STUDY TOOLS ═══════════════════ -->
-    <section id="ai" class="panel sec-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
+    <!-- ═══════════════════ AI FLUENCY & CO-WORKING WITH AI ═══════════════════ -->
+    <section id="ai" class="panel sec-ai active" role="tabpanel" aria-labelledby="tab-ai">
       <div class="container">
         <div class="subject-header">
           <div class="subject-icon" style="background:#eef2ff;color:#6366f1"><i class="fas fa-robot"></i></div>
           <div class="subject-header-text">
-            <span class="section-label section-label-orange">AI Tutors &amp; Research Assistants</span>
-            <h2>AI Study Tools — 10 Best Free Platforms</h2>
-            <p>Smart tutors, paper summarisers, and research copilots — free tiers that genuinely help with coursework.</p>
+            <span class="section-label section-label-orange" data-i18n="uni.sec.ai.label">AI Tutors & Co-pilots</span>
+            <h2 data-i18n="uni.sec.ai.h2">AI Fluency & Co-working with AI — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.ai.desc">Top free assistants, courses on prompt design, and the literacy you need to think with AI rather than against it.</p>
           </div>
         </div>
         <div class="resource-grid">
-
-          <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book-open"></i></div>
-              <div class="card-meta"><h4>NotebookLM</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>Upload your lecture notes and papers — Google's AI answers questions using only your sources, with citations.</p>
-            <span class="card-link">notebooklm.google.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-
           <a href="https://claude.ai" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-comments"></i></div>
-              <div class="card-meta"><h4>Claude</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-meta"><h4>Claude</h4></div>
             </div>
-            <p>Anthropic's AI assistant with a generous free tier — excellent at essay feedback, concept explanation, and code.</p>
+            <p>Anthropic's flagship assistant — a generous free tier covers writing, code and research with strong reasoning.</p>
             <span class="card-link">claude.ai <i class="fas fa-arrow-right"></i></span>
           </a>
-
           <a href="https://chatgpt.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-brain"></i></div>
-              <div class="card-meta"><h4>ChatGPT</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-meta"><h4>ChatGPT</h4></div>
             </div>
-            <p>OpenAI's ChatGPT — free tier covers GPT-4o mini, image understanding, voice mode, and basic data analysis.</p>
+            <p>OpenAI's ChatGPT — free tier covers GPT-4o mini, voice mode, image understanding and basic data analysis.</p>
             <span class="card-link">chatgpt.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
           <a href="https://gemini.google.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fab fa-google"></i></div>
-              <div class="card-meta"><h4>Gemini</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-meta"><h4>Gemini</h4></div>
             </div>
-            <p>Google's multimodal assistant with generous free tier — deeply integrated with Docs, Drive, and Gmail.</p>
+            <p>Google's multimodal assistant with deep integration into Docs, Drive and Gmail — strong free tier with image and code support.</p>
             <span class="card-link">gemini.google.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-search-plus"></i></div>
-              <div class="card-meta"><h4>Perplexity</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
-            </div>
-            <p>AI search engine that cites every claim — perfect for quick research when you need sources you can check.</p>
-            <span class="card-link">perplexity.ai <i class="fas fa-arrow-right"></i></span>
-          </a>
-
           <a href="https://copilot.microsoft.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fab fa-microsoft"></i></div>
-              <div class="card-meta"><h4>Microsoft Copilot</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-meta"><h4>Microsoft Copilot</h4></div>
             </div>
-            <p>Free Copilot with GPT-4-class model, image generation, and Microsoft 365 integration for students.</p>
+            <p>Free Copilot with GPT-4-class reasoning, image generation and Microsoft 365 integration — included free with any Microsoft account.</p>
             <span class="card-link">copilot.microsoft.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://elicit.com" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://www.perplexity.ai" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-flask"></i></div>
-              <div class="card-meta"><h4>Elicit</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
+              <div class="card-icon"><i class="fas fa-magnifying-glass"></i></div>
+              <div class="card-meta"><h4>Perplexity</h4></div>
             </div>
-            <p>AI research assistant that finds, summarises, and extracts data from academic papers — built for lit reviews.</p>
-            <span class="card-link">elicit.com <i class="fas fa-arrow-right"></i></span>
+            <p>AI search engine that cites every claim — perfect when you need verifiable sources rather than hallucinated answers.</p>
+            <span class="card-link">perplexity.ai <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://consensus.app" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://notebooklm.google.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
-              <div class="card-meta"><h4>Consensus</h4><div class="grade-badges"><span class="grade-badge">Grad</span></div></div>
+              <div class="card-icon"><i class="fas fa-book-open"></i></div>
+              <div class="card-meta"><h4>NotebookLM</h4></div>
             </div>
-            <p>AI search over peer-reviewed papers — ask a scientific question, get direct evidence-based answers.</p>
-            <span class="card-link">consensus.app <i class="fas fa-arrow-right"></i></span>
+            <p>Upload your own notes and PDFs — Google's AI answers strictly from your sources, with citations and audio summaries.</p>
+            <span class="card-link">notebooklm.google.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://typeset.io" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-file-pdf"></i></div>
-              <div class="card-meta"><h4>SciSpace</h4><div class="grade-badges"><span class="grade-badge">Grad</span><span class="grade-badge">PhD</span></div></div>
-            </div>
-            <p>Chat with any PDF paper — ask questions about methodology, results, and references in plain language.</p>
-            <span class="card-link">typeset.io <i class="fas fa-arrow-right"></i></span>
-          </a>
-
           <a href="https://huggingface.co" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-cube"></i></div>
-              <div class="card-meta"><h4>Hugging Face</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
+              <div class="card-meta"><h4>Hugging Face</h4></div>
             </div>
-            <p>Try thousands of open-source AI models in your browser — text, vision, speech — ideal for ML coursework.</p>
+            <p>Run thousands of open-source AI models in your browser — text, vision, speech, agents — and host your own free Spaces.</p>
             <span class="card-link">huggingface.co <i class="fas fa-arrow-right"></i></span>
           </a>
-
+          <a href="https://www.deeplearning.ai/short-courses/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="card-meta"><h4>DeepLearning.AI Short Courses</h4></div>
+            </div>
+            <p>Free 1-hour courses by Andrew Ng on prompting, RAG, agents and fine-tuning — taught with leading AI labs.</p>
+            <span class="card-link">deeplearning.ai <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.anthropic.com/ai-fluency" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-compass"></i></div>
+              <div class="card-meta"><h4>Anthropic AI Fluency</h4></div>
+            </div>
+            <p>Free open-source course teaching the four core competencies of working with AI — delegation, description, discernment, diligence.</p>
+            <span class="card-link">anthropic.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.elementsofai.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-atom"></i></div>
+              <div class="card-meta"><h4>Elements of AI</h4></div>
+            </div>
+            <p>University of Helsinki's free MOOC — 30 hours covering AI fundamentals, ethics and limits, taken by a million learners.</p>
+            <span class="card-link">elementsofai.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://grow.google/aiessentials/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-seedling"></i></div>
+              <div class="card-meta"><h4>Google AI Essentials</h4></div>
+            </div>
+            <p>Free Google curriculum on generative AI basics, prompt design and responsible use — no prior experience required.</p>
+            <span class="card-link">grow.google <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.promptingguide.ai" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-terminal"></i></div>
+              <div class="card-meta"><h4>Prompt Engineering Guide</h4></div>
+            </div>
+            <p>Open-source community guide to prompting — techniques, examples and research papers, all free and frequently updated.</p>
+            <span class="card-link">promptingguide.ai <i class="fas fa-arrow-right"></i></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ CODING & DATA ═══════════════════ -->
+    <!-- ═══════════════════ CODING & DATA LITERACY ═══════════════════ -->
     <section id="coding" class="panel sec-coding" role="tabpanel" aria-labelledby="tab-coding" hidden>
       <div class="container">
         <div class="subject-header">
           <div class="subject-icon" style="background:#f0f9ff;color:#0ea5e9"><i class="fas fa-code"></i></div>
           <div class="subject-header-text">
-            <span class="section-label section-label-orange">Programming &amp; Data Science</span>
-            <h2>Coding &amp; Data Science — 10 Best Free Resources</h2>
-            <p>Learn to code, practice with real datasets, and build a portfolio — free courses and sandboxes.</p>
+            <span class="section-label section-label-orange" data-i18n="uni.sec.coding.label">Programming & Data Science</span>
+            <h2 data-i18n="uni.sec.coding.h2">Coding & Data Literacy — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.coding.desc">Learn to code, practise with real datasets, and build a portfolio — free courses, sandboxes and certifications.</p>
           </div>
         </div>
         <div class="resource-grid">
-
-          <a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-              <div class="card-meta"><h4>freeCodeCamp</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Self-Learner</span></div></div>
-            </div>
-            <p>Thousands of hours of hands-on coding lessons and free certificates — web dev, data, machine learning.</p>
-            <span class="card-link">freecodecamp.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-
           <a href="https://cs50.harvard.edu" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-self">Self-Learner</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-university"></i></div>
-              <div class="card-meta"><h4>Harvard CS50</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
+              <div class="card-meta"><h4>Harvard CS50</h4></div>
             </div>
-            <p>Harvard's legendary intro to CS — free videos, free certificates via edX audit. Perfect first CS course.</p>
+            <p>Harvard's legendary intro to CS — free videos, problem sets and a free certificate via edX audit. Still the best first CS course online.</p>
             <span class="card-link">cs50.harvard.edu <i class="fas fa-arrow-right"></i></span>
           </a>
-
+          <a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-self">Self-Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="card-meta"><h4>freeCodeCamp</h4></div>
+            </div>
+            <p>Thousands of hours of hands-on coding lessons and free certifications — web dev, data analysis and machine learning.</p>
+            <span class="card-link">freecodecamp.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.theodinproject.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-self">Self-Learner</span><span class="grade-badge gb-switcher">Career Switcher</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-dharmachakra"></i></div>
+              <div class="card-meta"><h4>The Odin Project</h4></div>
+            </div>
+            <p>Free, full-stack web development curriculum used by self-taught devs landing real jobs — community-driven and battle-tested.</p>
+            <span class="card-link">theodinproject.com <i class="fas fa-arrow-right"></i></span>
+          </a>
           <a href="https://www.codecademy.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-terminal"></i></div>
-              <div class="card-meta"><h4>Codecademy (Free)</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-meta"><h4>Codecademy</h4></div>
             </div>
-            <p>Interactive browser-based coding lessons — Python, JS, SQL, and more; solid free tier for foundations.</p>
+            <p>Interactive browser-based coding lessons — Python, JS, SQL, HTML/CSS — with a solid free tier covering all the foundations.</p>
             <span class="card-link">codecademy.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
           <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-database"></i></div>
-              <div class="card-meta"><h4>Kaggle Learn</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
+              <div class="card-meta"><h4>Kaggle Learn</h4></div>
             </div>
-            <p>Short, hands-on data science and ML micro-courses — plus thousands of real datasets and competitions.</p>
-            <span class="card-link">kaggle.com/learn <i class="fas fa-arrow-right"></i></span>
+            <p>Short, hands-on data-science and ML micro-courses — plus thousands of real datasets and competitions to practise on.</p>
+            <span class="card-link">kaggle.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
           <a href="https://colab.research.google.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-microchip"></i></div>
-              <div class="card-meta"><h4>Google Colab</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
+              <div class="card-meta"><h4>Google Colab</h4></div>
             </div>
-            <p>Free Jupyter notebooks in the browser with free GPU — perfect for ML, data science, and research prototyping.</p>
+            <p>Free Jupyter notebooks in the browser with free GPU — perfect for ML, data science and research prototyping with no setup.</p>
             <span class="card-link">colab.research.google.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://education.github.com/pack" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://www.fast.ai" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fab fa-github"></i></div>
-              <div class="card-meta"><h4>GitHub Student Pack</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
+              <div class="card-icon"><i class="fas fa-bolt"></i></div>
+              <div class="card-meta"><h4>fast.ai</h4></div>
             </div>
-            <p>$200k+ of free developer tools for students — Copilot, JetBrains IDEs, domain names, cloud credits.</p>
-            <span class="card-link">education.github.com/pack <i class="fas fa-arrow-right"></i></span>
+            <p>Practical Deep Learning for Coders — a free top-down course that turns coders into deep-learning practitioners in seven weeks.</p>
+            <span class="card-link">fast.ai <i class="fas fa-arrow-right"></i></span>
           </a>
-
+          <a href="https://www.datacamp.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="card-meta"><h4>DataCamp Free</h4></div>
+            </div>
+            <p>Free first chapters of every course — solid intro to Python, R, SQL and data visualisation with browser-based exercises.</p>
+            <span class="card-link">datacamp.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://mode.com/sql-tutorial" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-table"></i></div>
+              <div class="card-meta"><h4>Mode SQL Tutorial</h4></div>
+            </div>
+            <p>The clearest free SQL tutorial online — analytics-focused, with real datasets and a built-in editor in the browser.</p>
+            <span class="card-link">mode.com <i class="fas fa-arrow-right"></i></span>
+          </a>
           <a href="https://replit.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-play"></i></div>
-              <div class="card-meta"><h4>Replit</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-meta"><h4>Replit</h4></div>
             </div>
-            <p>Code in 50+ languages directly in your browser — no setup, share projects with one link.</p>
+            <p>Code in 50+ languages directly in your browser — no setup, free hosting, instant collaboration and AI-assisted coding.</p>
             <span class="card-link">replit.com <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://leetcode.com" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://exercism.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
-              <div class="card-meta"><h4>LeetCode</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span><span class="grade-badge">Grad</span></div></div>
+              <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+              <div class="card-meta"><h4>Exercism</h4></div>
             </div>
-            <p>Practice algorithms and data structures — 2,500+ free problems, the standard for tech-interview prep.</p>
-            <span class="card-link">leetcode.com <i class="fas fa-arrow-right"></i></span>
+            <p>Free practice exercises in 70+ languages with mentor feedback — sharpen syntax and idioms beyond what tutorials cover.</p>
+            <span class="card-link">exercism.org <i class="fas fa-arrow-right"></i></span>
           </a>
-
-          <a href="https://www.hackerrank.com" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-trophy"></i></div>
-              <div class="card-meta"><h4>HackerRank</h4><div class="grade-badges"><span class="grade-badge">Undergrad</span></div></div>
+              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="card-meta"><h4>MIT 6.0001 Intro CS Python</h4></div>
             </div>
-            <p>Free coding challenges, SQL problems, and domain-specific certifications recruiters actually check.</p>
-            <span class="card-link">hackerrank.com <i class="fas fa-arrow-right"></i></span>
+            <p>MIT's introduction to computer science using Python — free lectures, problem sets and exams from the campus course.</p>
+            <span class="card-link">ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
           </a>
+        </div>
+      </div>
+    </section>
 
-          <a href="https://roadmap.sh" target="_blank" rel="noopener" class="resource-card">
+    <!-- ═══════════════════ CYBERSECURITY & DIGITAL PRIVACY ═══════════════════ -->
+    <section id="security" class="panel sec-security" role="tabpanel" aria-labelledby="tab-security" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#fef2f2;color:#dc2626"><i class="fas fa-shield-halved"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.security.label">Privacy & Online Safety</span>
+            <h2 data-i18n="uni.sec.security.h2">Cybersecurity & Digital Privacy — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.security.desc">Protect your accounts, data and identity online — and learn the security skills nobody else is teaching you.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://bitwarden.com" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-map-signs"></i></div>
-              <div class="card-meta"><h4>roadmap.sh</h4><div class="grade-badges"><span class="grade-badge">All Levels</span></div></div>
+              <div class="card-icon"><i class="fas fa-key"></i></div>
+              <div class="card-meta"><h4>Bitwarden</h4></div>
             </div>
-            <p>Community-curated learning roadmaps for every tech role — frontend, backend, DevOps, ML — with free resources.</p>
-            <span class="card-link">roadmap.sh <i class="fas fa-arrow-right"></i></span>
+            <p>Open-source password manager with a generous free tier — unlimited devices, passwords and end-to-end encryption.</p>
+            <span class="card-link">bitwarden.com <i class="fas fa-arrow-right"></i></span>
           </a>
+          <a href="https://haveibeenpwned.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-skull-crossbones"></i></div>
+              <div class="card-meta"><h4>Have I Been Pwned</h4></div>
+            </div>
+            <p>Free check whether your email or password has been exposed in a data breach — by security researcher Troy Hunt.</p>
+            <span class="card-link">haveibeenpwned.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://signal.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-comment-dots"></i></div>
+              <div class="card-meta"><h4>Signal</h4></div>
+            </div>
+            <p>Free end-to-end encrypted messenger — gold standard for private chats, voice and video. Used by journalists worldwide.</p>
+            <span class="card-link">signal.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://2fas.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-mobile-screen"></i></div>
+              <div class="card-meta"><h4>2FAS Auth</h4></div>
+            </div>
+            <p>Free open-source two-factor authentication app — far safer than SMS codes and protects your accounts even if passwords leak.</p>
+            <span class="card-link">2fas.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.torproject.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-user-secret"></i></div>
+              <div class="card-meta"><h4>Tor Browser</h4></div>
+            </div>
+            <p>Free anonymity browser that routes traffic through volunteer relays — essential for journalists, activists and high-risk users.</p>
+            <span class="card-link">torproject.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://foundation.mozilla.org/privacynotincluded/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-lock"></i></div>
+              <div class="card-meta"><h4>Privacy Not Included</h4></div>
+            </div>
+            <p>Mozilla's free buyer's guide grading the privacy of consumer tech — phones, smart speakers, mental-health apps. Easy to scan before you buy.</p>
+            <span class="card-link">foundation.mozilla.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://ssd.eff.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-eye-slash"></i></div>
+              <div class="card-meta"><h4>EFF Surveillance Self-Defense</h4></div>
+            </div>
+            <p>Electronic Frontier Foundation's free guide to digital security — practical playbooks for students, activists and everyday users.</p>
+            <span class="card-link">ssd.eff.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://tryhackme.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-self">Self-Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-bug"></i></div>
+              <div class="card-meta"><h4>TryHackMe</h4></div>
+            </div>
+            <p>Gamified cybersecurity training — free rooms cover networking, Linux and web security; the most beginner-friendly hacking platform.</p>
+            <span class="card-link">tryhackme.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.cybrary.it" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-self">Self-Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-shield-virus"></i></div>
+              <div class="card-meta"><h4>Cybrary</h4></div>
+            </div>
+            <p>Free intro courses on cybersecurity fundamentals, ethical hacking and CompTIA Security+ exam preparation.</p>
+            <span class="card-link">cybrary.it <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-flag-usa"></i></div>
+              <div class="card-meta"><h4>CISA Cybersecurity</h4></div>
+            </div>
+            <p>Free cybersecurity guidance from the US Cybersecurity & Infrastructure Security Agency — practical for individuals and small orgs.</p>
+            <span class="card-link">cisa.gov <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://owasp.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-spider"></i></div>
+              <div class="card-meta"><h4>OWASP</h4></div>
+            </div>
+            <p>Open Worldwide Application Security Project — free top-10 lists, cheatsheets and frameworks every web developer should know.</p>
+            <span class="card-link">owasp.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://cs155.stanford.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-phd">PhD</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="card-meta"><h4>Stanford CS155</h4></div>
+            </div>
+            <p>Stanford's Computer and Network Security course — free lecture slides, notes and reading lists from a flagship program.</p>
+            <span class="card-link">cs155.stanford.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ═══════════════════ CRITICAL THINKING & INFORMATION LITERACY ═══════════════════ -->
+    <section id="critical" class="panel sec-critical" role="tabpanel" aria-labelledby="tab-critical" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#fef3c7;color:#f59e0b"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.critical.label">Reasoning & Information Literacy</span>
+            <h2 data-i18n="uni.sec.critical.h2">Critical Thinking & Information Literacy — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.critical.desc">Evaluate evidence, recognise bias and reason clearly under uncertainty — the WEF's #1 skill of the next decade.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.callingbullshit.org" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+              <div class="card-meta"><h4>Calling Bullshit (UW)</h4></div>
+            </div>
+            <p>Free University of Washington course on spotting BS in numbers, charts and stories — every video and reading openly online.</p>
+            <span class="card-link">callingbullshit.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-self">Self-Learner</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+              <div class="card-meta"><h4>Khan Academy Statistics</h4></div>
+            </div>
+            <p>Free, complete intro to statistics and probability — the literacy you need to question any chart you see in the news.</p>
+            <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.allsides.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+              <div class="card-meta"><h4>AllSides</h4></div>
+            </div>
+            <p>Shows news headlines from left, centre and right side-by-side — calibrate your media diet and spot bias daily.</p>
+            <span class="card-link">allsides.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://ground.news" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-globe"></i></div>
+              <div class="card-meta"><h4>Ground News</h4></div>
+            </div>
+            <p>Compares how the same story is covered across the political spectrum — free tier highlights blind spots and bias.</p>
+            <span class="card-link">ground.news <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.snopes.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-search"></i></div>
+              <div class="card-meta"><h4>Snopes</h4></div>
+            </div>
+            <p>The original fact-checking site — free, transparent verdicts on viral claims, urban legends and political rumours.</p>
+            <span class="card-link">snopes.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.bbc.co.uk/programmes/b006qshd" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-podcast"></i></div>
+              <div class="card-meta"><h4>BBC More or Less</h4></div>
+            </div>
+            <p>Tim Harford's free BBC podcast and articles unpicking the numbers behind the headlines — the most readable training in statistical thinking.</p>
+            <span class="card-link">bbc.co.uk <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.coursera.org/learn/mindware" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="card-meta"><h4>Coursera 'Mindware' (UMich)</h4></div>
+            </div>
+            <p>Richard Nisbett's free audit of the most useful concepts in psychology and statistics for everyday reasoning.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.readthesequences.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-cogs"></i></div>
+              <div class="card-meta"><h4>LessWrong Sequences</h4></div>
+            </div>
+            <p>Free book-length intro to rationality — cognitive biases, probabilistic thinking, scientific reasoning and decision-making.</p>
+            <span class="card-link">readthesequences.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://yourlogicalfallacyis.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-comment-slash"></i></div>
+              <div class="card-meta"><h4>Your Logical Fallacy Is</h4></div>
+            </div>
+            <p>Free interactive guide to 24 common logical fallacies — bookmark-worthy for spotting bad arguments online and offline.</p>
+            <span class="card-link">yourlogicalfallacyis.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://thedecisionlab.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-brain"></i></div>
+              <div class="card-meta"><h4>The Decision Lab</h4></div>
+            </div>
+            <p>Free encyclopaedia of cognitive biases and behavioural science — clear, well-illustrated explanations of how we think wrong.</p>
+            <span class="card-link">thedecisionlab.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.poynter.org/mediawise/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+              <div class="card-meta"><h4>MediaWise</h4></div>
+            </div>
+            <p>Free media-literacy courses for teens and adults from the Poynter Institute — practical fact-checking with real-world examples.</p>
+            <span class="card-link">poynter.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.badscience.net" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-vial"></i></div>
+              <div class="card-meta"><h4>Bad Science (Goldacre)</h4></div>
+            </div>
+            <p>Ben Goldacre's free articles dismantling bad statistics in medicine and journalism — the canonical antidote to dodgy headlines.</p>
+            <span class="card-link">badscience.net <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ OPEN COURSEWARE & LIFELONG LEARNING ═══════════════════ -->
+    <section id="courseware" class="panel sec-courseware" role="tabpanel" aria-labelledby="tab-courseware" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#eff6ff;color:#3b82f6"><i class="fas fa-graduation-cap"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.courseware.label">Lectures & MOOCs</span>
+            <h2 data-i18n="uni.sec.courseware.h2">Open Courseware & Lifelong Learning — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.courseware.desc">Full courses from MIT, Harvard, Stanford, Yale and other top universities — free to audit, learn anything from anywhere.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://ocw.mit.edu" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-university"></i></div>
+              <div class="card-meta"><h4>MIT OpenCourseWare</h4></div>
+            </div>
+            <p>2,500+ MIT courses free — lecture notes, problem sets, exams, and often full video lectures from the world's top engineering school.</p>
+            <span class="card-link">ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.coursera.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+              <div class="card-meta"><h4>Coursera (Audit)</h4></div>
+            </div>
+            <p>Audit most courses from Stanford, Yale, Michigan and more for free — videos and readings included on the no-cost track.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.edx.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-school"></i></div>
+              <div class="card-meta"><h4>edX</h4></div>
+            </div>
+            <p>Harvard, MIT, Berkeley courses — free to audit, with optional paid certificates and MicroMasters programs for credit.</p>
+            <span class="card-link">edx.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://online.stanford.edu/free-courses" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-landmark"></i></div>
+              <div class="card-meta"><h4>Stanford Online</h4></div>
+            </div>
+            <p>Curated free courses from Stanford faculty — AI, engineering, medicine, education and entrepreneurship.</p>
+            <span class="card-link">online.stanford.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://oyc.yale.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+              <div class="card-meta"><h4>Open Yale Courses</h4></div>
+            </div>
+            <p>Complete Yale undergraduate lectures — philosophy, economics, astronomy, literature — full video and reading lists.</p>
+            <span class="card-link">oyc.yale.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.open.edu/openlearn" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-globe-europe"></i></div>
+              <div class="card-meta"><h4>OpenLearn (UK)</h4></div>
+            </div>
+            <p>Free courses from The Open University — 1,000+ topics with statements of participation available at no charge.</p>
+            <span class="card-link">open.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.saylor.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-certificate"></i></div>
+              <div class="card-meta"><h4>Saylor Academy</h4></div>
+            </div>
+            <p>Self-paced college courses with free certificates — some credit-eligible through ACE partnerships, no degree-fee required.</p>
+            <span class="card-link">saylor.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://oli.cmu.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-microscope"></i></div>
+              <div class="card-meta"><h4>CMU Open Learning Initiative</h4></div>
+            </div>
+            <p>Research-backed adaptive courses from Carnegie Mellon — statistics, psychology, biology and logic.</p>
+            <span class="card-link">oli.cmu.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.khanacademy.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-self">Self-Learner</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-play-circle"></i></div>
+              <div class="card-meta"><h4>Khan Academy</h4></div>
+            </div>
+            <p>Foundational courses with mastery tracking — calculus, linear algebra, physics, economics and exam prep, fully free.</p>
+            <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.futurelearn.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-users"></i></div>
+              <div class="card-meta"><h4>FutureLearn</h4></div>
+            </div>
+            <p>Short free courses from European and Commonwealth universities — discussion-based learning with peers worldwide.</p>
+            <span class="card-link">futurelearn.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.classcentral.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-compass"></i></div>
+              <div class="card-meta"><h4>Class Central</h4></div>
+            </div>
+            <p>Free search engine for 200,000+ MOOCs — the easiest way to find the best free version of any course on the web.</p>
+            <span class="card-link">classcentral.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.coursera.org/learn/learning-how-to-learn" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-brain"></i></div>
+              <div class="card-meta"><h4>Learning How to Learn</h4></div>
+            </div>
+            <p>The most-popular MOOC ever — free auditable course on meta-learning, focused practice and beating procrastination.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ RESEARCH, CITATION & OPEN KNOWLEDGE ═══════════════════ -->
+    <section id="research" class="panel sec-research" role="tabpanel" aria-labelledby="tab-research" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#f0fdf4;color:#16a34a"><i class="fas fa-flask"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.research.label">Finding & Citing Sources</span>
+            <h2 data-i18n="uni.sec.research.h2">Research, Citation & Open Knowledge — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.research.desc">Discover peer-reviewed papers, manage citations, and read free open textbooks — everything for your thesis or paper, free.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://scholar.google.com" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-search"></i></div>
+              <div class="card-meta"><h4>Google Scholar</h4></div>
+            </div>
+            <p>The largest free academic search engine — papers, citations, and often direct links to free PDFs across every discipline.</p>
+            <span class="card-link">scholar.google.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.zotero.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-bookmark"></i></div>
+              <div class="card-meta"><h4>Zotero</h4></div>
+            </div>
+            <p>Free, open-source reference manager — capture any source with one click and auto-format bibliographies in any style.</p>
+            <span class="card-link">zotero.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.semanticscholar.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-phd">PhD</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-brain"></i></div>
+              <div class="card-meta"><h4>Semantic Scholar</h4></div>
+            </div>
+            <p>AI-powered academic search from the Allen Institute — surfaces influential citations and related work for any paper.</p>
+            <span class="card-link">semanticscholar.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.connectedpapers.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-phd">PhD</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+              <div class="card-meta"><h4>Connected Papers</h4></div>
+            </div>
+            <p>Visual graph of papers related to any key article — a literature-review game changer for thesis and review work.</p>
+            <span class="card-link">connectedpapers.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://core.ac.uk" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-database"></i></div>
+              <div class="card-meta"><h4>CORE</h4></div>
+            </div>
+            <p>World's largest aggregator of open-access research — 300 million papers across 11,000 repositories, fully searchable.</p>
+            <span class="card-link">core.ac.uk <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="card-meta"><h4>PubMed</h4></div>
+            </div>
+            <p>Free NIH database of 35M+ biomedical citations — essential for life sciences, medicine and psychology.</p>
+            <span class="card-link">pubmed.ncbi.nlm.nih.gov <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://doaj.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-journal-whills"></i></div>
+              <div class="card-meta"><h4>DOAJ</h4></div>
+            </div>
+            <p>Directory of Open Access Journals — 20,000+ vetted peer-reviewed journals with free full text, no paywalls.</p>
+            <span class="card-link">doaj.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://openstax.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-atlas"></i></div>
+              <div class="card-meta"><h4>OpenStax</h4></div>
+            </div>
+            <p>Rice University's free peer-reviewed textbooks — biology, physics, economics, sociology and calculus, fully downloadable.</p>
+            <span class="card-link">openstax.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://libretexts.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-book"></i></div>
+              <div class="card-meta"><h4>LibreTexts</h4></div>
+            </div>
+            <p>The largest open-textbook library — chemistry, engineering, humanities and medicine, freely remixable for educators.</p>
+            <span class="card-link">libretexts.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://arxiv.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-phd">PhD</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="card-meta"><h4>arXiv</h4></div>
+            </div>
+            <p>Free preprint server for physics, math, CS and quantitative biology — see new research months before formal publication.</p>
+            <span class="card-link">arxiv.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.gutenberg.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-scroll"></i></div>
+              <div class="card-meta"><h4>Project Gutenberg</h4></div>
+            </div>
+            <p>75,000+ free classic books in the public domain — ideal for literature, history and philosophy courses.</p>
+            <span class="card-link">gutenberg.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://archive.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-landmark"></i></div>
+              <div class="card-meta"><h4>Internet Archive</h4></div>
+            </div>
+            <p>Millions of free books, academic papers and historic documents — including the Open Library lending service.</p>
+            <span class="card-link">archive.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ WRITING, COMMUNICATION & PUBLIC SPEAKING ═══════════════════ -->
+    <section id="writing" class="panel sec-writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#fff7ed;color:#f97316"><i class="fas fa-pen-fancy"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.writing.label">Essays, Comms & Voice</span>
+            <h2 data-i18n="uni.sec.writing.h2">Writing, Communication & Public Speaking — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.writing.desc">Write cleaner essays, present with confidence, and translate clearly — the human complement to AI assistance.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-spell-check"></i></div>
+              <div class="card-meta"><h4>Grammarly</h4></div>
+            </div>
+            <p>Real-time grammar, spelling and clarity checks in your browser or Word — the free tier covers all the daily-use essentials.</p>
+            <span class="card-link">grammarly.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://hemingwayapp.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-highlighter"></i></div>
+              <div class="card-meta"><h4>Hemingway Editor</h4></div>
+            </div>
+            <p>Highlights convoluted sentences, passive voice and adverbs — makes academic and professional writing dramatically clearer.</p>
+            <span class="card-link">hemingwayapp.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://languagetool.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-language"></i></div>
+              <div class="card-meta"><h4>LanguageTool</h4></div>
+            </div>
+            <p>Open-source grammar checker supporting 30+ languages — strong free tier, ideal for essays in German, French and Spanish.</p>
+            <span class="card-link">languagetool.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.overleaf.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-phd">PhD</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-file-code"></i></div>
+              <div class="card-meta"><h4>Overleaf</h4></div>
+            </div>
+            <p>Online LaTeX editor — collaborative thesis and paper writing with live preview and journal templates, free tier covers most students.</p>
+            <span class="card-link">overleaf.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://typst.app" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-bolt"></i></div>
+              <div class="card-meta"><h4>Typst</h4></div>
+            </div>
+            <p>Modern open-source alternative to LaTeX — faster compile, cleaner syntax, still produces beautiful PDFs for academic work.</p>
+            <span class="card-link">typst.app <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://owl.purdue.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-feather"></i></div>
+              <div class="card-meta"><h4>Purdue OWL</h4></div>
+            </div>
+            <p>The web's most-used free writing reference — APA/MLA/Chicago style guides, grammar tips and academic-writing playbooks.</p>
+            <span class="card-link">owl.purdue.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://ed.ted.com/topics/public-speaking-and-presentation" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-microphone"></i></div>
+              <div class="card-meta"><h4>TED-Ed Public Speaking</h4></div>
+            </div>
+            <p>Free TED-Ed lessons on public speaking, storytelling and presentation — taught by people who actually deliver TED talks.</p>
+            <span class="card-link">ed.ted.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.toastmasters.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-users-rectangle"></i></div>
+              <div class="card-meta"><h4>Toastmasters</h4></div>
+            </div>
+            <p>World's largest public-speaking community — many local clubs let you visit free, with structured pathways for growth.</p>
+            <span class="card-link">toastmasters.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.coursera.org/specializations/good-with-words" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-pen"></i></div>
+              <div class="card-meta"><h4>UMich 'Good with Words'</h4></div>
+            </div>
+            <p>Free-to-audit specialisation by Patrick Barry on writing and editing for persuasion — practical for essays, applications and pitches.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://yoodli.ai" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-microphone-alt"></i></div>
+              <div class="card-meta"><h4>Yoodli</h4></div>
+            </div>
+            <p>Free AI speech coach — practise presentations on video and get feedback on filler words, pace, clarity and confidence.</p>
+            <span class="card-link">yoodli.ai <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://docs.google.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="card-meta"><h4>Google Docs</h4></div>
+            </div>
+            <p>Free collaborative word processor with real-time editing, comments, version history and voice typing — universal for student work.</p>
+            <span class="card-link">docs.google.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.deepl.com/write" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-magic"></i></div>
+              <div class="card-meta"><h4>DeepL Write</h4></div>
+            </div>
+            <p>Free AI writing assistant from DeepL — rewrites for tone and clarity in English, German and other major languages.</p>
+            <span class="card-link">deepl.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PRODUCTIVITY, FOCUS & DEEP WORK ═══════════════════ -->
+    <section id="productivity" class="panel sec-productivity" role="tabpanel" aria-labelledby="tab-productivity" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#fdf2f8;color:#ec4899"><i class="fas fa-bullseye"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.productivity.label">Notes, Focus, Deadlines</span>
+            <h2 data-i18n="uni.sec.productivity.h2">Productivity, Focus & Deep Work — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.productivity.desc">Note systems, task managers and focus tools to win back your attention — the prerequisite for everything else.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.notion.so/students" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+              <div class="card-meta"><h4>Notion (Students)</h4></div>
+            </div>
+            <p>Free Plus plan for students with .edu email — notes, databases, task lists and wikis all in one workspace.</p>
+            <span class="card-link">notion.so <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://obsidian.md" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+              <div class="card-meta"><h4>Obsidian</h4></div>
+            </div>
+            <p>Local-first markdown note-taking with back-links — the best free tool for building a personal academic knowledge graph.</p>
+            <span class="card-link">obsidian.md <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://apps.ankiweb.net" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-clone"></i></div>
+              <div class="card-meta"><h4>Anki</h4></div>
+            </div>
+            <p>Free open-source spaced-repetition flashcards — used by med students and language learners worldwide; the proven memory tool.</p>
+            <span class="card-link">apps.ankiweb.net <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://todoist.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-check-square"></i></div>
+              <div class="card-meta"><h4>Todoist</h4></div>
+            </div>
+            <p>Clean task manager that handles recurring assignments and deadlines across all your devices — free tier handles most workflows.</p>
+            <span class="card-link">todoist.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.forestapp.cc" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-tree"></i></div>
+              <div class="card-meta"><h4>Forest</h4></div>
+            </div>
+            <p>Gamified focus timer — plant a virtual tree that dies if you leave the app. Free web version reliably blocks distractions.</p>
+            <span class="card-link">forestapp.cc <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://pomofocus.io" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-stopwatch"></i></div>
+              <div class="card-meta"><h4>Pomofocus</h4></div>
+            </div>
+            <p>Simple free Pomodoro timer — start focused 25-minute sessions in your browser with no signup or setup.</p>
+            <span class="card-link">pomofocus.io <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://getcoldturkey.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-ban"></i></div>
+              <div class="card-meta"><h4>Cold Turkey Blocker</h4></div>
+            </div>
+            <p>Free site and app blocker that's actually hard to bypass — schedule deep-work blocks that even you can't override.</p>
+            <span class="card-link">getcoldturkey.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.calnewport.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-headset"></i></div>
+              <div class="card-meta"><h4>Cal Newport's Deep Work</h4></div>
+            </div>
+            <p>Free essays, podcasts and guides from the author of Deep Work — practical playbooks for sustained, distraction-free focus.</p>
+            <span class="card-link">calnewport.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://logseq.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-diagram-project"></i></div>
+              <div class="card-meta"><h4>Logseq</h4></div>
+            </div>
+            <p>Open-source local-first knowledge graph — daily notes, outlines and back-links; a free, privacy-respecting Roam alternative.</p>
+            <span class="card-link">logseq.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://trello.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-columns"></i></div>
+              <div class="card-meta"><h4>Trello</h4></div>
+            </div>
+            <p>Free Kanban-style project boards — visual task management for group projects, theses and side projects.</p>
+            <span class="card-link">trello.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://calendar.google.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+              <div class="card-meta"><h4>Google Calendar</h4></div>
+            </div>
+            <p>Free time-blocking calendar with shared events and natural-language input — the backbone of any deep-work practice.</p>
+            <span class="card-link">calendar.google.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://toggl.com/track/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+              <div class="card-meta"><h4>Toggl Track</h4></div>
+            </div>
+            <p>Free time-tracking app with one-click timers — see where your study hours actually go and design better routines.</p>
+            <span class="card-link">toggl.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ MENTAL HEALTH & RESILIENCE ═══════════════════ -->
+    <section id="mental" class="panel sec-mental" role="tabpanel" aria-labelledby="tab-mental" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#f0fdfa;color:#14b8a6"><i class="fas fa-heart-pulse"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.mental.label">Wellbeing & Resilience</span>
+            <h2 data-i18n="uni.sec.mental.h2">Mental Health & Resilience — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.mental.desc">Sleep, stress, anxiety and mood — free, evidence-based resources to support the most important asset you have.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.coursera.org/learn/the-science-of-well-being" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-sun"></i></div>
+              <div class="card-meta"><h4>Yale 'Science of Well-Being'</h4></div>
+            </div>
+            <p>Yale's most-popular course ever — free to audit, taught by Laurie Santos, covering the psychology of happiness with daily practices.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.headspace.com/studentplan" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-cloud"></i></div>
+              <div class="card-meta"><h4>Headspace for Students</h4></div>
+            </div>
+            <p>Free Headspace Plus for students at over 1,000 universities — guided meditations, sleep stories and stress courses.</p>
+            <span class="card-link">headspace.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.calm.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-spa"></i></div>
+              <div class="card-meta"><h4>Calm</h4></div>
+            </div>
+            <p>Free guided meditations, breathing exercises and sleep stories — the basics of mindfulness without the paywall.</p>
+            <span class="card-link">calm.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://moodgym.com.au" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+              <div class="card-meta"><h4>MoodGym</h4></div>
+            </div>
+            <p>Free CBT-based program from Australian National University — proven to reduce symptoms of depression and anxiety.</p>
+            <span class="card-link">moodgym.com.au <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://woebothealth.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-robot"></i></div>
+              <div class="card-meta"><h4>Woebot</h4></div>
+            </div>
+            <p>Free chatbot-based mental-health support — uses CBT techniques to help with mood, anxiety and stressful thinking.</p>
+            <span class="card-link">woebothealth.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.nhs.uk/every-mind-matters/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-hospital"></i></div>
+              <div class="card-meta"><h4>NHS Every Mind Matters</h4></div>
+            </div>
+            <p>Free UK National Health Service mental-health hub — practical advice for anxiety, sleep, low mood and stress.</p>
+            <span class="card-link">nhs.uk <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://self-compassion.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <div class="card-meta"><h4>Self-Compassion (Kristin Neff)</h4></div>
+            </div>
+            <p>Kristin Neff's free meditations and exercises — research-backed self-compassion practices proven to build resilience.</p>
+            <span class="card-link">self-compassion.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://insighttimer.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-bell"></i></div>
+              <div class="card-meta"><h4>Insight Timer</h4></div>
+            </div>
+            <p>The largest free meditation app — 200,000+ free guided meditations, talks and music from teachers worldwide.</p>
+            <span class="card-link">insighttimer.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.7cups.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+              <div class="card-meta"><h4>7 Cups</h4></div>
+            </div>
+            <p>Free emotional support from trained listeners — 24/7 anonymous chats, plus low-cost online therapy if you need more.</p>
+            <span class="card-link">7cups.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.crisistextline.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-phone"></i></div>
+              <div class="card-meta"><h4>Crisis Text Line</h4></div>
+            </div>
+            <p>Free 24/7 crisis support by text — confidential, trained counsellors in the US, UK, Ireland and Canada.</p>
+            <span class="card-link">crisistextline.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://healthysleep.med.harvard.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-moon"></i></div>
+              <div class="card-meta"><h4>Harvard Healthy Sleep</h4></div>
+            </div>
+            <p>Free Harvard Medical School educational resource on sleep biology, hygiene and disorders — clear, evidence-based and accessible.</p>
+            <span class="card-link">healthysleep.med.harvard.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://actionforhappiness.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-smile"></i></div>
+              <div class="card-meta"><h4>Action for Happiness</h4></div>
+            </div>
+            <p>Free monthly calendars of evidence-based daily actions — small, sustainable habits proven to lift mood and resilience.</p>
+            <span class="card-link">actionforhappiness.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PERSONAL FINANCE & ECONOMIC LITERACY ═══════════════════ -->
+    <section id="finance" class="panel sec-finance" role="tabpanel" aria-labelledby="tab-finance" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#f7fee7;color:#84cc16"><i class="fas fa-coins"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.finance.label">Money, Taxes, Investing</span>
+            <h2 data-i18n="uni.sec.finance.h2">Personal Finance & Economic Literacy — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.finance.desc">Budgeting, taxes, compound interest and investing basics — the financial skills schools rarely teach but you need by 25.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.khanacademy.org/college-careers-more/personal-finance" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-wallet"></i></div>
+              <div class="card-meta"><h4>Khan Academy Personal Finance</h4></div>
+            </div>
+            <p>Free, complete personal-finance course — taxes, credit, investing, retirement and real estate, taught at high-school clarity.</p>
+            <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.investopedia.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-book-open"></i></div>
+              <div class="card-meta"><h4>Investopedia</h4></div>
+            </div>
+            <p>Free encyclopaedia of finance and investing — 30,000+ articles plus a free simulator for paper-trading stocks risk-free.</p>
+            <span class="card-link">investopedia.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.nerdwallet.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-money-check-alt"></i></div>
+              <div class="card-meta"><h4>NerdWallet</h4></div>
+            </div>
+            <p>Free guides comparing credit cards, student loans, savings accounts and investment platforms — vendor-independent advice.</p>
+            <span class="card-link">nerdwallet.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.bogleheads.org/wiki/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="card-meta"><h4>Bogleheads Wiki</h4></div>
+            </div>
+            <p>Free community wiki on low-cost index investing — based on John Bogle's principles, the gold standard for passive investors.</p>
+            <span class="card-link">bogleheads.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.consumerfinance.gov/consumer-tools/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-landmark"></i></div>
+              <div class="card-meta"><h4>CFPB Tools</h4></div>
+            </div>
+            <p>Free tools and guides from the US Consumer Financial Protection Bureau — student loans, credit, scams and money basics.</p>
+            <span class="card-link">consumerfinance.gov <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://moneysmart.gov.au" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-piggy-bank"></i></div>
+              <div class="card-meta"><h4>MoneySmart</h4></div>
+            </div>
+            <p>Free Australian government finance hub — calculators, guides and budget tools usable internationally.</p>
+            <span class="card-link">moneysmart.gov.au <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.coursera.org/learn/financial-markets" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-university"></i></div>
+              <div class="card-meta"><h4>Yale 'Financial Markets'</h4></div>
+            </div>
+            <p>Robert Shiller's Nobel-laureate free course — auditable on Coursera, covers risk, behavioural finance and modern markets.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-flask"></i></div>
+              <div class="card-meta"><h4>MIT 15.401 Finance Theory</h4></div>
+            </div>
+            <p>MIT Sloan's intro to finance theory — free lectures and problem sets covering valuation, portfolios and capital markets.</p>
+            <span class="card-link">ocw.mit.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.youtube.com/@thefinancialdiet" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fab fa-youtube"></i></div>
+              <div class="card-meta"><h4>The Financial Diet</h4></div>
+            </div>
+            <p>Free practical money videos for young adults — budgeting, investing, salary negotiation and lifestyle inflation, all jargon-free.</p>
+            <span class="card-link">youtube.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.getrichslowly.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-seedling"></i></div>
+              <div class="card-meta"><h4>Get Rich Slowly</h4></div>
+            </div>
+            <p>Free 15+ years of accessible personal-finance writing by JD Roth — debt payoff, savings, investing and mindful spending.</p>
+            <span class="card-link">getrichslowly.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.mrmoneymustache.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-fire"></i></div>
+              <div class="card-meta"><h4>Mr. Money Mustache</h4></div>
+            </div>
+            <p>Free essays on financial independence and frugality — the founding text of the FIRE movement, opinionated but practical.</p>
+            <span class="card-link">mrmoneymustache.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.youneedabudget.com/students/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+              <div class="card-meta"><h4>YNAB (Students)</h4></div>
+            </div>
+            <p>Free 12-month YNAB subscription for university students — the most-loved budgeting method, with classes included.</p>
+            <span class="card-link">youneedabudget.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CAREER, NETWORKING & ENTREPRENEURSHIP ═══════════════════ -->
+    <section id="career" class="panel sec-career" role="tabpanel" aria-labelledby="tab-career" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#f5f3ff;color:#8b5cf6"><i class="fas fa-briefcase"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.career.label">Job, Networking, Founding</span>
+            <h2 data-i18n="uni.sec.career.h2">Career, Networking & Entrepreneurship — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.career.desc">Land internships, switch careers, freelance, or start a company — the practical skills for portfolio-career life.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.startupschool.org" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-rocket"></i></div>
+              <div class="card-meta"><h4>YC Startup School</h4></div>
+            </div>
+            <p>Free 10-week course from the world's top accelerator — 1M+ founders trained, with library of YC essays and talks.</p>
+            <span class="card-link">startupschool.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="card-meta"><h4>LinkedIn Learning</h4></div>
+            </div>
+            <p>Many public libraries grant free LinkedIn Learning access — thousands of courses on careers, tools and soft skills.</p>
+            <span class="card-link">linkedin.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://resumeworded.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+              <div class="card-meta"><h4>Resume Worded</h4></div>
+            </div>
+            <p>Free AI resume and LinkedIn profile feedback — built by ex-recruiters, scores your CV against real hiring rubrics.</p>
+            <span class="card-link">resumeworded.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://standout-cv.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="card-meta"><h4>Standout CV</h4></div>
+            </div>
+            <p>Free downloadable CV templates and writing guides — practical for first jobs, internships and career switchers.</p>
+            <span class="card-link">standout-cv.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.themuse.com/advice" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-comments"></i></div>
+              <div class="card-meta"><h4>The Muse Career Advice</h4></div>
+            </div>
+            <p>Free archive of career articles — interview prep, salary negotiation, navigating workplace politics and switching careers.</p>
+            <span class="card-link">themuse.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.levels.fyi" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+              <div class="card-meta"><h4>Levels.fyi</h4></div>
+            </div>
+            <p>Free salary data crowdsourced from real offers — see what tech, finance and consulting roles actually pay before you negotiate.</p>
+            <span class="card-link">levels.fyi <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.glassdoor.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-building"></i></div>
+              <div class="card-meta"><h4>Glassdoor</h4></div>
+            </div>
+            <p>Free reviews, salary ranges and interview questions for thousands of companies — the standard read before any interview.</p>
+            <span class="card-link">glassdoor.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://80000hours.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-compass"></i></div>
+              <div class="card-meta"><h4>80,000 Hours</h4></div>
+            </div>
+            <p>Free career advice focused on doing the most good with your work — research-driven guides on impactful career paths.</p>
+            <span class="card-link">80000hours.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://startupclass.samaltman.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-chalkboard"></i></div>
+              <div class="card-meta"><h4>Stanford How to Start a Startup</h4></div>
+            </div>
+            <p>Free Stanford CS183B taught by Sam Altman and Y Combinator partners — 20 free lectures on building a startup from zero.</p>
+            <span class="card-link">startupclass.samaltman.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.indiehackers.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-laptop-house"></i></div>
+              <div class="card-meta"><h4>Indie Hackers</h4></div>
+            </div>
+            <p>Free community of bootstrapped founders — interviews, podcasts and forum threads on building profitable side businesses.</p>
+            <span class="card-link">indiehackers.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://academy.hubspot.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+              <div class="card-meta"><h4>HubSpot Academy</h4></div>
+            </div>
+            <p>Free certifications in marketing, sales, content and SEO — recognised by employers, completed online in a few hours each.</p>
+            <span class="card-link">academy.hubspot.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.coursera.org/google-career-certificates" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fab fa-google"></i></div>
+              <div class="card-meta"><h4>Google Career Certificates</h4></div>
+            </div>
+            <p>Free-to-audit Google certificates in IT support, data analytics, UX and project management — recognised by 150+ employers.</p>
+            <span class="card-link">coursera.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ CIVIC, MEDIA & CLIMATE LITERACY ═══════════════════ -->
+    <section id="civic" class="panel sec-civic" role="tabpanel" aria-labelledby="tab-civic" hidden>
+      <div class="container">
+        <div class="subject-header">
+          <div class="subject-icon" style="background:#ecfeff;color:#06b6d4"><i class="fas fa-globe"></i></div>
+          <div class="subject-header-text">
+            <span class="section-label section-label-orange" data-i18n="uni.sec.civic.label">Citizenship & Sustainability</span>
+            <h2 data-i18n="uni.sec.civic.h2">Civic, Media & Climate Literacy — 12 Best Free Resources</h2>
+            <p data-i18n="uni.sec.civic.desc">Big-picture citizenship — understand democracy, evaluate media, grasp climate science and the ethics of technology.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="https://ourworldindata.org" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-chart-area"></i></div>
+              <div class="card-meta"><h4>Our World in Data</h4></div>
+            </div>
+            <p>Free, openly licensed data visualisations on the world's biggest issues — climate, poverty and health — built by Oxford researchers.</p>
+            <span class="card-link">ourworldindata.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://climate.mit.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-cloud-sun"></i></div>
+              <div class="card-meta"><h4>MIT Climate Portal</h4></div>
+            </div>
+            <p>Free MIT-curated explainers on climate change — the science, the solutions, the policy — accessible and rigorously sourced.</p>
+            <span class="card-link">climate.mit.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://drawdown.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-leaf"></i></div>
+              <div class="card-meta"><h4>Project Drawdown</h4></div>
+            </div>
+            <p>Free, ranked list of the most effective climate solutions — searchable database with deep technical analyses for each.</p>
+            <span class="card-link">drawdown.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://yaleclimateconnections.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-tree"></i></div>
+              <div class="card-meta"><h4>Yale Climate Connections</h4></div>
+            </div>
+            <p>Free daily climate journalism from Yale — accurate, accessible reporting on climate science, impacts and solutions.</p>
+            <span class="card-link">yaleclimateconnections.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.khanacademy.org/humanities/us-government-and-civics" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-undergrad">Undergrad</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-flag"></i></div>
+              <div class="card-meta"><h4>Khan Academy Civics</h4></div>
+            </div>
+            <p>Free, complete intro to US civics — Constitution, branches, elections — useful even for non-US students learning democracy basics.</p>
+            <span class="card-link">khanacademy.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.icivics.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-gavel"></i></div>
+              <div class="card-meta"><h4>iCivics</h4></div>
+            </div>
+            <p>Free games and lessons on democratic participation — built by Justice O'Connor, used in 50,000+ classrooms.</p>
+            <span class="card-link">icivics.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.scu.edu/ethics/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-balance-scale-right"></i></div>
+              <div class="card-meta"><h4>Markkula Ethics Center</h4></div>
+            </div>
+            <p>Santa Clara University's free ethics resource hub — frameworks for thinking through tech, business, AI and biomedical ethics.</p>
+            <span class="card-link">scu.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://hai.stanford.edu" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-grad">Grad</span><span class="grade-badge gb-phd">PhD</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-microscope"></i></div>
+              <div class="card-meta"><h4>Stanford HAI</h4></div>
+            </div>
+            <p>Free reports, primers and policy briefs from Stanford's Human-Centered AI Institute — the leading source on AI's societal impact.</p>
+            <span class="card-link">hai.stanford.edu <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.bellingcat.com/resources/how-tos/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-search-location"></i></div>
+              <div class="card-meta"><h4>Bellingcat Toolkit</h4></div>
+            </div>
+            <p>Free open-source-investigation playbook — verify videos, geolocate photos and fact-check viral claims like the pros.</p>
+            <span class="card-link">bellingcat.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.solutionsjournalism.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="card-meta"><h4>Solutions Journalism Network</h4></div>
+            </div>
+            <p>Free archive of evidence-based reporting on what's working — antidote to doom-scrolling, focuses on responses to social problems.</p>
+            <span class="card-link">solutionsjournalism.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.eff.org/issues" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-fist-raised"></i></div>
+              <div class="card-meta"><h4>EFF Civil Liberties</h4></div>
+            </div>
+            <p>Electronic Frontier Foundation's free guides on free speech, surveillance and digital rights — the leading digital civil liberties group.</p>
+            <span class="card-link">eff.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.unsdglearn.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Levels</span><span class="grade-badge gb-adult">Adult Learner</span><span class="grade-badge gb-switcher">Career Switcher</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+              <div class="card-meta"><h4>UN SDG Learn</h4></div>
+            </div>
+            <p>Free courses on the UN Sustainable Development Goals — climate, equality, poverty and governance, taught by UN agencies and partners.</p>
+            <span class="card-link">unsdglearn.org <i class="fas fa-arrow-right"></i></span>
+          </a>
         </div>
       </div>
     </section>
@@ -891,10 +1775,10 @@
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=11"></script>
+  <script defer src="assets/js/i18n.js?v=14"></script>
   <script defer src="assets/js/main.js"></script>
   <script>
-    /* Tabbed panels: click tab → swap panel in place */
+    /* Tabbed panels: click tab -> swap panel in place */
     (function () {
       var tabs = document.querySelectorAll('.subject-tab');
       var panels = document.querySelectorAll('.panel');
@@ -933,6 +1817,9 @@
           history.replaceState(null, '', '#' + target);
         });
       });
+      // Initial selection from hash, otherwise first tab
+      var initial = window.location.hash.slice(1);
+      if (initial) { activate(initial, false); } else { tabs[0].setAttribute('aria-selected','true'); }
 
       nav.addEventListener('keydown', function (e) {
         if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
@@ -943,9 +1830,6 @@
         tabs[next].focus();
         tabs[next].click();
       });
-
-      var initial = window.location.hash.slice(1);
-      if (initial) activate(initial, false);
     })();
   </script>
   <script>
