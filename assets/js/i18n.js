@@ -139,8 +139,67 @@ const translations = {
     'footer.copyright': '© 2026 CTWP Educational Empowerment. All rights reserved.',
     /* Subpages */
     'sub.students.badge': 'K–12 Future-Ready Skills', 'sub.students.title': 'Resources for School Students (K-12)',
-    'sub.students.desc': '156 curated free tools across 13 future-ready life skills — covering ages 3 to 18. Each tool is tagged with its pricing model and age range.',
+    'sub.students.desc': '288 curated free tools across 13 future-ready life skills — covering ages 3 to 18. Each tool is tagged with its pricing model and age range.',
     'sub.students.back': 'Back to Resources',
+    /* Students subpage chrome */
+    'students.stat.tools': 'Free Tools', 'students.stat.skills': 'Life Skills',
+    'students.stat.ages': 'Age Range', 'students.stat.freestart': 'Free to Start',
+    'students.picker.label': 'Explore by Skill',
+    'students.picker.heading': 'Choose one of the <em>13 life skills</em> to discover the best free tools',
+    'students.filter.label': 'Filter by age:', 'students.filter.all': 'All Ages',
+    /* Skill chip labels */
+    'students.chip.literacy': 'Literacy', 'students.chip.math': 'Math',
+    'students.chip.science': 'Science', 'students.chip.history': 'History',
+    'students.chip.coding': 'Coding', 'students.chip.ai': 'AI Literacy',
+    'students.chip.critical': 'Critical Thinking', 'students.chip.mental': 'Mental Health',
+    'students.chip.finance': 'Finance', 'students.chip.life': 'Life Skills',
+    'students.chip.values': 'Values', 'students.chip.creativity': 'Creativity',
+    'students.chip.learn': 'Learn to Learn',
+    /* Section labels (orange badges) */
+    'students.sec.literacy.label': 'Read, Write, Speak',
+    'students.sec.math.label': 'Numbers & Logic',
+    'students.sec.science.label': 'Curiosity & Inquiry',
+    'students.sec.history.label': 'Past & Places',
+    'students.sec.coding.label': 'Build & Create',
+    'students.sec.ai.label': 'Understand the Web & the Machine',
+    'students.sec.critical.label': 'Think Better',
+    'students.sec.mental.label': 'Feel Well, Learn Well',
+    'students.sec.finance.label': 'Money, Banking, Insurance',
+    'students.sec.life.label': 'Cook, Move, Live Well',
+    'students.sec.values.label': 'Character & Community',
+    'students.sec.creativity.label': 'Make & Imagine',
+    'students.sec.learn.label': 'Study Smarter',
+    /* Section headings */
+    'students.sec.literacy.title': 'Literacy & Communication — 12+ Free Tools per Age',
+    'students.sec.math.title': 'Math — 12+ Free Tools per Age',
+    'students.sec.science.title': 'Science — 12+ Free Tools per Age',
+    'students.sec.history.title': 'History & Geography — 12+ Free Tools per Age',
+    'students.sec.coding.title': 'Coding & Computational Thinking — 12+ Free Tools per Age',
+    'students.sec.ai.title': 'AI & Digital Literacy — 12+ Free Tools per Age',
+    'students.sec.critical.title': 'Critical Thinking & Problem Solving — 12+ Free Tools per Age',
+    'students.sec.mental.title': 'Mental Health & Mindfulness — 12+ Free Tools per Age',
+    'students.sec.finance.title': 'Financial Literacy — 12+ Free Tools per Age',
+    'students.sec.life.title': 'Life Skills & Health — 12+ Free Tools per Age',
+    'students.sec.values.title': 'Values, Ethics & Citizenship — 12+ Free Tools per Age',
+    'students.sec.creativity.title': 'Creativity, Arts & Making — 12+ Free Tools per Age',
+    'students.sec.learn.title': 'Learn How to Learn — 12+ Free Tools per Age',
+    /* Section descriptions */
+    'students.sec.literacy.desc': 'From phonics to essay writing: reading practice, grammar, vocabulary and expressive language for every age.',
+    'students.sec.math.desc': 'From counting to calculus: interactive practice, visual tools and expert explanations for every age.',
+    'students.sec.science.desc': 'Simulations, experiments and visual explainers in physics, chemistry, biology, earth and space.',
+    'students.sec.history.desc': 'Explore continents, cultures and centuries — interactive maps, primary sources and rich story-telling.',
+    'students.sec.coding.desc': 'From drag-and-drop blocks to real programming — logic, algorithms and making things with code.',
+    'students.sec.ai.desc': 'Use AI wisely, spot misinformation online and master the digital skills every future adult needs.',
+    'students.sec.critical.desc': 'Reason clearly, debate well and tell facts from noise — the #1 skill in every Future-of-Jobs report.',
+    'students.sec.mental.desc': 'Calm minds, emotion regulation and social-emotional learning — the foundation for everything else.',
+    'students.sec.finance.desc': 'Budgeting, saving, investing, banking and insurance — the practical money skills schools rarely teach.',
+    'students.sec.life.desc': 'Cooking, nutrition, fitness, first aid, sleep and everyday skills — what adult life actually asks of you.',
+    'students.sec.values.desc': 'Empathy, integrity, global awareness and active citizenship — the character skills that hold it all together.',
+    'students.sec.creativity.desc': 'Music, art, design, 3D, film and invention — free tools that let kids create real things.',
+    'students.sec.learn.desc': 'Memory techniques, focus tools, note-making and study science — the meta-skills that make every other subject easier.',
+    /* Pricing pills + Top Pick badge */
+    'pill.free': 'Free', 'pill.free_signup': 'Free (sign-up)', 'pill.freemium': 'Freemium',
+    'top_pick': 'Top Pick',
     'sub.uni.badge': 'Higher Education Tools', 'sub.uni.title': 'Resources for University Students',
     'sub.uni.desc': '60 curated free tools across 6 topics. Pick a topic below to see the top 10.',
     'sub.uni.back': 'Back to Resources',
@@ -292,8 +351,67 @@ const translations = {
     'footer.copyright': '© 2026 CTWP Educational Empowerment. Alle Rechte vorbehalten.',
     /* Subpages */
     'sub.students.badge': 'K–12 Zukunftskompetenzen', 'sub.students.title': 'Ressourcen für Schülerinnen & Schüler (K-12)',
-    'sub.students.desc': '156 kuratierte kostenlose Tools für 13 zukunftsrelevante Lebenskompetenzen — von 3 bis 18 Jahre. Jedes Tool ist mit Preismodell und Altersbereich gekennzeichnet.',
+    'sub.students.desc': '288 kuratierte kostenlose Tools für 13 zukunftsrelevante Lebenskompetenzen — von 3 bis 18 Jahre. Jedes Tool ist mit Preismodell und Altersbereich gekennzeichnet.',
     'sub.students.back': 'Zurück zu Ressourcen',
+    /* Students subpage chrome */
+    'students.stat.tools': 'Kostenlose Tools', 'students.stat.skills': 'Lebenskompetenzen',
+    'students.stat.ages': 'Altersbereich', 'students.stat.freestart': 'Kostenloser Einstieg',
+    'students.picker.label': 'Nach Kompetenz entdecken',
+    'students.picker.heading': 'Wähle eine der <em>13 Lebenskompetenzen</em>, um die besten kostenlosen Tools zu entdecken',
+    'students.filter.label': 'Nach Alter filtern:', 'students.filter.all': 'Alle Altersstufen',
+    /* Skill chip labels */
+    'students.chip.literacy': 'Sprache', 'students.chip.math': 'Mathematik',
+    'students.chip.science': 'Wissenschaft', 'students.chip.history': 'Geschichte',
+    'students.chip.coding': 'Programmieren', 'students.chip.ai': 'KI-Kompetenz',
+    'students.chip.critical': 'Kritisches Denken', 'students.chip.mental': 'Psychische Gesundheit',
+    'students.chip.finance': 'Finanzen', 'students.chip.life': 'Lebenskompetenzen',
+    'students.chip.values': 'Werte', 'students.chip.creativity': 'Kreativität',
+    'students.chip.learn': 'Lernen lernen',
+    /* Section labels (orange badges) */
+    'students.sec.literacy.label': 'Lesen, Schreiben, Sprechen',
+    'students.sec.math.label': 'Zahlen & Logik',
+    'students.sec.science.label': 'Neugier & Forschung',
+    'students.sec.history.label': 'Vergangenheit & Orte',
+    'students.sec.coding.label': 'Bauen & Erschaffen',
+    'students.sec.ai.label': 'Web & Maschine verstehen',
+    'students.sec.critical.label': 'Besser denken',
+    'students.sec.mental.label': 'Wohlfühlen, gut lernen',
+    'students.sec.finance.label': 'Geld, Banken, Versicherungen',
+    'students.sec.life.label': 'Kochen, Bewegen, Gut leben',
+    'students.sec.values.label': 'Charakter & Gemeinschaft',
+    'students.sec.creativity.label': 'Machen & Erfinden',
+    'students.sec.learn.label': 'Klüger lernen',
+    /* Section headings */
+    'students.sec.literacy.title': 'Sprache & Kommunikation — 12+ kostenlose Tools pro Alter',
+    'students.sec.math.title': 'Mathematik — 12+ kostenlose Tools pro Alter',
+    'students.sec.science.title': 'Wissenschaft — 12+ kostenlose Tools pro Alter',
+    'students.sec.history.title': 'Geschichte & Geografie — 12+ kostenlose Tools pro Alter',
+    'students.sec.coding.title': 'Programmieren & Computational Thinking — 12+ kostenlose Tools pro Alter',
+    'students.sec.ai.title': 'KI & digitale Kompetenz — 12+ kostenlose Tools pro Alter',
+    'students.sec.critical.title': 'Kritisches Denken & Problemlösung — 12+ kostenlose Tools pro Alter',
+    'students.sec.mental.title': 'Psychische Gesundheit & Achtsamkeit — 12+ kostenlose Tools pro Alter',
+    'students.sec.finance.title': 'Finanzkompetenz — 12+ kostenlose Tools pro Alter',
+    'students.sec.life.title': 'Lebenskompetenzen & Gesundheit — 12+ kostenlose Tools pro Alter',
+    'students.sec.values.title': 'Werte, Ethik & Bürgerschaft — 12+ kostenlose Tools pro Alter',
+    'students.sec.creativity.title': 'Kreativität, Kunst & Werken — 12+ kostenlose Tools pro Alter',
+    'students.sec.learn.title': 'Lernen lernen — 12+ kostenlose Tools pro Alter',
+    /* Section descriptions */
+    'students.sec.literacy.desc': 'Von der Lautlehre bis zum Aufsatz: Lesepraxis, Grammatik, Wortschatz und ausdrucksstarke Sprache für jedes Alter.',
+    'students.sec.math.desc': 'Vom Zählen bis zur Analysis: interaktive Übungen, visuelle Werkzeuge und fundierte Erklärungen für jedes Alter.',
+    'students.sec.science.desc': 'Simulationen, Experimente und visuelle Erklärungen in Physik, Chemie, Biologie, Erd- und Weltraumwissenschaften.',
+    'students.sec.history.desc': 'Erkunde Kontinente, Kulturen und Jahrhunderte — interaktive Karten, Originalquellen und packendes Storytelling.',
+    'students.sec.coding.desc': 'Von Drag-and-Drop-Blöcken bis zur echten Programmierung — Logik, Algorithmen und kreatives Coding.',
+    'students.sec.ai.desc': 'KI sinnvoll nutzen, Falschinformationen erkennen und die digitalen Kompetenzen meistern, die jeder Erwachsene braucht.',
+    'students.sec.critical.desc': 'Klar argumentieren, gut debattieren und Fakten von Lärm trennen — die Schlüsselkompetenz im Future-of-Jobs-Bericht.',
+    'students.sec.mental.desc': 'Ruhiger Geist, Emotionsregulation und sozial-emotionales Lernen — die Grundlage für alles andere.',
+    'students.sec.finance.desc': 'Budgetieren, Sparen, Investieren, Banken und Versicherungen — die praktischen Geldkompetenzen, die in der Schule selten gelehrt werden.',
+    'students.sec.life.desc': 'Kochen, Ernährung, Fitness, Erste Hilfe, Schlaf und Alltagsfähigkeiten — was das Erwachsenenleben wirklich verlangt.',
+    'students.sec.values.desc': 'Empathie, Integrität, globales Bewusstsein und aktive Bürgerschaft — die Charakterstärken, die alles zusammenhalten.',
+    'students.sec.creativity.desc': 'Musik, Kunst, Design, 3D, Film und Erfindung — kostenlose Werkzeuge, mit denen Kinder Echtes erschaffen.',
+    'students.sec.learn.desc': 'Gedächtnistechniken, Fokus-Tools, Notizen und Lernforschung — die Meta-Fähigkeiten, die jedes andere Fach erleichtern.',
+    /* Pricing pills + Top Pick badge */
+    'pill.free': 'Kostenlos', 'pill.free_signup': 'Kostenlos (Anmeldung)', 'pill.freemium': 'Freemium',
+    'top_pick': 'Top-Empfehlung',
     'sub.uni.badge': 'Hochschulbildung', 'sub.uni.title': 'Ressourcen für Studierende',
     'sub.uni.desc': '60 kuratierte kostenlose Tools in 6 Themen. Wähle unten ein Thema und sieh die Top 10.',
     'sub.uni.back': 'Zurück zu Ressourcen',
@@ -326,6 +444,13 @@ function applyTranslations() {
   /* Placeholders */
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     el.placeholder = t(el.dataset.i18nPh);
+  });
+  /* Class-based translation for repeated UI elements (pricing pills + Top Pick badge) */
+  document.querySelectorAll('.pricing-pill.pill-free').forEach(el => { el.textContent = t('pill.free'); });
+  document.querySelectorAll('.pricing-pill.pill-free-signup').forEach(el => { el.textContent = t('pill.free_signup'); });
+  document.querySelectorAll('.pricing-pill.pill-freemium').forEach(el => { el.textContent = t('pill.freemium'); });
+  document.querySelectorAll('.top-pick-badge').forEach(el => {
+    el.innerHTML = '<i class="fas fa-star"></i> ' + t('top_pick');
   });
   /* Update toggle button — highlight active language */
   const btn = document.getElementById('langToggle');
