@@ -217,7 +217,12 @@ const translations = {
     'uni.grade.all': 'All Levels',
     'uni.grade.adult': 'Adult Learner',
     'uni.grade.switcher': 'Career Switcher',
-    /* University: tab labels */
+    /* University: skill-picker chrome + filter bar */
+    'uni.picker.label': 'Explore by Skill',
+    'uni.picker.heading': 'Choose one of the <em>12 future-skill clusters</em> to discover the best free tools',
+    'uni.filter.label': 'Filter by audience:',
+    'uni.filter.all': 'All Audiences',
+    /* University: tab labels (long form, kept for backward compatibility) */
     'uni.tab.ai': 'AI Fluency',
     'uni.tab.coding': 'Coding & Data',
     'uni.tab.security': 'Cybersecurity',
@@ -230,6 +235,19 @@ const translations = {
     'uni.tab.finance': 'Personal Finance',
     'uni.tab.career': 'Career & Entrepreneurship',
     'uni.tab.civic': 'Civic, Media & Climate',
+    /* University: chip labels (short form for the chip grid) */
+    'uni.chip.ai': 'AI Fluency',
+    'uni.chip.coding': 'Coding & Data',
+    'uni.chip.security': 'Cybersecurity',
+    'uni.chip.critical': 'Critical Thinking',
+    'uni.chip.courseware': 'Open Courseware',
+    'uni.chip.research': 'Research',
+    'uni.chip.writing': 'Writing & Speaking',
+    'uni.chip.productivity': 'Productivity',
+    'uni.chip.mental': 'Mental Health',
+    'uni.chip.finance': 'Personal Finance',
+    'uni.chip.career': 'Career',
+    'uni.chip.civic': 'Civic & Climate',
     /* University: section panel labels + headings + descriptions */
     'uni.sec.ai.label': 'AI Tutors & Co-pilots',
     'uni.sec.ai.h2': 'AI Fluency & Co-working with AI \u2014 12 Best Free Resources',
