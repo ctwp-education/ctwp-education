@@ -288,7 +288,7 @@
     a.resource-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; border-top: 3px solid transparent; }
     .sec-planning  .resource-card { border-top-color: #2563eb; }
     .sec-materials  .resource-card { border-top-color: #dc2626; }
-    .sec-differentiation  .resource-card { border-top-color: #f59e0b; }
+    .sec-adapting  .resource-card { border-top-color: #f59e0b; }
     .sec-objectives  .resource-card { border-top-color: #6366f1; }
     .sec-explaining  .resource-card { border-top-color: #f97316; }
     .sec-interactive  .resource-card { border-top-color: #0891b2; }
@@ -306,7 +306,7 @@
     .sec-ai  .resource-card { border-top-color: #8b5cf6; }
     .sec-planning  .resource-card:hover { border-color: #2563eb; }
     .sec-materials  .resource-card:hover { border-color: #dc2626; }
-    .sec-differentiation  .resource-card:hover { border-color: #f59e0b; }
+    .sec-adapting  .resource-card:hover { border-color: #f59e0b; }
     .sec-objectives  .resource-card:hover { border-color: #6366f1; }
     .sec-explaining  .resource-card:hover { border-color: #f97316; }
     .sec-interactive  .resource-card:hover { border-color: #0891b2; }
@@ -324,7 +324,7 @@
     .sec-ai  .resource-card:hover { border-color: #8b5cf6; }
     .sec-planning  .card-icon { background: #eff6ff; color: #2563eb; }
     .sec-materials  .card-icon { background: #fef2f2; color: #dc2626; }
-    .sec-differentiation  .card-icon { background: #fffbeb; color: #f59e0b; }
+    .sec-adapting  .card-icon { background: #fffbeb; color: #f59e0b; }
     .sec-objectives  .card-icon { background: #eef2ff; color: #6366f1; }
     .sec-explaining  .card-icon { background: #fff7ed; color: #f97316; }
     .sec-interactive  .card-icon { background: #ecfeff; color: #0891b2; }
@@ -454,10 +454,10 @@
   <!-- ── Sub-chip Bar (visible chips depend on active phase) ── -->
   <nav class="subchip-bar" role="tablist" aria-label="Choose a topic within the active phase">
     <div class="subchip-inner">
-      <button type="button" class="subject-tab chip-active" role="tab" data-tab="planning" data-phase="before" aria-selected="true" aria-controls="planning" style="--chip-color:#22c55e"><i class="fas fa-chalkboard chip-icon" style="color:#2563eb"></i> <span data-i18n="teachers.chip.planning">Lesson Planning</span></button>
+      <button type="button" class="subject-tab chip-active" role="tab" data-tab="planning" data-phase="before" aria-selected="true" aria-controls="planning" style="--chip-color:#22c55e"><i class="fas fa-chalkboard chip-icon" style="color:#2563eb"></i> <span data-i18n="teachers.chip.planning">Lesson Planning & Curriculum</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="materials" data-phase="before" aria-selected="false" aria-controls="materials" style="--chip-color:#22c55e"><i class="fas fa-pen-ruler chip-icon" style="color:#dc2626"></i> <span data-i18n="teachers.chip.materials">Creating Materials</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="differentiation" data-phase="before" aria-selected="false" aria-controls="differentiation" style="--chip-color:#22c55e"><i class="fas fa-universal-access chip-icon" style="color:#f59e0b"></i> <span data-i18n="teachers.chip.differentiation">Differentiation & SEN</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="objectives" data-phase="before" aria-selected="false" aria-controls="objectives" style="--chip-color:#22c55e"><i class="fas fa-bullseye chip-icon" style="color:#6366f1"></i> <span data-i18n="teachers.chip.objectives">Objectives & Standards</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="adapting" data-phase="before" aria-selected="false" aria-controls="adapting" style="--chip-color:#22c55e"><i class="fas fa-arrows-split-up-and-left chip-icon" style="color:#f59e0b"></i> <span data-i18n="teachers.chip.adapting">Selecting & Adapting</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="objectives" data-phase="before" aria-selected="false" aria-controls="objectives" style="--chip-color:#22c55e"><i class="fas fa-bullseye chip-icon" style="color:#6366f1"></i> <span data-i18n="teachers.chip.objectives">Objectives & Standards Alignment</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="explaining" data-phase="during" aria-selected="false" aria-controls="explaining" style="--chip-color:#3b82f6"><i class="fas fa-display chip-icon" style="color:#f97316"></i> <span data-i18n="teachers.chip.explaining">Explaining Content</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="interactive" data-phase="during" aria-selected="false" aria-controls="interactive" style="--chip-color:#3b82f6"><i class="fas fa-flask chip-icon" style="color:#0891b2"></i> <span data-i18n="teachers.chip.interactive">Interactive Activities</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="collab" data-phase="during" aria-selected="false" aria-controls="collab" style="--chip-color:#3b82f6"><i class="fas fa-diagram-project chip-icon" style="color:#a855f7"></i> <span data-i18n="teachers.chip.collab">Collaboration</span></button>
@@ -465,12 +465,12 @@
       <button type="button" class="subject-tab" role="tab" data-tab="grading" data-phase="after" aria-selected="false" aria-controls="grading" style="--chip-color:#a855f7"><i class="fas fa-clipboard-check chip-icon" style="color:#475569"></i> <span data-i18n="teachers.chip.grading">Grading</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="feedback" data-phase="after" aria-selected="false" aria-controls="feedback" style="--chip-color:#a855f7"><i class="fas fa-pen-fancy chip-icon" style="color:#06b6d4"></i> <span data-i18n="teachers.chip.feedback">Feedback</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="reflection" data-phase="after" aria-selected="false" aria-controls="reflection" style="--chip-color:#a855f7"><i class="fas fa-rotate-left chip-icon" style="color:#84cc16"></i> <span data-i18n="teachers.chip.reflection">Reflection</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="tracking" data-phase="after" aria-selected="false" aria-controls="tracking" style="--chip-color:#a855f7"><i class="fas fa-house-user chip-icon" style="color:#10b981"></i> <span data-i18n="teachers.chip.tracking">Tracking & Family</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="mgmt" data-phase="supp" aria-selected="false" aria-controls="mgmt" style="--chip-color:#f59e0b"><i class="fas fa-school chip-icon" style="color:#14b8a6"></i> <span data-i18n="teachers.chip.mgmt">Classroom Mgmt</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="comms" data-phase="supp" aria-selected="false" aria-controls="comms" style="--chip-color:#f59e0b"><i class="fas fa-comments chip-icon" style="color:#22c55e"></i> <span data-i18n="teachers.chip.comms">Comms</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="admin" data-phase="supp" aria-selected="false" aria-controls="admin" style="--chip-color:#f59e0b"><i class="fas fa-folder-tree chip-icon" style="color:#71717a"></i> <span data-i18n="teachers.chip.admin">Admin & Files</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="pd" data-phase="supp" aria-selected="false" aria-controls="pd" style="--chip-color:#f59e0b"><i class="fas fa-user-graduate chip-icon" style="color:#e11d48"></i> <span data-i18n="teachers.chip.pd">PD & Further Ed</span></button>
-      <button type="button" class="subject-tab" role="tab" data-tab="wellbeing" data-phase="supp" aria-selected="false" aria-controls="wellbeing" style="--chip-color:#f59e0b"><i class="fas fa-heart-pulse chip-icon" style="color:#d946ef"></i> <span data-i18n="teachers.chip.wellbeing">Wellbeing</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="tracking" data-phase="after" aria-selected="false" aria-controls="tracking" style="--chip-color:#a855f7"><i class="fas fa-house-user chip-icon" style="color:#10b981"></i> <span data-i18n="teachers.chip.tracking">Tracking Progress</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="mgmt" data-phase="supp" aria-selected="false" aria-controls="mgmt" style="--chip-color:#f59e0b"><i class="fas fa-school chip-icon" style="color:#14b8a6"></i> <span data-i18n="teachers.chip.mgmt">Classroom Management</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="comms" data-phase="supp" aria-selected="false" aria-controls="comms" style="--chip-color:#f59e0b"><i class="fas fa-comments chip-icon" style="color:#22c55e"></i> <span data-i18n="teachers.chip.comms">Communication</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="admin" data-phase="supp" aria-selected="false" aria-controls="admin" style="--chip-color:#f59e0b"><i class="fas fa-folder-tree chip-icon" style="color:#71717a"></i> <span data-i18n="teachers.chip.admin">Administration & Files</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="pd" data-phase="supp" aria-selected="false" aria-controls="pd" style="--chip-color:#f59e0b"><i class="fas fa-user-graduate chip-icon" style="color:#e11d48"></i> <span data-i18n="teachers.chip.pd">Professional Development</span></button>
+      <button type="button" class="subject-tab" role="tab" data-tab="wellbeing" data-phase="supp" aria-selected="false" aria-controls="wellbeing" style="--chip-color:#f59e0b"><i class="fas fa-heart-pulse chip-icon" style="color:#d946ef"></i> <span data-i18n="teachers.chip.wellbeing">Teacher Wellbeing</span></button>
       <button type="button" class="subject-tab" role="tab" data-tab="ai" data-phase="supp" aria-selected="false" aria-controls="ai" style="--chip-color:#f59e0b"><i class="fas fa-robot chip-icon" style="color:#8b5cf6"></i> <span data-i18n="teachers.chip.ai">AI Co-pilots</span></button>
     </div>
   </nav>
@@ -595,14 +595,14 @@
             <p data-i18n="cd_t_009">Free library of master-teacher lesson plans across K-12 subjects — vetted, classroom-tested and aligned to Common Core.</p>
             <span class="card-link">betterlesson.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://eduprotocols.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
+          <a href="https://www.pbslearningmedia.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
-              <div class="card-meta"><h4>EduProtocols</h4></div>
+              <div class="card-icon"><i class="fas fa-tower-broadcast"></i></div>
+              <div class="card-meta"><h4>PBS LearningMedia</h4></div>
             </div>
-            <p data-i18n="cd_t_010">Free reusable lesson frames any teacher can drop content into — Cyber Sandwich, Iron Chef, Worst Preso Ever and more.</p>
-            <span class="card-link">eduprotocols.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_010">Free PBS K-12 digital media library — 100,000+ standards-aligned videos, lessons and interactives across every subject.</p>
+            <span class="card-link">pbslearningmedia.org <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://www.ck12.org" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
@@ -742,80 +742,26 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ SELECTING & ADAPTING RESOURCES — DIFFERENTIATION, INCLUSION & SEN ═══════════════════ -->
-    <section id="differentiation" class="panel sec-differentiation phase-before" role="tabpanel" aria-labelledby="tab-differentiation" data-phase="before" hidden>
+    <!-- ═══════════════════ SELECTING & ADAPTING RESOURCES ═══════════════════ -->
+    <section id="adapting" class="panel sec-adapting phase-before" role="tabpanel" aria-labelledby="tab-adapting" data-phase="before" hidden>
       <div class="container">
         <div class="subject-header">
-          <div class="subject-icon" style="background:#fffbeb;color:#f59e0b"><i class="fas fa-universal-access"></i></div>
+          <div class="subject-icon" style="background:#fffbeb;color:#f59e0b"><i class="fas fa-arrows-split-up-and-left"></i></div>
           <div class="subject-header-text">
-            <span class="section-label section-label-orange" data-i18n="teachers.sec.differentiation.label">Inclusion, SEN & Adapting Resources</span>
-            <h2 data-i18n="teachers.sec.differentiation.h2">Selecting & Adapting Resources — Differentiation, Inclusion & SEN — 12 Best Free Tools</h2>
-            <p data-i18n="teachers.sec.differentiation.desc">Reach every learner — adaptive readers, accessibility tools, dyslexia-friendly fonts and SEN-specific resources.</p>
+            <span class="section-label section-label-orange" data-i18n="teachers.sec.adapting.label">Levelling, Accessibility & SEN</span>
+            <h2 data-i18n="teachers.sec.adapting.h2">Selecting & Adapting Resources — 12 Best Free Tools</h2>
+            <p data-i18n="teachers.sec.adapting.desc">Pick existing resources and adapt them for every learner — text levellers, leveled libraries, accessibility readers and dyslexia-friendly tools.</p>
           </div>
         </div>
         <div class="resource-grid">
-          <a href="https://www.understood.org" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-              <div class="card-meta"><h4>Understood.org</h4></div>
-            </div>
-            <p data-i18n="cd_t_024">Comprehensive free resources for teachers and parents on dyslexia, ADHD and learning differences — research-backed and practical.</p>
-            <span class="card-link">understood.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a href="https://www.cast.org/our-work/about-udl.html" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-universal-access"></i></div>
-              <div class="card-meta"><h4>CAST UDL Guidelines</h4></div>
-            </div>
-            <p data-i18n="cd_t_025">The definitive Universal Design for Learning framework — free guidelines, examples and implementation tools for every classroom.</p>
-            <span class="card-link">cast.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a href="https://www.bookshare.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-sen">Special Ed</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book-reader"></i></div>
-              <div class="card-meta"><h4>Bookshare</h4></div>
-            </div>
-            <p data-i18n="cd_t_026">Free for US students with reading disabilities — over 1.4M accessible audiobooks and ebooks with text-to-speech.</p>
-            <span class="card-link">bookshare.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a href="https://www.naturalreaders.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Stages</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-volume-high"></i></div>
-              <div class="card-meta"><h4>Natural Reader</h4></div>
-            </div>
-            <p data-i18n="cd_t_027">Free text-to-speech with natural voices — read PDFs, web pages and Word docs aloud to support reading access.</p>
-            <span class="card-link">naturalreaders.com <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a href="https://www.opendyslexic.org" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-font"></i></div>
-              <div class="card-meta"><h4>OpenDyslexic Font</h4></div>
-            </div>
-            <p data-i18n="cd_t_028">Free open-source dyslexia-friendly typeface — designed to reduce letter rotation, includes browser extensions.</p>
-            <span class="card-link">opendyslexic.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a href="https://www.texthelp.com/products/read-and-write-education/" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book"></i></div>
-              <div class="card-meta"><h4>Read&Write (Texthelp)</h4></div>
-            </div>
-            <p data-i18n="cd_t_029">Free 30-day trial of the leading literacy support tool — text-to-speech, predictive typing, picture dictionary.</p>
-            <span class="card-link">texthelp.com <i class="fas fa-arrow-right"></i></span>
-          </a>
           <a href="https://diffit.me" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
             <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-sen">Special Ed</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-arrows-split-up-and-left"></i></div>
               <div class="card-meta"><h4>Diffit for Teachers</h4></div>
             </div>
-            <p data-i18n="cd_t_030">Adapt any text to any reading level instantly — leveled passages, vocabulary and questions; the gold-standard differentiation AI.</p>
+            <p data-i18n="cd_t_024">Adapt any text to any reading level instantly — leveled passages, vocabulary and questions; the gold-standard differentiation AI.</p>
             <span class="card-link">diffit.me <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://newsela.com" target="_blank" rel="noopener" class="resource-card">
@@ -824,26 +770,35 @@
               <div class="card-icon"><i class="fas fa-newspaper"></i></div>
               <div class="card-meta"><h4>Newsela</h4></div>
             </div>
-            <p data-i18n="cd_t_031">Free leveled news articles — every article available at 5 reading levels for differentiated content access across subjects.</p>
+            <p data-i18n="cd_t_025">Free leveled news articles — every article available at 5 reading levels for differentiated content access across subjects.</p>
             <span class="card-link">newsela.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://www.do2learn.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-sen">Special Ed</span><span class="grade-badge gb-prek">Pre-K</span><span class="grade-badge gb-primary">Primary</span></div>
+          <a href="https://www.readworks.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
-              <div class="card-meta"><h4>Do2Learn</h4></div>
+              <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+              <div class="card-meta"><h4>ReadWorks</h4></div>
             </div>
-            <p data-i18n="cd_t_032">Free social skills, autism and behaviour resources — picture cards, songs, games and printable visual schedules.</p>
-            <span class="card-link">do2learn.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_026">Free comprehensive K-12 reading library — thousands of leveled passages and paired texts with comprehension questions.</p>
+            <span class="card-link">readworks.org <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://www.theottoolbox.com/sensory-resources/" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-sen">Special Ed</span><span class="grade-badge gb-prek">Pre-K</span><span class="grade-badge gb-primary">Primary</span></div>
+          <a href="https://rewordify.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-sen">Special Ed</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-hands"></i></div>
-              <div class="card-meta"><h4>OT Toolbox Sensory</h4></div>
+              <div class="card-icon"><i class="fas fa-book-bookmark"></i></div>
+              <div class="card-meta"><h4>Rewordify</h4></div>
             </div>
-            <p data-i18n="cd_t_033">Free curated sensory and fine-motor activities for SEN classrooms — calm corners, sensory bins and OT-recommended ideas.</p>
-            <span class="card-link">theottoolbox.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_027">Paste any difficult text — Rewordify replaces hard words with simpler ones inline, with definitions on hover.</p>
+            <span class="card-link">rewordify.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.twinkl.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-prek">Pre-K</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-star"></i></div>
+              <div class="card-meta"><h4>Twinkl Resources</h4></div>
+            </div>
+            <p data-i18n="cd_t_028">Free curriculum-aligned printables across age ranges and abilities — adapt any worksheet up or down a level in seconds.</p>
+            <span class="card-link">twinkl.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://education.microsoft.com/en-us/resource/35d33d56" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
@@ -851,17 +806,62 @@
               <div class="card-icon"><i class="fab fa-microsoft"></i></div>
               <div class="card-meta"><h4>Immersive Reader</h4></div>
             </div>
-            <p data-i18n="cd_t_034">Free Microsoft tool — read any text aloud with line focus, syllable splitting, picture dictionary and 60+ languages.</p>
+            <p data-i18n="cd_t_029">Free Microsoft tool — read any text aloud with line focus, syllable splitting, picture dictionary and 60+ languages.</p>
             <span class="card-link">education.microsoft.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://www.bdadyslexia.org.uk/advice/educators" target="_blank" rel="noopener" class="resource-card">
+          <a href="https://www.naturalreaders.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Stages</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-volume-high"></i></div>
+              <div class="card-meta"><h4>Natural Reader</h4></div>
+            </div>
+            <p data-i18n="cd_t_030">Free text-to-speech with natural voices — read PDFs, web pages and Word docs aloud to support reading access.</p>
+            <span class="card-link">naturalreaders.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.opendyslexic.org" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-flag"></i></div>
-              <div class="card-meta"><h4>BDA Free Resources</h4></div>
+              <div class="card-icon"><i class="fas fa-font"></i></div>
+              <div class="card-meta"><h4>OpenDyslexic Font</h4></div>
             </div>
-            <p data-i18n="cd_t_035">British Dyslexia Association's free downloadable guides for teachers — best-practice classroom adaptations and assessments.</p>
-            <span class="card-link">bdadyslexia.org.uk <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_031">Free open-source dyslexia-friendly typeface — designed to reduce letter rotation, includes browser extensions.</p>
+            <span class="card-link">opendyslexic.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.texthelp.com/products/read-and-write-education/" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-book"></i></div>
+              <div class="card-meta"><h4>Read&Write (Texthelp)</h4></div>
+            </div>
+            <p data-i18n="cd_t_032">Free 30-day trial of the leading literacy support tool — text-to-speech, predictive typing, picture dictionary.</p>
+            <span class="card-link">texthelp.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.bookshare.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-sen">Special Ed</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-book-open-reader"></i></div>
+              <div class="card-meta"><h4>Bookshare</h4></div>
+            </div>
+            <p data-i18n="cd_t_033">Free for US students with reading disabilities — over 1.4M accessible audiobooks and ebooks with text-to-speech.</p>
+            <span class="card-link">bookshare.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.cast.org/our-work/about-udl.html" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-universal-access"></i></div>
+              <div class="card-meta"><h4>CAST UDL Guidelines</h4></div>
+            </div>
+            <p data-i18n="cd_t_034">The definitive Universal Design for Learning framework — free guidelines, examples and implementation tools for every classroom.</p>
+            <span class="card-link">cast.org <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://www.understood.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="card-meta"><h4>Understood.org</h4></div>
+            </div>
+            <p data-i18n="cd_t_035">Comprehensive free resources for teachers and parents on dyslexia, ADHD and learning differences — research-backed and practical.</p>
+            <span class="card-link">understood.org <i class="fas fa-arrow-right"></i></span>
           </a>
         </div>
       </div>
@@ -873,7 +873,7 @@
         <div class="subject-header">
           <div class="subject-icon" style="background:#eef2ff;color:#6366f1"><i class="fas fa-bullseye"></i></div>
           <div class="subject-header-text">
-            <span class="section-label section-label-orange" data-i18n="teachers.sec.objectives.label">Standards, Frameworks & Backward Design</span>
+            <span class="section-label section-label-orange" data-i18n="teachers.sec.objectives.label">Standards, Frameworks & Lesson Frames</span>
             <h2 data-i18n="teachers.sec.objectives.h2">Setting Objectives & Standards Alignment — 12 Best Free Tools</h2>
             <p data-i18n="teachers.sec.objectives.desc">Anchor every lesson to clear standards and learning goals — official frameworks, taxonomies and OER alignment libraries.</p>
           </div>
@@ -952,13 +952,22 @@
             <p data-i18n="cd_t_043">Pam Hook's free SOLO Taxonomy resources — the Structure of Observed Learning Outcomes for clear progression in objectives.</p>
             <span class="card-link">pamhook.com <i class="fas fa-arrow-right"></i></span>
           </a>
+          <a href="https://eduprotocols.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
+              <div class="card-meta"><h4>EduProtocols</h4></div>
+            </div>
+            <p data-i18n="cd_t_044">Free reusable lesson frames tied to learning targets — Cyber Sandwich, Iron Chef, Worst Preso Ever and more.</p>
+            <span class="card-link">eduprotocols.com <i class="fas fa-arrow-right"></i></span>
+          </a>
           <a href="https://www.curriki.org" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
               <div class="card-meta"><h4>Curriki</h4></div>
             </div>
-            <p data-i18n="cd_t_044">Free open educational resources library — 50,000+ free lessons, units and full courses tagged by standard.</p>
+            <p data-i18n="cd_t_045">Free open educational resources library — 50,000+ free lessons, units and full courses tagged by standard.</p>
             <span class="card-link">curriki.org <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://www.oercommons.org" target="_blank" rel="noopener" class="resource-card">
@@ -967,17 +976,8 @@
               <div class="card-icon"><i class="fas fa-globe"></i></div>
               <div class="card-meta"><h4>OER Commons</h4></div>
             </div>
-            <p data-i18n="cd_t_045">Largest free OER repository — 70,000+ resources tagged by Common Core, NGSS and state standards, plus quality reviews.</p>
+            <p data-i18n="cd_t_046">Largest free OER repository — 70,000+ resources tagged by Common Core, NGSS and state standards, plus quality reviews.</p>
             <span class="card-link">oercommons.org <i class="fas fa-arrow-right"></i></span>
-          </a>
-          <a href="https://www.ascd.org/free-resources" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book-open-reader"></i></div>
-              <div class="card-meta"><h4>ASCD Free Resources</h4></div>
-            </div>
-            <p data-i18n="cd_t_046">Free articles, webinars and book excerpts on curriculum design, standards alignment and instructional leadership.</p>
-            <span class="card-link">ascd.org <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://www.visiblelearningmetax.com" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Stages</span></div>
@@ -1220,23 +1220,23 @@
             <p data-i18n="cd_t_069">Free graphing calculator and classroom activities — the gold standard for visualising functions in maths classes.</p>
             <span class="card-link">desmos.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://www.beepbox.co" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
+          <a href="https://code.org" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-wave-square"></i></div>
-              <div class="card-meta"><h4>Beepbox</h4></div>
+              <div class="card-icon"><i class="fas fa-code"></i></div>
+              <div class="card-meta"><h4>Code.org</h4></div>
             </div>
-            <p data-i18n="cd_t_070">Free retro chiptune music maker — students compose 8-bit melodies and beats in minutes, no account needed.</p>
-            <span class="card-link">beepbox.co <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_070">Free K-12 computer science curriculum — Hour of Code, full year courses, AI Lab and Dance Party. Used by 60M+ students.</p>
+            <span class="card-link">code.org <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://www.sketchbook.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
+          <a href="https://earth.google.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-higher">Higher Ed</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
-              <div class="card-meta"><h4>Autodesk Sketchbook</h4></div>
+              <div class="card-icon"><i class="fas fa-earth-americas"></i></div>
+              <div class="card-meta"><h4>Google Earth</h4></div>
             </div>
-            <p data-i18n="cd_t_071">Free professional drawing app from Autodesk — clean interface, full brush set, available on web, desktop and mobile.</p>
-            <span class="card-link">sketchbook.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_071">Free 3D globe in the browser — Voyager tours of culture, history and science; build your own placemarks for any geography lesson.</p>
+            <span class="card-link">earth.google.com <i class="fas fa-arrow-right"></i></span>
           </a>
         </div>
       </div>
@@ -1254,23 +1254,14 @@
           </div>
         </div>
         <div class="resource-grid">
-          <a href="https://jamboard.google.com" target="_blank" rel="noopener" class="resource-card">
-            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
-            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Stages</span></div>
-            <div class="card-top">
-              <div class="card-icon"><i class="fab fa-google"></i></div>
-              <div class="card-meta"><h4>Google Jamboard</h4></div>
-            </div>
-            <p data-i18n="cd_t_072">Free shared whiteboard from Google — sticky notes, drawings, images and live collaboration up to 50 students.</p>
-            <span class="card-link">jamboard.google.com <i class="fas fa-arrow-right"></i></span>
-          </a>
           <a href="https://miro.com/education" target="_blank" rel="noopener" class="resource-card">
+            <span class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</span>
             <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-higher">Higher Ed</span></div>
             <div class="card-top">
               <div class="card-icon"><i class="fas fa-chalkboard-user"></i></div>
               <div class="card-meta"><h4>Miro for Education</h4></div>
             </div>
-            <p data-i18n="cd_t_073">Free Education plan with unlimited boards and templates for verified teachers — the most-loved visual collaboration tool.</p>
+            <p data-i18n="cd_t_072">Free Education plan with unlimited boards and templates for verified teachers — the most-loved visual collaboration tool.</p>
             <span class="card-link">miro.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://www.figma.com/education/" target="_blank" rel="noopener" class="resource-card">
@@ -1279,7 +1270,7 @@
               <div class="card-icon"><i class="fab fa-figma"></i></div>
               <div class="card-meta"><h4>FigJam Education</h4></div>
             </div>
-            <p data-i18n="cd_t_074">Free FigJam for educators and students — collaborative whiteboarding with delightful templates and engagement features.</p>
+            <p data-i18n="cd_t_073">Free FigJam for educators and students — collaborative whiteboarding with delightful templates and engagement features.</p>
             <span class="card-link">figma.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://padlet.com" target="_blank" rel="noopener" class="resource-card">
@@ -1288,8 +1279,17 @@
               <div class="card-icon"><i class="fas fa-thumbtack"></i></div>
               <div class="card-meta"><h4>Padlet</h4></div>
             </div>
-            <p data-i18n="cd_t_075">Free 'sticky note wall' for posting ideas, photos, links and audio — three free padlets and beloved by teachers.</p>
+            <p data-i18n="cd_t_074">Free 'sticky note wall' for posting ideas, photos, links and audio — three free padlets and beloved by teachers.</p>
             <span class="card-link">padlet.com <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="https://excalidraw.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
+            <div class="card-top">
+              <div class="card-icon"><i class="fas fa-pencil"></i></div>
+              <div class="card-meta"><h4>Excalidraw</h4></div>
+            </div>
+            <p data-i18n="cd_t_075">Free open-source virtual whiteboard with hand-drawn aesthetic — instant collaboration, no login required, end-to-end encrypted.</p>
+            <span class="card-link">excalidraw.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://whiteboard.fi" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
@@ -1479,14 +1479,14 @@
             <p data-i18n="cd_t_094">Live audience-response polls embedded in PowerPoint or Google Slides — free tier supports up to 25 responses per poll.</p>
             <span class="card-link">pollev.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://www.vevox.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-higher">Higher Ed</span></div>
+          <a href="https://www.blooket.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-comments"></i></div>
-              <div class="card-meta"><h4>Vevox</h4></div>
+              <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+              <div class="card-meta"><h4>Blooket</h4></div>
             </div>
-            <p data-i18n="cd_t_095">Anonymous live polling and Q&A — free tier with unlimited polls, popular in higher-ed lecture halls.</p>
-            <span class="card-link">vevox.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_095">Game-based quiz platform massively popular with teens — host live games or assign self-paced sets. Free tier covers full classroom use.</p>
+            <span class="card-link">blooket.com <i class="fas fa-arrow-right"></i></span>
           </a>
         </div>
       </div>
@@ -1648,14 +1648,14 @@
             <p data-i18n="cd_t_109">Free web app that highlights complex sentences, passive voice and adverbs — clearer student writing in seconds.</p>
             <span class="card-link">hemingwayapp.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://rewordify.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-sen">Special Ed</span></div>
+          <a href="https://www.kamiapp.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-higher">Higher Ed</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-book-bookmark"></i></div>
-              <div class="card-meta"><h4>Rewordify</h4></div>
+              <div class="card-icon"><i class="fas fa-file-pdf"></i></div>
+              <div class="card-meta"><h4>Kami</h4></div>
             </div>
-            <p data-i18n="cd_t_110">Paste any difficult text — Rewordify replaces hard words with simpler ones inline, with definitions on hover.</p>
-            <span class="card-link">rewordify.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_110">Free PDF and document annotation — drop comments, voice notes, drawings and stickers right on student work in seconds.</p>
+            <span class="card-link">kamiapp.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://corubrics-en.tecnocentres.org" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free">Free</span><span class="grade-badge gb-all">All Stages</span></div>
@@ -1782,14 +1782,14 @@
             <p data-i18n="cd_t_122">Students design e-books for reflection or projects — free for one library of 40 books per teacher.</p>
             <span class="card-link">bookcreator.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://padlet.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-all">All Stages</span></div>
+          <a href="https://www.onenote.com/classnotebook" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Stages</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-thumbtack"></i></div>
-              <div class="card-meta"><h4>Padlet (Exit Walls)</h4></div>
+              <div class="card-icon"><i class="fab fa-microsoft"></i></div>
+              <div class="card-meta"><h4>OneNote Class Notebook</h4></div>
             </div>
-            <p data-i18n="cd_t_123">Free 'sticky note wall' — perfect for end-of-lesson exit tickets, KWL boards and quick written reflections.</p>
-            <span class="card-link">padlet.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_123">Free Microsoft tool — every student gets a private notebook for journals and reflections, plus a shared content library and collaboration space.</p>
+            <span class="card-link">onenote.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://reflect.microsoft.com" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
@@ -1800,14 +1800,14 @@
             <p data-i18n="cd_t_124">Free emotional check-in tool inside Teams for Education — students choose feelings; teachers see class wellbeing trends.</p>
             <span class="card-link">reflect.microsoft.com <i class="fas fa-arrow-right"></i></span>
           </a>
-          <a href="https://en.linoit.com" target="_blank" rel="noopener" class="resource-card">
-            <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-all">All Stages</span></div>
+          <a href="https://app.edu.buncee.com" target="_blank" rel="noopener" class="resource-card">
+            <div class="card-pills"><span class="pricing-pill pill-freemium">Freemium</span><span class="grade-badge gb-primary">Primary</span><span class="grade-badge gb-secondary">Secondary</span></div>
             <div class="card-top">
-              <div class="card-icon"><i class="fas fa-note-sticky"></i></div>
-              <div class="card-meta"><h4>Lino It</h4></div>
+              <div class="card-icon"><i class="fas fa-bolt-lightning"></i></div>
+              <div class="card-meta"><h4>Buncee</h4></div>
             </div>
-            <p data-i18n="cd_t_125">Free sticky-note canvas — collect anonymous reflections, peer feedback and class discussion threads on one shared board.</p>
-            <span class="card-link">en.linoit.com <i class="fas fa-arrow-right"></i></span>
+            <p data-i18n="cd_t_125">Free creation platform for student stories and digital reflections — combine text, voice, video and animation in one canvas.</p>
+            <span class="card-link">app.edu.buncee.com <i class="fas fa-arrow-right"></i></span>
           </a>
           <a href="https://www.notion.so/product/notion-for-education" target="_blank" rel="noopener" class="resource-card">
             <div class="card-pills"><span class="pricing-pill pill-free-signup">Free (sign-up)</span><span class="grade-badge gb-secondary">Secondary</span><span class="grade-badge gb-higher">Higher Ed</span></div>
