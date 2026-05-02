@@ -411,20 +411,25 @@
 
     @media (max-width: 900px) {
       .phase-tabs-inner {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-rows: auto auto;
         gap: 0.5rem;
       }
+      .phase-tab { min-width: 0; overflow-wrap: anywhere; }
       /* Row 1: Before · During · After */
       .phase-tab[data-phase="before"]       { grid-column: 1; grid-row: 1; height: auto; }
       .phase-tab[data-phase="during"]       { grid-column: 2; grid-row: 1; height: auto; }
       .phase-tab[data-phase="after"]        { grid-column: 3; grid-row: 1; height: auto; }
       /* Row 2: Fundamentals · Support · Further Dev */
       .phase-tab[data-phase="fundamentals"] { grid-column: 1; grid-row: 2; height: auto; }
-      .phase-tab[data-phase="supp"]         { grid-column: 2; grid-row: 2; height: auto; flex-direction: column; align-items: center; text-align: center; }
+      .phase-tab[data-phase="supp"]         {
+        grid-column: 2; grid-row: 2; height: auto;
+        flex-direction: column; align-items: flex-start;
+        gap: 0.3rem; padding: 0.7rem 0.8rem 0.8rem;
+      }
       .phase-tab[data-phase="furtherdev"]   { grid-column: 3; grid-row: 2; height: auto; }
       .phase-tab { padding: 0.7rem 0.8rem 0.8rem; }
-      .phase-tab .ph-icon { width: 32px; height: 32px; font-size: 0.9rem; }
+      .phase-tab .ph-icon { width: 32px; height: 32px; font-size: 0.9rem; margin-bottom: 0.35rem; }
       .phase-tab .ph-name { font-size: 0.85rem; }
       .phase-tab .ph-sub { font-size: 0.66rem; }
     }
