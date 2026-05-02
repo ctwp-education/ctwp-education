@@ -145,16 +145,17 @@ const translations = {
     'students.stat.tools': 'Free Tools', 'students.stat.skills': 'Life Skills',
     'students.stat.ages': 'Age Range', 'students.stat.freestart': 'Free to Start',
     'students.picker.label': 'Explore by Skill',
-    'students.picker.heading': 'Choose one of the <em>13 life skills</em> to discover the best free tools',
+    'students.picker.heading': 'Choose one of the <em>14 life skills</em> to discover the best free tools',
     'students.filter.label': 'Filter by age:', 'students.filter.all': 'All Ages',
     /* Skill chip labels */
     'students.chip.literacy': 'Literacy', 'students.chip.math': 'Math',
     'students.chip.science': 'Science', 'students.chip.history': 'History',
-    'students.chip.coding': 'Coding', 'students.chip.ai': 'AI Literacy',
+    'students.chip.coding': 'Coding', 'students.chip.ai': 'Digital Literacy',
     'students.chip.critical': 'Critical Thinking', 'students.chip.mental': 'Mental Health',
     'students.chip.finance': 'Finance', 'students.chip.life': 'Life Skills',
     'students.chip.values': 'Values', 'students.chip.creativity': 'Creativity',
     'students.chip.learn': 'Learn to Learn',
+    'students.chip.sport': 'Sport & Health',
     /* Section labels (orange badges) */
     'students.sec.literacy.label': 'Read, Write, Speak',
     'students.sec.math.label': 'Numbers & Logic',
@@ -169,6 +170,7 @@ const translations = {
     'students.sec.values.label': 'Character & Community',
     'students.sec.creativity.label': 'Make & Imagine',
     'students.sec.learn.label': 'Study Smarter',
+    'students.sec.sport.label': 'Move & Thrive',
     /* Section headings */
     'students.sec.literacy.title': 'Literacy & Communication',
     'students.sec.math.title': 'Math',
@@ -183,6 +185,7 @@ const translations = {
     'students.sec.values.title': 'Values, Ethics & Citizenship',
     'students.sec.creativity.title': 'Creativity, Arts & Making',
     'students.sec.learn.title': 'Learn How to Learn',
+    'students.sec.sport.title': 'Sport & Physical Health',
     /* Section descriptions */
     'students.sec.literacy.desc': 'From phonics to essay writing: reading practice, grammar, vocabulary and expressive language for every age.',
     'students.sec.math.desc': 'From counting to calculus: interactive practice, visual tools and expert explanations for every age.',
@@ -197,6 +200,7 @@ const translations = {
     'students.sec.values.desc': 'Empathy, integrity, global awareness and active citizenship — the character skills that hold it all together.',
     'students.sec.creativity.desc': 'Music, art, design, 3D, film and invention — free tools that let kids create real things.',
     'students.sec.learn.desc': 'Memory techniques, focus tools, note-making and study science — the meta-skills that make every other subject easier.',
+    'students.sec.sport.desc': 'Movement routines, sports training, yoga and fitness science — free resources to build healthy, active habits at any age.',
     /* Pricing pills + Top Pick badge */
     'pill.free': 'Free', 'pill.free_signup': 'Free (sign-up)', 'pill.freemium': 'Freemium',
     'top_pick': 'Top Pick',
@@ -1503,16 +1507,17 @@ const translations = {
     'students.stat.tools': 'Kostenlose Tools', 'students.stat.skills': 'Lebenskompetenzen',
     'students.stat.ages': 'Altersbereich', 'students.stat.freestart': 'Kostenloser Einstieg',
     'students.picker.label': 'Nach Kompetenz entdecken',
-    'students.picker.heading': 'Wähle eine der <em>13 Lebenskompetenzen</em>, um die besten kostenlosen Tools zu entdecken',
+    'students.picker.heading': 'Wähle eine der <em>14 Lebenskompetenzen</em>, um die besten kostenlosen Tools zu entdecken',
     'students.filter.label': 'Nach Alter filtern:', 'students.filter.all': 'Alle Altersstufen',
     /* Skill chip labels */
     'students.chip.literacy': 'Sprache', 'students.chip.math': 'Mathematik',
     'students.chip.science': 'Wissenschaft', 'students.chip.history': 'Geschichte',
-    'students.chip.coding': 'Programmieren', 'students.chip.ai': 'KI-Kompetenz',
+    'students.chip.coding': 'Programmieren', 'students.chip.ai': 'Digitale Kompetenz',
     'students.chip.critical': 'Kritisches Denken', 'students.chip.mental': 'Psychische Gesundheit',
     'students.chip.finance': 'Finanzen', 'students.chip.life': 'Lebenskompetenzen',
     'students.chip.values': 'Werte', 'students.chip.creativity': 'Kreativität',
     'students.chip.learn': 'Lernen lernen',
+    'students.chip.sport': 'Sport & Gesundheit',
     /* Section labels (orange badges) */
     'students.sec.literacy.label': 'Lesen, Schreiben, Sprechen',
     'students.sec.math.label': 'Zahlen & Logik',
@@ -1527,6 +1532,7 @@ const translations = {
     'students.sec.values.label': 'Charakter & Gemeinschaft',
     'students.sec.creativity.label': 'Machen & Erfinden',
     'students.sec.learn.label': 'Klüger lernen',
+    'students.sec.sport.label': 'Bewegen & Aufblühen',
     /* Section headings */
     'students.sec.literacy.title': 'Sprache & Kommunikation',
     'students.sec.math.title': 'Mathematik',
@@ -1541,6 +1547,7 @@ const translations = {
     'students.sec.values.title': 'Werte, Ethik & Bürgerschaft',
     'students.sec.creativity.title': 'Kreativität, Kunst & Werken',
     'students.sec.learn.title': 'Lernen lernen',
+    'students.sec.sport.title': 'Sport & körperliche Gesundheit',
     /* Section descriptions */
     'students.sec.literacy.desc': 'Von der Lautlehre bis zum Aufsatz: Lesepraxis, Grammatik, Wortschatz und ausdrucksstarke Sprache für jedes Alter.',
     'students.sec.math.desc': 'Vom Zählen bis zur Analysis: interaktive Übungen, visuelle Werkzeuge und fundierte Erklärungen für jedes Alter.',
@@ -1555,6 +1562,7 @@ const translations = {
     'students.sec.values.desc': 'Empathie, Integrität, globales Bewusstsein und aktive Bürgerschaft — die Charakterstärken, die alles zusammenhalten.',
     'students.sec.creativity.desc': 'Musik, Kunst, Design, 3D, Film und Erfindung — kostenlose Werkzeuge, mit denen Kinder Echtes erschaffen.',
     'students.sec.learn.desc': 'Gedächtnistechniken, Fokus-Tools, Notizen und Lernforschung — die Meta-Fähigkeiten, die jedes andere Fach erleichtern.',
+    'students.sec.sport.desc': 'Bewegungsroutinen, Sporttraining, Yoga und Fitnesswissenschaft — kostenlose Ressourcen für gesunde, aktive Gewohnheiten in jedem Alter.',
     /* Pricing pills + Top Pick badge */
     'pill.free': 'Kostenlos', 'pill.free_signup': 'Kostenlos (Anmeldung)', 'pill.freemium': 'Freemium',
     'top_pick': 'Top-Empfehlung',
