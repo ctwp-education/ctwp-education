@@ -1,5 +1,16 @@
 User-agent: *
 Allow: /
-Disallow: /assets/js/
+
+# AI scraper policy: allow assistants users invoke, block unmoderated training crawlers
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: GPTBot
+Disallow: /
 
 Sitemap: https://www.ctwp-education.eu.org/sitemap.xml

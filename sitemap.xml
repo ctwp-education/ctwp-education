@@ -1,33 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
   <url>
     <loc>https://www.ctwp-education.eu.org/</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.ctwp-education.eu.org/lab.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ctwp-education.eu.org/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/"/>
+    <image:image>
+      <image:loc>https://www.ctwp-education.eu.org/assets/images/Malawi_Salima_Classroom.webp</image:loc>
+      <image:caption>CTWP Educational Empowerment — free educational resources worldwide</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.ctwp-education.eu.org/students.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ctwp-education.eu.org/students.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/students.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/students.html"/>
   </url>
   <url>
     <loc>https://www.ctwp-education.eu.org/teachers.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ctwp-education.eu.org/teachers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/teachers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/teachers.html"/>
   </url>
   <url>
     <loc>https://www.ctwp-education.eu.org/university.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ctwp-education.eu.org/university.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/university.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/university.html"/>
+  </url>
+  <url>
+    <loc>https://www.ctwp-education.eu.org/lab.html</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ctwp-education.eu.org/lab.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/lab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/lab.html"/>
+    <image:image>
+      <image:loc>https://www.ctwp-education.eu.org/assets/images/Computer%20Lab/lab-hero.webp</image:loc>
+      <image:caption>Solar-powered computer lab in Mutare, Zimbabwe — built by CTWP and Bongai Shamwari</image:caption>
+    </image:image>
   </url>
 </urlset>

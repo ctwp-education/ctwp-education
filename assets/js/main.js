@@ -242,18 +242,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-count]').forEach(c => counterObserver.observe(c));
 
-  // Contact form — opens mailto with form data
+  // Contact form — opens mailto with form data (only on pages that have the form)
   const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name     = contactForm.querySelector('#name').value;
-    const email    = contactForm.querySelector('#email').value;
-    const interest = contactForm.querySelector('#interest').value;
-    const message  = contactForm.querySelector('#message').value;
-    const subject  = encodeURIComponent(`CTWP Contact: ${interest} — ${name}`);
-    const body     = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInterest: ${interest}\n\n${message}`);
-    window.location.href = `mailto:ctwp.ee@gmail.com?subject=${subject}&body=${body}`;
-  });
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name     = contactForm.querySelector('#name').value;
+      const email    = contactForm.querySelector('#email').value;
+      const interest = contactForm.querySelector('#interest').value;
+      const message  = contactForm.querySelector('#message').value;
+      const subject  = encodeURIComponent(`CTWP Contact: ${interest} — ${name}`);
+      const body     = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInterest: ${interest}\n\n${message}`);
+      window.location.href = `mailto:ctwp.ee@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
