@@ -2348,36 +2348,8 @@ function applyTranslations() {
   document.querySelectorAll('.grade-badge.gb-self').forEach(el => { el.textContent = t('uni.grade.self'); });
   document.querySelectorAll('.grade-badge.gb-adult').forEach(el => { el.textContent = t('uni.grade.adult'); });
   document.querySelectorAll('.grade-badge.gb-switcher').forEach(el => { el.textContent = t('uni.grade.switcher'); });
-  /* Teachers audience-stage badges */
-  document.querySelectorAll('.grade-badge.gb-prek').forEach(el => { el.textContent = t('teachers.grade.prek'); });
-  document.querySelectorAll('.grade-badge.gb-primary').forEach(el => { el.textContent = t('teachers.grade.primary'); });
-  document.querySelectorAll('.grade-badge.gb-secondary').forEach(el => { el.textContent = t('teachers.grade.secondary'); });
-  document.querySelectorAll('.grade-badge.gb-higher').forEach(el => { el.textContent = t('teachers.grade.higher'); });
-  document.querySelectorAll('.grade-badge.gb-sen').forEach(el => { el.textContent = t('teachers.grade.sen'); });
-  /* gb-all is locale-aware: 'All Levels' on uni page, 'All Stages' on teachers page */
-  const _gbAllKey = location.pathname.includes('teachers.html') ? 'teachers.grade.all' : 'uni.grade.all';
-  document.querySelectorAll('.grade-badge.gb-all').forEach(el => { el.textContent = t(_gbAllKey); });
-  /* Teachers audience-stage badges */
-  document.querySelectorAll('.grade-badge.gb-prek').forEach(el => { el.textContent = t('teachers.grade.prek'); });
-  document.querySelectorAll('.grade-badge.gb-primary').forEach(el => { el.textContent = t('teachers.grade.primary'); });
-  document.querySelectorAll('.grade-badge.gb-secondary').forEach(el => { el.textContent = t('teachers.grade.secondary'); });
-  document.querySelectorAll('.grade-badge.gb-higher').forEach(el => { el.textContent = t('teachers.grade.higher'); });
-  document.querySelectorAll('.grade-badge.gb-sen').forEach(el => { el.textContent = t('teachers.grade.sen'); });
-  /* gb-all is locale-aware: 'All Levels' on uni page, 'All Stages' on teachers page */
-  const _gbAllKey = location.pathname.includes('teachers.html') ? 'teachers.grade.all' : 'uni.grade.all';
-  document.querySelectorAll('.grade-badge.gb-all').forEach(el => { el.textContent = t(_gbAllKey); });
-  /* Teachers audience-stage badges */
-  document.querySelectorAll('.grade-badge.gb-prek').forEach(el => { el.textContent = t('teachers.grade.prek'); });
-  document.querySelectorAll('.grade-badge.gb-primary').forEach(el => { el.textContent = t('teachers.grade.primary'); });
-  document.querySelectorAll('.grade-badge.gb-secondary').forEach(el => { el.textContent = t('teachers.grade.secondary'); });
-  document.querySelectorAll('.grade-badge.gb-higher').forEach(el => { el.textContent = t('teachers.grade.higher'); });
-  document.querySelectorAll('.grade-badge.gb-sen').forEach(el => { el.textContent = t('teachers.grade.sen'); });
-  /* gb-all is locale-aware: 'All Levels' on uni page, 'All Stages' on teachers page */
-  const _gbAllKey = location.pathname.includes('teachers.html') ? 'teachers.grade.all' : 'uni.grade.all';
-  document.querySelectorAll('.grade-badge.gb-all').forEach(el => { el.textContent = t(_gbAllKey); });
-  /* Teachers page audience badges (page-aware so gb-all picks the right label) */
-  var _isTeachersPg = location.pathname.endsWith('teachers.html');
-  var _allKey = _isTeachersPg ? 'teachers.grade.all' : 'uni.grade.all';
+  /* Teachers audience-stage badges + gb-all (page-aware) */
+  var _allKey = location.pathname.endsWith('teachers.html') ? 'teachers.grade.all' : 'uni.grade.all';
   document.querySelectorAll('.grade-badge.gb-all').forEach(el => { el.textContent = t(_allKey); });
   document.querySelectorAll('.grade-badge.gb-prek').forEach(el => { el.textContent = t('teachers.grade.prek'); });
   document.querySelectorAll('.grade-badge.gb-primary').forEach(el => { el.textContent = t('teachers.grade.primary'); });
