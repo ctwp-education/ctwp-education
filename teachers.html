@@ -415,7 +415,14 @@
         grid-template-rows: auto auto;
         gap: 0.5rem;
       }
-      .phase-tab { min-width: 0; overflow-wrap: anywhere; }
+      .phase-tab { min-width: 0; }
+      .phase-tab .ph-name,
+      .phase-tab .ph-sub {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        overflow-wrap: break-word;
+      }
       /* Row 1: Before · During · After */
       .phase-tab[data-phase="before"]       { grid-column: 1; grid-row: 1; height: auto; }
       .phase-tab[data-phase="during"]       { grid-column: 2; grid-row: 1; height: auto; }
