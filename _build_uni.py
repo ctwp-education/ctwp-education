@@ -662,7 +662,7 @@ HTML = f"""<!DOCTYPE html>
 
     /* ── Filter Bar ──────────────────────────────── */
     .filter-bar {{
-      background: var(--white);
+      background: #f1f5f4;
       border-bottom: 1px solid var(--gray-200);
       padding: 1rem 0;
     }}
