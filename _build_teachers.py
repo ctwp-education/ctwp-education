@@ -1716,7 +1716,7 @@ HTML = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=17"></script>
+  <script defer src="assets/js/i18n.js?v=18"></script>
   <script defer src="assets/js/main.js"></script>
   <script>
     /* Phase tabs + sub-chips: two-level navigation */

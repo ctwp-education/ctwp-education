@@ -920,7 +920,7 @@ HTML = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=16"></script>
+  <script defer src="assets/js/i18n.js?v=18"></script>
   <script defer src="assets/js/main.js"></script>
   <script>
     /* Chip-grid panels: click chip -> swap panel + reapply filter */
