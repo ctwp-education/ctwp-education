@@ -15,7 +15,7 @@ AUD_LABELS = {
     "phd": "PhD",
     "self": "Self-Learner",
     "all": "All Levels",
-    "adult": "Adult Learner",
+    "adult": "Executive",
     "switcher": "Career Switcher",
 }
 AUD_CLASS = {k: f"gb-{k}" for k in AUD_LABELS}
@@ -920,7 +920,7 @@ HTML = f"""<!DOCTYPE html>
     </div>
   </div>
 
-  <script defer src="assets/js/i18n.js?v=18"></script>
+  <script defer src="assets/js/i18n.js?v=20"></script>
   <script defer src="assets/js/main.js"></script>
   <script>
     /* Chip-grid panels: click chip -> swap panel + reapply filter */
