@@ -1159,7 +1159,6 @@ def render_phase_tab(p, is_first):
     return (
         f'      <button type="button" class="phase-tab{active_cls}" role="tab" data-phase="{p["key"]}" '
         f'aria-selected="{aria_sel}" style="--ph-color:{p["color"]};--ph-bg:{p["color_bg"]}">'
-        f'<span class="ph-count">{sub_count}</span>'
         f'<span class="ph-icon"><i class="{p["icon"]}"></i></span>'
         f'<span class="ph-name" data-i18n="teachers.phase.{p["key"]}.name">{p["tab_label"]}</span>'
         f'<span class="ph-sub" data-i18n="teachers.phase.{p["key"]}.tag">{p["tag"]}</span>'
