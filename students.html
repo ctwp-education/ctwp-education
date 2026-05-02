@@ -137,7 +137,7 @@
     }
     .skill-picker-inner {
       display: grid;
-      grid-template-columns: repeat(5, 170px);
+      grid-template-columns: repeat(7, 150px);
       justify-content: center;
       gap: 0.65rem;
       max-width: 100%;
@@ -444,10 +444,13 @@
       grid-column: 1 / -1;
     }
 
-    @media (max-width: 960px) {
-      .skill-picker-inner { grid-template-columns: repeat(4, 160px); }
+    @media (max-width: 1120px) {
+      .skill-picker-inner { grid-template-columns: repeat(5, 150px); }
     }
-    @media (max-width: 780px) {
+    @media (max-width: 840px) {
+      .skill-picker-inner { grid-template-columns: repeat(4, 150px); }
+    }
+    @media (max-width: 680px) {
       .skill-picker-inner { grid-template-columns: repeat(3, 150px); }
     }
     @media (max-width: 560px) {
