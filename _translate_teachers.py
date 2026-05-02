@@ -28,7 +28,7 @@ src = I18N.read_text(encoding="utf-8")
 def js_escape(s):
     return json.dumps(s, ensure_ascii=False)
 
-en_lines = ['    /* ─────────────── Teachers page (4 phases × 18 sub-clusters × 12 cards) ─────────────── */']
+en_lines = ['    /* ─────────────── Teachers page (6 phases × 28 sub-clusters) ─────────────── */']
 for k, v in KEYS.items():
     en_lines.append(f'    {js_escape(k)}: {js_escape(v)},')
 en_block = "\n".join(en_lines) + "\n"
