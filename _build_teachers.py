@@ -1331,7 +1331,6 @@ HTML = f"""<!DOCTYPE html>
       padding: 0.75rem 1.2rem;
     }}
     .phase-tab[data-phase="supp"] .ph-count {{ top: 0.5rem; }}
-    .phase-tab[data-phase="supp"] .ph-sub {{ display: none; }}
     .phase-tab:hover {{
       border-color: var(--ph-color);
       box-shadow: 0 6px 16px rgba(0,0,0,0.08);
