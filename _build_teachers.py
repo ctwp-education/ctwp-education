@@ -1293,12 +1293,20 @@ HTML = f"""<!DOCTYPE html>
     }}
     .phase-tabs-inner {{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1.15fr 1fr 1fr 1fr 1.15fr;
+      grid-template-rows: auto auto;
       gap: 0.7rem;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }}
+    /* Spatial placement: Fundamentals left tall, Before/During/After top-middle, Supporting bottom-middle, Further Dev right tall */
+    .phase-tab[data-phase="fundamentals"] {{ grid-column: 1; grid-row: 1 / 3; }}
+    .phase-tab[data-phase="before"]       {{ grid-column: 2; grid-row: 1; }}
+    .phase-tab[data-phase="during"]       {{ grid-column: 3; grid-row: 1; }}
+    .phase-tab[data-phase="after"]        {{ grid-column: 4; grid-row: 1; }}
+    .phase-tab[data-phase="supp"]         {{ grid-column: 2 / 5; grid-row: 2; }}
+    .phase-tab[data-phase="furtherdev"]   {{ grid-column: 5; grid-row: 1 / 3; }}
     .phase-tab {{
       display: flex;
       flex-direction: column;
@@ -1313,7 +1321,18 @@ HTML = f"""<!DOCTYPE html>
       transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
       position: relative;
       font-family: var(--font-body);
+      height: 100%;
+      box-sizing: border-box;
     }}
+    /* Supporting: wider card gets horizontal icon+text layout */
+    .phase-tab[data-phase="supp"] {{
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1.2rem;
+    }}
+    .phase-tab[data-phase="supp"] .ph-count {{ top: 0.5rem; }}
+    .phase-tab[data-phase="supp"] .ph-sub {{ display: none; }}
     .phase-tab:hover {{
       border-color: var(--ph-color);
       box-shadow: 0 6px 16px rgba(0,0,0,0.08);
@@ -1514,8 +1533,21 @@ HTML = f"""<!DOCTYPE html>
     .card-link {{ display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.76rem; color: var(--orange-500); font-weight: 500; margin-top: 0.75rem; transition: gap var(--transition); }}
     a.resource-card:hover .card-link {{ gap: 0.55rem; }}
 
-    @media (max-width: 880px) {{
-      .phase-tabs-inner {{ grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }}
+    @media (max-width: 900px) {{
+      .phase-tabs-inner {{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: unset;
+        gap: 0.5rem;
+      }}
+      .phase-tab[data-phase="fundamentals"],
+      .phase-tab[data-phase="before"],
+      .phase-tab[data-phase="during"],
+      .phase-tab[data-phase="after"],
+      .phase-tab[data-phase="supp"],
+      .phase-tab[data-phase="furtherdev"] {{
+        grid-column: unset; grid-row: unset; height: auto;
+      }}
+      .phase-tab[data-phase="supp"] {{ grid-column: 1 / 4; flex-direction: row; }}
       .phase-tab {{ padding: 0.7rem 0.8rem 0.8rem; }}
       .phase-tab .ph-icon {{ width: 32px; height: 32px; font-size: 0.9rem; }}
       .phase-tab .ph-name {{ font-size: 0.85rem; }}
