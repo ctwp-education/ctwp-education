@@ -232,6 +232,68 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   transform: scaleX(1);
 }
 
+/* Resources dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a2e1c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  min-width: 170px;
+  padding: 0.35rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+  transform: translateX(-50%) translateY(-4px);
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-menu li { list-style: none; }
+.nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown-menu a:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.07);
+}
+.nav-dropdown-menu a i { font-size: 0.78rem; opacity: 0.7; }
+.nav-link-has-dropdown .fa-chevron-down {
+  font-size: 0.6rem;
+  margin-left: 3px;
+  vertical-align: middle;
+  transition: transform 0.18s;
+}
+.nav-dropdown:hover .nav-link-has-dropdown .fa-chevron-down { transform: rotate(180deg); }
+
+/* Mobile dropdown sub-links */
+.mobile-sub-links { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; width: 100%; margin-top: 0.1rem; }
+.mobile-sub-link {
+  font-size: 0.95rem; font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-sm);
+  width: 100%; text-align: center;
+  transition: all var(--transition);
+}
+.mobile-sub-link:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
 /* Nav Lab button */
 .nav-btn-lab {
   position: relative;
