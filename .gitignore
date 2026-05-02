@@ -9,3 +9,30 @@ desktop.ini
 # Editor
 .vscode/
 *.code-workspace
+
+# Local source images & video — NOT served by the site (.webp versions are deployed)
+assets/images/Our work in action/*.jpg
+assets/images/Our work in action/*.jpeg
+assets/images/Our work in action/*.png
+assets/images/Computer Lab/*.jpg.jpg
+assets/images/K12.jpg
+assets/images/Student.jpg
+assets/images/Teacher.jpg
+assets/images/map.png
+assets/images/Malawi_Salima_Classroom.png
+assets/images/IMG-20251130-WA0003.*
+assets/images/IMG-20251130-WA0006.*
+assets/images/IMG-20251204-WA0085.jpg
+# Unreferenced logo originals (only their .webp counterparts are used)
+assets/images/Logos/*.jpg
+assets/images/Logos/*.png
+assets/images/Logos/Logo ctwp ee.webp
+assets/images/Logos/Logo ctwp no background.webp
+assets/images/Logos/WhatsApp Image*.webp
+assets/images/Logos/ctwp logo round white bg*.webp
+assets/images/Logos/logo-veros-home.webp
+assets/images/Logos/ti nisi sam logo png.webp
+assets/images/Logos/vero's home png*.webp
+
+# Build artifacts (kept locally, not served)
+ctwp-education/
