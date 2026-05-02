@@ -206,6 +206,8 @@
       line-height: 1;
     }
     .subject-tab.in-active-phase { display: inline-flex; }
+    /* Further Development has 7 chips — scale down slightly to fit one row */
+    .subject-tab[data-phase="furtherdev"] { height: 2.2rem; font-size: 0.7rem; padding: 0 0.65rem; gap: 0.35rem; }
     .subject-tab:not(.chip-active):hover {
       color: var(--chip-color, var(--gray-900));
       border-color: var(--chip-color, var(--gray-400));
