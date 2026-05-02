@@ -1377,7 +1377,7 @@ HTML = f"""<!DOCTYPE html>
 
     /* ── Sub-chip bar ────────────────────────── */
     .subchip-bar {{
-      background: var(--white);
+      background: #f0f9ff; /* updated dynamically by JS to match active phase color_bg */
       padding: 0.9rem 0 1.5rem;
       border-bottom: 1px solid var(--gray-200);
     }}
@@ -1723,6 +1723,7 @@ HTML = f"""<!DOCTYPE html>
       var subChips = document.querySelectorAll('.subject-tab');
       var panels = document.querySelectorAll('.panel');
       var phasePicker = document.querySelector('.phase-picker');
+      var subChipBar = document.querySelector('.subchip-bar');
 
       function activateSubcluster(targetId, scroll) {{
         var found = false;
@@ -1753,6 +1754,9 @@ HTML = f"""<!DOCTYPE html>
           var match = t.dataset.phase === phaseKey;
           t.setAttribute('aria-selected', match ? 'true' : 'false');
           t.classList.toggle('phase-active', match);
+          if (match && subChipBar) {{
+            subChipBar.style.background = t.style.getPropertyValue('--ph-bg');
+          }}
         }});
         var firstSubInPhase = null;
         subChips.forEach(function (c) {{
