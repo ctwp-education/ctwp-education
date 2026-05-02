@@ -1377,7 +1377,7 @@ HTML = f"""<!DOCTYPE html>
 
     /* ── Sub-chip bar ────────────────────────── */
     .subchip-bar {{
-      background: #f1f5f4;
+      background: var(--cream, #fdf6ec);
       padding: 0.9rem 0 1.5rem;
       border-bottom: 1px solid var(--gray-200);
     }}
