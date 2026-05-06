@@ -326,9 +326,10 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   white-space: nowrap;
 }
 .lang-toggle:hover { background: rgba(255,255,255,0.16); }
-.lang-opt { opacity: 0.35; transition: opacity var(--transition); display: inline-flex; align-items: center; gap: 0.3rem; }
+.lang-opt { opacity: 0.35; transition: opacity var(--transition); display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer; padding: 0 0.1rem; border-radius: 4px; }
+.lang-opt:hover { opacity: 0.75; }
 .lang-opt.lang-active { opacity: 1; }
-.lang-sep { opacity: 0.25; margin: 0 0.1rem; font-weight: 300; }
+.lang-sep { opacity: 0.25; margin: 0 0.05rem; font-weight: 300; pointer-events: none; }
 .lang-opt .fi { width: 1.2em; height: 0.9em; border-radius: 2px; }
 
 /* Hamburger */
