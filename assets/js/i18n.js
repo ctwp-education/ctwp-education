@@ -6917,12 +6917,22 @@ function applyTranslations() {
   document.querySelectorAll('.grade-badge.gb-secondary').forEach(el => { el.textContent = t('teachers.grade.secondary'); });
   document.querySelectorAll('.grade-badge.gb-higher').forEach(el => { el.textContent = t('teachers.grade.higher'); });
   document.querySelectorAll('.grade-badge.gb-sen').forEach(el => { el.textContent = t('teachers.grade.sen'); });
-  /* Update toggle button — highlight active language */
-  const btn = document.getElementById('langToggle');
-  if (btn) {
-    btn.querySelectorAll('.lang-opt').forEach(opt => {
+  /* Update lang switcher — highlight active option and sync trigger display */
+  const switcher = document.getElementById('langToggle');
+  if (switcher) {
+    switcher.querySelectorAll('.lang-opt').forEach(opt => {
       opt.classList.toggle('lang-active', opt.dataset.lang === currentLang);
     });
+    const activeOpt = switcher.querySelector('.lang-opt[data-lang="' + currentLang + '"]');
+    if (activeOpt) {
+      const triggerFlag = switcher.querySelector('.lang-trigger-flag');
+      const triggerCode = switcher.querySelector('.lang-trigger-code');
+      if (triggerFlag) {
+        const optFlag = activeOpt.querySelector('.fi');
+        if (optFlag) triggerFlag.className = optFlag.className + ' lang-trigger-flag';
+      }
+      if (triggerCode) triggerCode.textContent = currentLang.toUpperCase();
+    }
   }
   /* Update html lang attribute */
   document.documentElement.lang = currentLang;
@@ -6937,14 +6947,27 @@ function setLanguage(lang) {
 
 function i18nInit() {
   applyTranslations();
-  const btn = document.getElementById('langToggle');
-  if (!btn) return;
-  // Each .lang-opt is clickable individually
-  btn.querySelectorAll('.lang-opt').forEach(opt => {
+  const switcher = document.getElementById('langToggle');
+  if (!switcher) return;
+  const trigger = switcher.querySelector('.lang-trigger');
+  if (trigger) {
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = switcher.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', open);
+    });
+  }
+  switcher.querySelectorAll('.lang-opt').forEach(opt => {
     opt.addEventListener('click', (e) => {
       e.stopPropagation();
       setLanguage(opt.dataset.lang);
+      switcher.classList.remove('open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
     });
+  });
+  document.addEventListener('click', () => {
+    switcher.classList.remove('open');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
   });
 }
 

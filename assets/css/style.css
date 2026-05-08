@@ -312,9 +312,10 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .nav-btn-lab:hover { border-color: var(--white); }
 .nav-btn-lab.active { border-color: var(--orange-500); color: var(--orange-400); }
 
-/* Language Toggle */
-.lang-toggle {
-  display: flex; align-items: center; gap: 0.25rem;
+/* Language Switcher Dropdown */
+.lang-switcher { position: relative; }
+.lang-trigger {
+  display: flex; align-items: center; gap: 0.35rem;
   padding: 0.3rem 0.65rem;
   font-size: 0.8rem; font-weight: 600;
   color: var(--white);
@@ -325,12 +326,44 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   transition: background var(--transition);
   white-space: nowrap;
 }
-.lang-toggle:hover { background: rgba(255,255,255,0.16); }
-.lang-opt { opacity: 0.35; transition: opacity var(--transition); display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer; padding: 0 0.1rem; border-radius: 4px; }
-.lang-opt:hover { opacity: 0.75; }
-.lang-opt.lang-active { opacity: 1; }
-.lang-sep { opacity: 0.25; margin: 0 0.05rem; font-weight: 300; pointer-events: none; }
-.lang-opt .fi { width: 1.2em; height: 0.9em; border-radius: 2px; }
+.lang-trigger:hover { background: rgba(255,255,255,0.16); }
+.lang-arrow {
+  width: 0.65em; height: 0.65em;
+  transition: transform var(--transition);
+  opacity: 0.7; flex-shrink: 0;
+}
+.lang-switcher.open .lang-arrow { transform: rotate(180deg); }
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  background: rgba(13, 40, 24, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 0.55rem;
+  padding: 0.3rem;
+  min-width: 6.5rem;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+  z-index: 200;
+}
+.lang-switcher.open .lang-dropdown { display: flex; flex-direction: column; }
+.lang-opt {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.38rem 0.6rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  opacity: 0.55;
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--white);
+  transition: background var(--transition), opacity var(--transition);
+  white-space: nowrap;
+}
+.lang-opt:hover { background: rgba(255,255,255,0.1); opacity: 0.9; }
+.lang-opt.lang-active { opacity: 1; background: rgba(255,255,255,0.07); }
+.lang-opt .fi { width: 1.2em; height: 0.9em; border-radius: 2px; flex-shrink: 0; }
+.lang-trigger-flag { width: 1.2em; height: 0.9em; border-radius: 2px; flex-shrink: 0; }
 
 /* Hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; }
