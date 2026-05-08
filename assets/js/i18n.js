@@ -5654,7 +5654,7 @@ const translations = {
     "gallery.label": "Voir l'Impact",
     "gallery.title": "Notre Action en Images",
     "gallery.subtitle": "Photos et vidéos de nos écoles, sessions de formation et travail communautaire.",
-    "gallery.follow": "Suivre notre parcours",
+    "gallery.follow": "Suivez notre parcours",
     "res.label": "Trouvez ce dont Vous Avez Besoin",
     "res.title": "Ressources Éducatives Gratuites",
     "res.subtitle": "Plus de 700 outils sélectionnés — pour élèves K–12, enseignants et apprenants universitaires.",
