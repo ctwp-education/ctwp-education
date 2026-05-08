@@ -16,6 +16,12 @@ const translations = {
     /* Lab subpage */
     'lab.hero.subtitle': 'A fully equipped digital learning lab for disadvantaged and disabled children — powered by solar energy, Starlink internet, and the belief that every child deserves access to technology.',
     'lab.hero.cta1': 'Support This Project', 'lab.hero.cta2': 'See What We Built',
+    'lab.hero.badge': 'Mutare, Zimbabwe · Bongai Shamwari',
+    'lab.hero.title': 'Our <em>Computer Lab</em> in Zimbabwe',
+    'lab.partner.tag': 'Joint Initiative',
+    'lab.partner.h4': 'Stronger together — from idea to first lesson.',
+    'lab.partner.p': 'This computer lab is the result of two organisations sharing one conviction: that every child, regardless of where they are born, deserves access to quality digital education. CTWP Educational Empowerment and Bongai Shamwari e.V. pooled their expertise, networks, and resources to make it happen — from fundraising and procurement to the very first lesson.',
+
     'lab.intro.label': 'Status Report 2025', 'lab.intro.title': 'Thank You for Your Support!',
     'lab.intro.quote': '"For disadvantaged and disabled children in Zimbabwe, Bongai Shamwari is far more than a place of learning — it is a source of hope, opportunity, and community."',
     'lab.intro.p1': 'Your generous contribution in 2025 has been instrumental in advancing the digitalization project at the Bongai Shamwari kindergarten and school. Thanks to your support, we have built sustainable digital infrastructure that opens the door to knowledge and new learning opportunities for the children, their teachers, and the wider community.',
@@ -1398,6 +1404,12 @@ const translations = {
     /* Lab subpage DE */
     'lab.hero.subtitle': 'Ein voll ausgestattetes digitales Lernlabor für benachteiligte und behinderte Kinder — betrieben mit Solarenergie, Starlink-Internet und der Überzeugung, dass jedes Kind Zugang zu Technologie verdient.',
     'lab.hero.cta1': 'Projekt unterstützen', 'lab.hero.cta2': 'Was wir gebaut haben',
+    'lab.hero.badge': 'Mutare, Simbabwe · Bongai Shamwari',
+    'lab.hero.title': 'Unser <em>Computer Lab</em> in Simbabwe',
+    'lab.partner.tag': 'Gemeinsame Initiative',
+    'lab.partner.h4': 'Gemeinsam stärker — von der Idee zur ersten Stunde.',
+    'lab.partner.p': 'Dieses Computerlabor ist das Ergebnis zweier Organisationen, die eine gemeinsame Überzeugung teilen: dass jedes Kind, unabhängig davon, wo es geboren wurde, Zugang zu qualitativ hochwertiger digitaler Bildung verdient. CTWP Educational Empowerment und Bongai Shamwari e.V. haben ihr Fachwissen, ihre Netzwerke und Ressourcen zusammengelegt, um dies zu ermöglichen — von der Mittelbeschaffung bis zur allerersten Unterrichtsstunde.',
+
     'lab.intro.label': 'Statusbericht 2025', 'lab.intro.title': 'Danke für Ihre Unterstützung!',
     'lab.intro.quote': '„Für benachteiligte und behinderte Kinder in Simbabwe ist Bongai Shamwari weit mehr als ein Lernort — es ist eine Quelle der Hoffnung, der Möglichkeiten und der Gemeinschaft."',
     'lab.intro.p1': 'Ihr großzügiger Beitrag im Jahr 2025 war entscheidend für den Fortschritt des Digitalisierungsprojekts an der Bongai Shamwari Kita und Schule. Dank Ihrer Unterstützung haben wir eine nachhaltige digitale Infrastruktur aufgebaut, die den Kindern, ihren Lehrern und der gesamten Gemeinschaft Zugang zu Wissen und neuen Lernmöglichkeiten eröffnet.',
@@ -2868,6 +2880,12 @@ const translations = {
     "lab.hero.subtitle": "Un laboratorio digital totalmente equipado para niños desfavorecidos y con discapacidad, alimentado por energía solar, internet Starlink y la convicción de que cada niño merece acceso a la tecnología.",
     "lab.hero.cta1": "Apoya este Proyecto",
     "lab.hero.cta2": "Ver lo que Construimos",
+    "lab.hero.badge": "Mutare, Zimbabue · Bongai Shamwari",
+    "lab.hero.title": "Nuestro <em>Laboratorio Informático</em> en Zimbabue",
+    "lab.partner.tag": "Iniciativa Conjunta",
+    "lab.partner.h4": "Más fuertes juntos — de la idea a la primera lección.",
+    "lab.partner.p": "Este laboratorio informático es el resultado de dos organizaciones que comparten una convicción: que cada niño, independientemente del lugar en el que haya nacido, merece acceso a una educación digital de calidad. CTWP Educational Empowerment y Bongai Shamwari e.V. unieron su experiencia, redes y recursos para lograrlo — desde la recaudación de fondos y la adquisición hasta la primera lección.",
+
     "lab.intro.label": "Informe de Estado 2025",
     "lab.intro.title": "¡Gracias por tu Apoyo!",
     "lab.intro.quote": "\"Para los niños desfavorecidos y con discapacidad en Zimbabue, Bongai Shamwari es mucho más que un lugar de aprendizaje: es una fuente de esperanza, oportunidad y comunidad.\"",
@@ -4202,6 +4220,12 @@ const translations = {
     "lab.hero.subtitle": "Um laboratório digital totalmente equipado para crianças em situação de vulnerabilidade e com deficiência — alimentado por energia solar, internet Starlink e a convicção de que toda criança merece acesso à tecnologia.",
     "lab.hero.cta1": "Apoie este Projeto",
     "lab.hero.cta2": "Veja o que Construímos",
+    "lab.hero.badge": "Mutare, Zimbábue · Bongai Shamwari",
+    "lab.hero.title": "Nosso <em>Laboratório de Informática</em> no Zimbábue",
+    "lab.partner.tag": "Iniciativa Conjunta",
+    "lab.partner.h4": "Mais fortes juntos — da ideia à primeira aula.",
+    "lab.partner.p": "Este laboratório de informática é o resultado de duas organizações que compartilham uma convicção: que toda criança, independentemente de onde nasceu, merece acesso a uma educação digital de qualidade. CTWP Educational Empowerment e Bongai Shamwari e.V. uniram sua experiência, redes e recursos para tornar isso possível — desde a arrecadação de fundos e aquisição até a primeira aula.",
+
     "lab.intro.label": "Relatório de Status 2025",
     "lab.intro.title": "Obrigado pelo seu Apoio!",
     "lab.intro.quote": "\"Para crianças em situação de vulnerabilidade e com deficiência no Zimbábue, a Bongai Shamwari é muito mais que um lugar de aprendizagem — é uma fonte de esperança, oportunidade e comunidade.\"",
@@ -5492,7 +5516,8 @@ const translations = {
     "cd_t_340": "Comunidade gratuita de blogs e discussão da Edutopia — compartilhe sua história docente e leia o que funciona em salas pelo mundo.",
     "cd_t_341": "Rede gratuita de filiados da National Education Association — conexões profissionais, ferramentas de advocacy e apoio entre pares para professores dos EUA.",
     "cd_t_342": "Grupos gratuitos de educadores no LinkedIn — networking profissional, desenvolvimento de carreira e liderança intelectual em educação.",
-    "cd_t_343": "Rede de educadores da ISTE — espaços comunitários gratuitos, grupos de interesse especial e discussões sobre EdTech e aprendizagem inovadora.",,
+    "cd_t_343": "Rede de educadores da ISTE — espaços comunitários gratuitos, grupos de interesse especial e discussões sobre EdTech e aprendizagem inovadora.",
+  },
   fr: {
     /* ─────────────── French translations (fr) — structural ─────────────── */
     "nav.about": "À propos",
@@ -5520,6 +5545,12 @@ const translations = {
     "lab.hero.subtitle": "Un laboratoire numérique entièrement équipé pour les enfants défavorisés et handicapés — alimenté par l'énergie solaire, Internet Starlink et la conviction que chaque enfant mérite l'accès à la technologie.",
     "lab.hero.cta1": "Soutenir ce Projet",
     "lab.hero.cta2": "Voir ce que Nous Avons Construit",
+    "lab.hero.badge": "Mutare, Zimbabwe · Bongai Shamwari",
+    "lab.hero.title": "Notre <em>Laboratoire Informatique</em> au Zimbabwe",
+    "lab.partner.tag": "Initiative Conjointe",
+    "lab.partner.h4": "Plus forts ensemble — de l'idée à la première leçon.",
+    "lab.partner.p": "Ce laboratoire informatique est le fruit de deux organisations partageant une conviction commune : que chaque enfant, quel que soit son lieu de naissance, mérite d'avoir accès à une éducation numérique de qualité. CTWP Educational Empowerment et Bongai Shamwari e.V. ont mis en commun leur expertise, leurs réseaux et leurs ressources pour y parvenir — du financement et des achats jusqu'à la toute première leçon.",
+
     "lab.intro.label": "Rapport de Situation 2025",
     "lab.intro.title": "Merci pour votre Soutien !",
     "lab.intro.quote": "\"Pour les enfants défavorisés et handicapés du Zimbabwe, Bongai Shamwari est bien plus qu'un lieu d'apprentissage — c'est une source d'espoir, d'opportunité et de communauté.\"",
