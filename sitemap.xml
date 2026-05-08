@@ -11,6 +11,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ctwp-education.eu.org/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ctwp-education.eu.org/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ctwp-education.eu.org/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/"/>
     <image:image>
       <image:loc>https://www.ctwp-education.eu.org/assets/images/Malawi_Salima_Classroom.webp</image:loc>
@@ -26,6 +27,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/students.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ctwp-education.eu.org/students.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ctwp-education.eu.org/students.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ctwp-education.eu.org/students.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/students.html"/>
   </url>
   <url>
@@ -37,6 +39,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/teachers.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ctwp-education.eu.org/teachers.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ctwp-education.eu.org/teachers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ctwp-education.eu.org/teachers.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/teachers.html"/>
   </url>
   <url>
@@ -48,6 +51,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/university.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ctwp-education.eu.org/university.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ctwp-education.eu.org/university.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ctwp-education.eu.org/university.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/university.html"/>
   </url>
   <url>
@@ -59,6 +63,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.ctwp-education.eu.org/lab.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.ctwp-education.eu.org/lab.html"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ctwp-education.eu.org/lab.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ctwp-education.eu.org/lab.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ctwp-education.eu.org/lab.html"/>
     <image:image>
       <image:loc>https://www.ctwp-education.eu.org/assets/images/Computer%20Lab/lab-hero.webp</image:loc>
