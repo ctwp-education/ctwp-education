@@ -592,6 +592,44 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   background: #f7903c;
   transform: translateY(-1px);
 }
+/* SDG Strip */
+.sdg-strip {
+  display: flex; align-items: center; gap: 1rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0.75rem 2rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.sdg-strip-label {
+  font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  white-space: nowrap;
+}
+.sdg-badges { display: flex; gap: 0.45rem; overflow-x: auto; }
+.sdg-badge {
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-end;
+  width: 62px; height: 62px; flex-shrink: 0;
+  border-radius: 4px; padding: 0.3rem 0.25rem 0.3rem;
+  color: #fff; text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sdg-badge:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+.sdg-n {
+  position: absolute; top: 4px; left: 6px;
+  font-size: 0.72rem; font-weight: 900; line-height: 1;
+}
+.sdg-badge i { font-size: 1.1rem; margin-bottom: 0.18rem; }
+.sdg-t {
+  font-size: 0.34rem; font-weight: 800;
+  letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.35;
+}
+@media (max-width: 640px) {
+  .sdg-strip { flex-direction: column; align-items: flex-start; gap: 0.6rem; padding-bottom: 1.25rem; }
+  .sdg-badges { width: 100%; }
+}
 /* Phase 3 lab button */
 .phase-lab-btn {
   display: inline-flex;
