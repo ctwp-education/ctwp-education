@@ -5530,7 +5530,7 @@ const translations = {
     "nav.contact": "Contact",
     "nav.lab": "Notre Lab",
     "hero.badge": "Éducation Gratuite pour Chaque Apprenant",
-    "hero.title": "Donner au monde les moyens par l\\'<em>Éducation</em>",
+    "hero.title": "Donner au monde les moyens par l'<em>Éducation</em>",
     "hero.subtitle": "CTWP Educational Empowerment comble le fossé entre les apprenants et le savoir libre et open source — en testant la technologie dans de vraies classes, pour un impact réel.",
     "hero.cta.resources": "Explorer les Ressources",
     "hero.cta.support": "Soutenir",
